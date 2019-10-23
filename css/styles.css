@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "gt-mono-regular";
+  src: url(gt-america-mono-regular.otf);
+}
+html {
+  font-size: 100%;
+}
+body {
+  background-color: black;
+  margin: 0 10px 10px 10px;
+  font-family: "gt-mono-regular", "Courier New", "Courier";
+  color: magenta;
+  line-height: 1.2;
+}
+/*overall two columns layout*/
+section {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  grid-gap: 10px;
+  padding-top: 10px;
+}
+div {
+  padding-top: 15px;
+}
+img {
+  border: 1px solid white;
+  width: 100%;
+}
+h1 {
+  font-size: 3.8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+
+}
+h6 {
+  font-size: 0.7em;
+  margin: 8px 0 20px 0;
+  font-weight: 300;
+}
+p {
+  font-size: 1.05em;
+  margin: 8px 0;
+}
+a:link {
+  font-size: 1.05em;
+  color: magenta;
+  text-decoration: none;
+}
+a:visited {
+  color: magenta;
+}
+button {
+  width: 80%;
+  height: 50px;
+  border: solid 2px magenta;
+  background-color: transparent;
+  color: magenta;
+  font-family: "gt-mono-regular", "Courier New", "Courier";
+  font-size: 1em;
+  text-align: center
+}
+button:hover {
+  cursor: pointer;
+}
+/*slider look*/
+input[type=range] { /*slider bar*/
+  display: block;
+  margin-top: 12px;
+  -webkit-appearance: none; /*override default look*/
+  appearance: none;
+  width: 80%; /*set the bar to be shorter than screen width*/
+  max-width: 400px; /*limit the width of the bar when screen is wide*/
+  height: 15px;
+  background: none;
+  outline: 2px solid #ff00ff;
+}
+input[type=range]::-webkit-slider-thumb { /*slider handle*/
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ff00ff;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb { /*slider handle (for firefox)*/
+  border: 0;
+  border-radius: 0;
+  width: 15px;
+  height: 15px;
+  background: #ff00ff;
+  cursor: pointer;
+}

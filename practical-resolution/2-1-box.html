@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Glitch Rooms</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/styles-class.css">
+<script src="../js/aframe.js"></script>
+</head>
+
+<body>
+<a-scene vr-mode-ui="enabled: false">
+  <a-camera position="0 0 28"></a-camera>
+  <a-box
+            position="0 0 0"
+            height="17"
+            width="17"
+            depth="17"
+            side="double"
+            material="color: red"
+            animation__rotation="
+                property: rotation;
+                from: 0 360 0;
+                to: 360 0 360;
+                dir: reverse;
+                dur: 20000;
+                loop: true;
+                easing: linear;"> </a-box>
+</a-scene>
+</body>
+</html>

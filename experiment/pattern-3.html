@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drop the Dot – Nora Zhao</title>
+	<style type = "text/css">
+		html, body {margin: 0; padding: 0; overflow: hidden}
+	</style>
+</head>
+
+<body style="margin:0;padding:0;overflow:hidden">
+	<div id="webgl">
+		<input style="display:inline; position:absolute; top:5px; left:5px"
+		type="button"
+		value="Refresh"
+		onClick="document.location.reload()">
+		<input style="display:inline; position:absolute; top:5px; left:63px"
+		type="button"
+		value="Save Current Image"
+		onClick="saveAsImage()">
+	</div>
+
+	<script src="../js/three.min.js"></script>
+	<script src="../js/dat-gui.js"></script>
+	<script>
+		// scene
+		var scene = new THREE.Scene();
+
+		// camera
+		var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+		var positionZ  = Math.random() * 0.5 + 0.15;
+		camera.position.set(0, 0, positionZ);
+		camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+		// responsive
+		window.addEventListener("resize", onWindowResize, false);
+
+		function onWindowResize() {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+		}
+
+		// define geometry
+		function getPlane(w, h, color) {
+			var geometry = new THREE.PlaneGeometry(w, h);
+			var material = new THREE.MeshBasicMaterial({
+				color: color,
+				side: THREE.DoubleSide
+			});
+			var mesh = new THREE.Mesh(geometry, material);
+			return mesh;
+		}
+
+		// place geometry
+		var squareSize = 20;
+		var [color1, color2, color3] = [Math.random() * 0xffffff, Math.random() * 0xffffff, Math.random() * 0xffffff];
+		var [rotationX, rotationY, rotationZ] = [Math.random() * 0.3, Math.random() * 0.3, Math.random() * 0.3];
+
+		var obj1 = getPlane(squareSize, squareSize, color1);
+		var obj2 = getPlane(squareSize, squareSize, color2);
+		var obj3 = getPlane(squareSize, squareSize, color3);
+
+		var group = new THREE.Group();
+		group.add(obj1, obj2, obj3);
+		group.rotation.set(rotationX, rotationY, rotationZ);
+		scene.add(group);
+
+		// render
+		var renderer = new THREE.WebGLRenderer({
+			preserveDrawingBuffer: true
+		});
+		renderer.setClearColor("rgb(255, 255, 255)"); // background color
+		document.getElementById("webgl").appendChild(renderer.domElement);
+
+		// controller
+		var gui = new dat.GUI();
+
+		var controller = new function() {
+			this.color1 = color1;
+			this.color2 = color2;
+			this.color3 = color3;
+			this.scale = 1;
+			this.positionZ = camera.position.z;
+			this.rotationX = group.rotation.x;
+			this.rotationY = group.rotation.y;
+		}
+
+		var folder1 = gui.addFolder('Plane Colour');
+		folder1.addColor(controller, 'color1').name('A').onChange(function() {
+			obj1.material.color.set(controller.color1);
+		});
+		folder1.addColor(controller, 'color2').name('B').onChange(function() {
+			obj2.material.color.set(controller.color2);
+		});
+		folder1.addColor(controller, 'color3').name('C').onChange(function() {
+			obj3.material.color.set(controller.color3);
+		});
+		folder1.open();
+
+
+
+		var folder2 = gui.addFolder('Plane Rotation');
+		folder2.add(controller, 'rotationX', 0, 0.8).name('X').onChange(function() {
+			group.rotation.x = (controller.rotationX);
+		});
+		folder2.add(controller, 'rotationY', 0, 0.8).name('Y').onChange(function() {
+			group.rotation.y = (controller.rotationY);
+		});
+		folder2.open();
+
+		var folder3 = gui.addFolder('Camera Position')
+		folder3.add(controller, 'positionZ', 0.15, 1).name('Z').onChange(function() {
+			camera.position.z = (controller.positionZ);
+		});
+		folder3.open();
+
+		gui.close();
+
+		// update
+		var update = function() {
+			obj1.rotation.z += 0.00001;
+			obj2.rotation.z -= 0.00001;
+
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setPixelRatio(window.devicePixelRatio); // resolution for hd-dpi devices
+			renderer.render(scene, camera);
+			setTimeout(function() {
+				requestAnimationFrame(function() {
+					update(scene, camera);
+				})
+			}, 1000 / 3); // refresh rate per second
+		}
+		update();
+
+		// screenshot function
+		var strDownloadMime = "image/octet-stream";
+
+		function saveAsImage() {
+			var imgData, imgNode;
+			try {
+				var strMime = "image/png";
+				imgData = renderer.domElement.toDataURL(strMime);
+				saveFile(imgData.replace(strMime, strDownloadMime), "configurable patterns.png"); // file name
+			} catch (e) {
+				console.log(e);
+				return;
+			}
+		}
+
+		var saveFile = function(strData, filename) {
+			var link = document.createElement("a");
+			if (typeof link.download === "string") {
+				document.body.appendChild(link);
+				link.download = filename;
+				link.href = strData;
+				link.click();
+				document.body.removeChild(link);
+			} else {
+				location.replace(uri);
+			}
+		}
+	</script>
+</body>
+</html>

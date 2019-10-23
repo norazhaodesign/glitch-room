@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*set body text white and p text magenta in research portfolio*/
+.research-portfolio {
+  color: white;
+}
+.research-portfolio p {
+  color: magenta;
+}
+.research-portfolio a:link {
+  font-size: 1.05em;
+  color: white;
+}
+.research-portfolio a:visited {
+  color: white;
+  background-color: transparent;
+}
+/*use container to have text shown on top of picture*/
+.image-container {
+  position: relative;
+  padding: 0;
+}
+.top-left-text {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+}
+/*vertically center contents on a page*/
+.verticalCenter {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*image gallery grid*/
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin-right: 20px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-right: 20px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-right: 20px;
+}
+.grid4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-right: 20px;
+}
+.grid5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-right: 20px;
+}
+/*use container to style color picker*/
+.input-color-container {
+  padding-top: 0;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*width: 124px;*/
+  height: 40px;
+  border: solid 2px magenta;
+}
+.input-color {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 200px;
+  height: 100px;
+  border: none;
+}
+
+
+
+
+

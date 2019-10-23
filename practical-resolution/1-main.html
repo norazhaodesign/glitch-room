@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Glitch Rooms</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/styles-class.css">
+<script src="../js/aframe.js"></script>
+</head>
+
+<body>
+<section class="verticalCenter" style="z-index: 1;">
+  <div>
+  </div>
+  <div>
+    <h1>Glitch Rooms</h1>
+    <p style="padding-top: 20px;"> a space for you to create your own digital artwork </p>
+    <p> a space where you can experience your creation in three-dimension </p>
+    <p> a space to sharre and explore </p>
+    <button style="width: 280px;
+                     margin-top: 40px;">
+    <a href="2-objects.html">Create My Own Room</a>
+    </button>
+    <button style="width: 280px;
+                 margin-top: 20px;">
+    <a href="2-rooms.html">Visit Exsiting Rooms</a>
+    </button>
+  </div>
+</section>
+<a-scene vr-mode-ui="enabled: false"> 
+  <!-- camera -->
+  <a-camera position="0 0 -3"></a-camera>
+  
+  <!-- geometry2 -->
+  <a-box
+      position="5 0 -3"
+      height="18"
+      width="18"
+      depth="18"
+      side="double"
+      material="color: black"
+      animation__rotation="
+          property: rotation;
+          from: 25 43 0;
+          to: 25.5 43 0;
+          dir: alternate;
+          dur: 510000;
+          loop: true;
+          easing: linear;">
+    <a-box
+          height="18"
+          width="18"
+          depth="18"
+          side="double"
+          material="color: blue"
+          animation__rotation="
+              property: rotation;
+              from: 0 0 0;
+              to: -0.1 0 0.1;
+              dir: alternate;
+              dur: 500000;
+              loop: true;
+              easing: linear;"> </a-box>
+    <a-box
+          height="18"
+          width="18"
+          depth="18"
+          side="double"
+          material="color: green"
+          animation__rotation="
+              property: rotation;
+              from: 0 0 0;
+              to: 0.1 0 -0.1;
+              dir: alternate;
+              dur: 490000;
+              loop: true;
+              easing: linear;"> </a-box>
+  </a-box>
+</a-scene>
+</body>
+</html>
