@@ -10,8 +10,8 @@
 
 <body>
 <!--controls--------------------------------------------------------->
-<div id="html-text"
-     style="z-index: 5;
+<div id="html-contents"
+     style="z-index: 2;
             position: relative;
             overflow: auto;
             height: 100vh;
@@ -254,10 +254,6 @@ sliderSpeed.addEventListener('input', () => {
   object3.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
 }, false);
 
-  
-document.addEventListener('enter-vr', () => {
-  html-text.setAttribute('visibility', false);
-});
 
 
 
