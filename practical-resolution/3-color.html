@@ -10,7 +10,8 @@
 
 <body>
 <!--controls--------------------------------------------------------->
-<div style="z-index: 5;
+<div id="html-text"
+     style="z-index: 5;
             position: relative;
             overflow: auto;
             height: 100vh;
@@ -116,7 +117,7 @@
   <button style="margin-top: 40px;
                  max-width: 400px;">Enter VR</button>
   </a>
-  <div style="height: 200px;"></div>
+  <div style="height: 140px;"></div>
 </div>
 
 <!--aframe--------------------------------------------------------->
@@ -253,6 +254,16 @@ sliderSpeed.addEventListener('input', () => {
   object3.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
 }, false);
 
+  
+  
+  
+  
+  
+  
+  
+myEnterVRButton.click( () => {
+  html-text.hide();
+});
 
 
 
