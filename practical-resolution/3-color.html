@@ -9,8 +9,9 @@
 </head>
 
 <body>
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">  
 <!--controls--------------------------------------------------------->
-<div id="html-contents"
+  <div id="html-contents"
      style="z-index: 2;
             position: relative;
             overflow: auto;
@@ -119,9 +120,8 @@
   </a>
   <div style="height: 140px;"></div>
 </div>
-
+  
 <!--aframe--------------------------------------------------------->
-<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-camera id="camera"
             position="-10 2 30"> </a-camera>
   <a-box id="object1"
