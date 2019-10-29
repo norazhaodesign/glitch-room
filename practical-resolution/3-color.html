@@ -112,7 +112,8 @@
   
   <!--enter vr button--> 
   <a id="myEnterVRButton" href="#">
-  <button style="margin-top: 40px;
+  <button id="VRButton"
+          style="margin-top: 40px;
                  max-width: 400px;">Enter VR</button>
   </a>
   <div style="height: 140px;"></div>
@@ -253,7 +254,9 @@ sliderSpeed.addEventListener('input', () => {
 }, false);
 
 
-
+VRButton.addEventListener('click', () => {
+    toggleFullScreen();
+}, false);
 
 
 
