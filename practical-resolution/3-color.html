@@ -10,7 +10,8 @@
 
 <body>
 <!--controls--------------------------------------------------------->
-  <div style="z-index: 1;
+  <div id="htmlContents"
+       style="z-index: 1;
             position: relative;
             overflow: auto;
             height: 100vh;
@@ -255,7 +256,8 @@ sliderSpeed.addEventListener('input', () => {
 
 
 VRButton.addEventListener('click', () => {
-    toggleFullScreen();
+  toggleFullScreen();
+  htmlContents.visibility: none; 
 }, false);
 
 
