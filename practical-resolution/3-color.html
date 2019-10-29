@@ -173,8 +173,6 @@
 // move camera location to (0,0,0) when entering vr
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   camera.setAttribute('position', {x: 0, y: 0, z: 0});
-    toggleFullScreen();
-  htmlContents.visibility: none; 
 }, false);
 
 // move camera location back outside when exiting vr
@@ -261,7 +259,6 @@ sliderSpeed.addEventListener('input', () => {
 //  toggleFullScreen();
 //  htmlContents.visibility: none; 
 //}, false);
-//
 
 
 
