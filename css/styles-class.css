@@ -86,7 +86,7 @@
   grid-gap: 10px;
   margin-right: 20px;
 }
-@media only screen and (max-width: 812px) {
+@media screen and (max-width: 812px) {
   .grid3to1 {
     grid-template-columns: 1fr;
   }
@@ -95,6 +95,10 @@
   grid-template-columns: 1fr;
   grid-gap: 10px;
   padding-top: 10px;  }
+}
+
+.in-vr #htmlContents {
+  display: none;
 }
 
 
