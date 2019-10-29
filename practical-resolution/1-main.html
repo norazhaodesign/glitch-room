@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glitch Rooms</title>
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/styles-class.css">
 <script src="../js/aframe.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -16,7 +16,8 @@
   <div>
     <div class="verticalCenter" style="z-index: 1; margin-left: 20px;">
       <h1>Glitch Rooms</h1>
-      <div style="padding-top: 20px;"></div>
+      <div style="padding-top: 20px;">
+      </div>
       a space for you to create your own digital artwork; <br>
       a space where you can experience your creation in three-dimension; <br>
       a space to share and explore... <br>
@@ -30,7 +31,8 @@
 </main>
 <a-scene vr-mode-ui="enabled: false"> 
   <!-- camera -->
-  <a-camera position="0 0 -3"></a-camera>
+  <a-camera position="0 0 -3"
+            look-at="0 0 0"></a-camera>
   
   <!-- geometry2 -->
   <a-box
