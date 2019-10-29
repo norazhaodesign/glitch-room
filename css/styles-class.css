@@ -79,10 +79,22 @@
   height: 100px;
   border: none;
 }
+
+.grid3to1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-right: 20px;
+}
 @media only screen and (max-width: 500px) {
-  .grid4to1 {
+  .grid3to1 {
     grid-template-columns: 1fr;
   }
+  .desktopOnly{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  padding-top: 10px;  }
 }
 
 
