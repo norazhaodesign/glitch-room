@@ -31,9 +31,10 @@
 </main>
 <a-scene vr-mode-ui="enabled: false"> 
   <!-- camera -->
+  <a-camera position="0 0 -3"></a-camera>
+  <!-- geometry -->
   
-  <a-entity camera look-controls position="0 0 -3">
-    <a-box
+  <a-box
       position="5 0 -3"
       height="18"
       width="18"
@@ -77,13 +78,6 @@
               loop: true;
               easing: linear;"> </a-box>
   </a-box>
-
-  
-  
-  
-  
-  </a-entity>
-  
 </a-scene>
 </body>
 </html>
