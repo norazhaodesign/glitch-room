@@ -79,7 +79,7 @@
   height: 100px;
   border: none;
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .grid3to1 {
       grid-template-columns: 1fr;
   }
