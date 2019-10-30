@@ -20,6 +20,7 @@
     <h2>Choose A Room to Experience</h2>
     <div style="padding-top: 40px;">
     </div>
+    
     <!--iframe objects container-->
     <div class="grid3 gridxto1">
       <!--obj-->
@@ -40,15 +41,36 @@
         <h6> Created by: Mark <br>
           At: 29 Oct 2019 </h6>
       </div>
+      
+      
+      
+      
+      
+      
       <!--obj-->
       <div style="padding-top: 0;">
-        <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe src="../experiment/r3-box.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+        <div id="iframeDiv1"
+             style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
+          <iframe id="iframe1"
+                  src="../experiment/r3-box.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+          <div id="frameDummy1"
+               style=" position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;"></div>
         </div>
         <p> feeling a bit sad but that's ok </p>
         <h6> Created by: cat in the rain <br>
           At: 25 Oct 2019 </h6>
       </div>
+      
+      
+      
+      
+      
+      
+      
       <!--obj-->
       <div style="padding-top: 0;">
         <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
@@ -77,10 +99,19 @@
                 <p> Late </p>
         <h6> Created by: Sleepy Cat <br>
           At: 27 Oct 2019 </h6>
-
       </div>
     </div>
   </div>
 </main>
+  
+<!--javascript for opening new tabs--> 
+  <script>
+    
+    
+    
+    iframeDiv1.addEventListener("click", function(e) {
+  window.location.href = document.getElementById("iframe1").src;
+});
+  </script>
 </body>
 </html>
