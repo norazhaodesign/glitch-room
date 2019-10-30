@@ -90,11 +90,12 @@
   .grid3to1 {
     grid-template-columns: 1fr;
   }
-  .desktopOnly{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
-  padding-top: 10px;  }
+  .desktop2ColMobile1Col {
+    grid-template-columns: 1fr;
+  }
+  .desktopOnly {
+    display: none;
+  }
 }
 
 .in-vr #htmlContents {

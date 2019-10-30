@@ -122,8 +122,8 @@
   
 <!--aframe--------------------------------------------------------->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">  
-      <a-entity camera look-controls id="camera"  position="-10 2 30">
-
+  <a-camera id="camera"
+            position="-10 2 30"> </a-camera>
   <a-box id="object1"
          position="0 0 0"
          height="20"
@@ -166,7 +166,6 @@
                               dur: 20000;
                               loop: true;
                               easing: linear;"> </a-box>
-       </a-entity>
 </a-scene>
 
 <!--javascript---------------------------------------------------------> 
