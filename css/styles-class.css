@@ -96,6 +96,10 @@
   left: 0px; 
   right: 0px;
 }
+/*hide html contents when entering vr on ios*/
+.in-vr #htmlContents {
+  display: none;
+}
 /*mobile media query*/
 @media screen and (max-width: 650px) {
   .desktop2ColMobile1Col {
@@ -108,10 +112,18 @@
     display: none;
   }
 }
-/*hide html contents when entering vr on ios*/
-.in-vr #htmlContents {
-  display: none;
+@media screen and (max-width: 810px) {
+  .desktop2ColMobile1Col {
+    grid-template-columns: 1fr;
+  }
+  .gridxto1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .desktopOnly {
+    display: none;
+  }
 }
+
 
 
 
