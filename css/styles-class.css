@@ -95,6 +95,7 @@
   }
   .desktopOnly {
     display: none;
+    padding-top: 0;
   }
 }
 
