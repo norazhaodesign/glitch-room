@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glitch Rooms</title>
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 <link rel="stylesheet" type="text/css" href="../css/styles-class.css">
@@ -10,7 +11,7 @@
 
 <body>
 <!--controls--------------------------------------------------------->
-  <div id="htmlContents"
+<div id="htmlContents"
        style="z-index: 1;
             position: relative;
             overflow: auto;
@@ -117,11 +118,12 @@
           style="margin-top: 40px;
                  max-width: 400px;">Enter VR</button>
   </a>
-  <div style="height: 140px;"></div>
+  <div style="height: 140px;">
+  </div>
 </div>
-  
+
 <!--aframe--------------------------------------------------------->
-<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">  
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-camera id="camera"
             position="-10 2 30"> </a-camera>
   <a-box id="object1"
@@ -216,9 +218,6 @@ genrateRandomColorSet.addEventListener('click', () => {
   console.log(colorPicker1.value, colorPicker2.value, colorPicker3.value);
 }, false);
 
-// !!!!!!!!!
-// problem: after using color picker, the generate button doesn't change colors shown inside color picker anymore
-
 // use silder to change object size
 sliderScale.addEventListener('input', () => {
   object1.setAttribute('scale', {x: sliderScale.value,
@@ -250,6 +249,7 @@ sliderSize3.addEventListener('input', () => {
   object3.setAttribute('depth', sliderSize3.value * 20);
 }, false);
 
+// use silder to change movement speed
 sliderSpeed.addEventListener('input', () => {
   object1.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
   object2.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});

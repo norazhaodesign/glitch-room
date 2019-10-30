@@ -14,13 +14,14 @@ body {
   line-height: 1.2;
   font-size: 16px;
 }
-/*overall two columns layout*/
+/*research portfolio page overall two columns layout*/
 section {
   display: grid;
   grid-template-columns: 1fr 3.5fr;
   grid-gap: 10px;
   padding-top: 10px;
 }
+/*outcome page overall two columns layout*/
 main {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -51,6 +52,7 @@ h6 {
   font-size: 0.7em;
   margin: 8px 0 20px 0;
   font-weight: 300;
+  line-height: 1.4;
 }
 p {
   font-size: 1.05em;
@@ -77,7 +79,7 @@ button {
 button:hover {
   cursor: pointer;
 }
-/*slider look*/
+/*slider look (on outcome page)*/
 input[type=range] { /*slider bar*/
   display: block;
   margin-top: 12px;

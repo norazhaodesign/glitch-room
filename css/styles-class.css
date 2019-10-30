@@ -80,14 +80,9 @@
   border: none;
 }
 
-.grid3to1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-  margin-right: 20px;
-}
-@media screen and (max-width: 812px) {
-  .grid3to1 {
+/*mobile media query*/
+@media screen and (max-width: 650px) {
+  .gridxto1 {
     grid-template-columns: 1fr;
   }
   .desktop2ColMobile1Col {
