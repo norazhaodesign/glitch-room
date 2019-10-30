@@ -79,6 +79,21 @@
   height: 100px;
   border: none;
 }
+.iframe-holder-square {
+  position: relative; 
+  padding-top: 100%; 
+  overflow: auto; 
+  border: 1px solid white; 
+  margin-bottom: 10px
+}
+/*invisible element in front of the iframe so it can be clicked*/
+.frame-dummy {
+  position: absolute; 
+  top: 0px; 
+  bottom: 0px; 
+  left: 0px; 
+  right: 0px;
+}
 
 /*mobile media query*/
 @media screen and (max-width: 650px) {

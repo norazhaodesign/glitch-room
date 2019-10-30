@@ -79,6 +79,15 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+iframe {
+  border: none; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  width: 100%;
+}
 /*slider look (on outcome page)*/
 input[type=range] { /*slider bar*/
   display: block;

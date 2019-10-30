@@ -23,95 +23,117 @@
     
     <!--iframe objects container-->
     <div class="grid3 gridxto1">
-      <!--obj-->
+      
+      <!--obj1-->
       <div style="padding-top: 0;">
-        <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe src="../experiment/r1-sphere.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+        <div id="iframeDiv1"
+             class="iframe-holder-square">
+          <iframe id="iframe1"
+                  src="../experiment/r1-sphere.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
         <p> A Rounded World </p>
         <h6> Created by: Alex the Bird <br>
           At: 24 Oct 2019 </h6>
       </div>
-      <!--obj-->
+      
+      <!--obj2-->
       <div style="padding-top: 0;">
-        <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe src="../experiment/r2-cone.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+        <div id="iframeDiv2"
+             class="iframe-holder-square">
+          <iframe id="iframe2"
+                  src="../experiment/r2-cone.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
         <p> Above the Horizon </p>
         <h6> Created by: Mark <br>
           At: 29 Oct 2019 </h6>
       </div>
       
-      
-      
-      
-      
-      
-      <!--obj-->
+      <!--obj3-->
       <div style="padding-top: 0;">
-        <div id="iframeDiv1"
-             style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe id="iframe1"
-                  src="../experiment/r3-box.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
-          <div id="frameDummy1"
-               style=" position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;"></div>
+        <div id="iframeDiv3"
+             class="iframe-holder-square">
+          <iframe id="iframe3"
+                  src="../experiment/r3-box.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
         <p> feeling a bit sad but that's ok </p>
         <h6> Created by: cat in the rain <br>
           At: 25 Oct 2019 </h6>
       </div>
       
-      
-      
-      
-      
-      
-      
-      <!--obj-->
+      <!--obj4-->
       <div style="padding-top: 0;">
-        <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe src="../experiment/r4-box.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+        <div id="iframeDiv4"
+             class="iframe-holder-square">
+          <iframe id="iframe4"
+                  src="../experiment/r4-box.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
-                <p> The Circus </p>
+        <p> The Circus </p>
         <h6> Created by: DOOOOOOOOOOlala <br>
           At: 22 Oct 2019 </h6>
-
       </div>
-      <!--obj-->
+      <!--obj5-->
       <div style="padding-top: 0;">
-        <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe src="../experiment/r5-octahedron.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+        <div id="iframeDiv5"
+             class="iframe-holder-square">
+          <iframe id="iframe5"
+                  src="../experiment/r5-octahedron.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
-                <p> A Challenge </p>
+        <p> A Challenge </p>
         <h6> Created by: Lily <br>
           At: 22 Oct 2019 </h6>
-
       </div>
-      <!--obj-->
+      <!--obj6-->
       <div style="padding-top: 0;">
-        <div style="position:relative; padding-top:100%; overflow:auto; border:1px solid white; margin-bottom:10px">
-          <iframe src="../experiment/r6-octahedron.html" style="border:none; position:absolute; top:0; left:0; height:100%; width:100%;"> </iframe>
+        <div id="iframeDiv6"
+             class="iframe-holder-square">
+          <iframe id="iframe6"
+                  src="../experiment/r6-octahedron.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
-                <p> Late </p>
+        <p> Late </p>
         <h6> Created by: Sleepy Cat <br>
           At: 27 Oct 2019 </h6>
       </div>
     </div>
   </div>
 </main>
-  
-<!--javascript for opening new tabs--> 
-  <script>
-    
-    
-    
-    iframeDiv1.addEventListener("click", function(e) {
+
+<script>   
+// open full screen page when clicking iframe    
+iframeDiv1.addEventListener("click", function(e) {
   window.location.href = document.getElementById("iframe1").src;
 });
-  </script>
+  
+iframeDiv2.addEventListener("click", function(e) {
+  window.location.href = document.getElementById("iframe2").src;
+});
+  
+iframeDiv3.addEventListener("click", function(e) {
+  window.location.href = document.getElementById("iframe3").src;
+});
+  
+  iframeDiv4.addEventListener("click", function(e) {
+  window.location.href = document.getElementById("iframe4").src;
+});
+  
+iframeDiv5.addEventListener("click", function(e) {
+  window.location.href = document.getElementById("iframe5").src;
+});
+  
+iframeDiv6.addEventListener("click", function(e) {
+  window.location.href = document.getElementById("iframe6").src;
+});
+</script>
 </body>
 </html>
