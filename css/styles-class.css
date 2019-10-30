@@ -71,6 +71,7 @@
   height: 40px;
   border: solid 2px magenta;
 }
+/*position color picker behind container to hide default border*/
 .input-color {
   position: absolute;
   left: -10px;
@@ -95,21 +96,19 @@
   left: 0px; 
   right: 0px;
 }
-
 /*mobile media query*/
 @media screen and (max-width: 650px) {
-  .gridxto1 {
+  .desktop2ColMobile1Col {
     grid-template-columns: 1fr;
   }
-  .desktop2ColMobile1Col {
+  .gridxto1 {
     grid-template-columns: 1fr;
   }
   .desktopOnly {
     display: none;
-    padding-top: 0;
   }
 }
-
+/*hide html contents when entering vr on ios*/
 .in-vr #htmlContents {
   display: none;
 }

@@ -13,18 +13,20 @@
     <a-entity camera look-controls>
   <a-sphere
             position="0 0 -28"
-            radius='13'
+            radius="13"
             side="double"
+            wireframe="true"
+            wireframe-linewidth="10"
             material="color: blue"
             animation__rotation="
                 property: rotation;
                 from: 0 360 0;
                 to: 360 0 0;
                 dir: reverse;
-                dur: 8000;
+                dur: 18000;
                 loop: true;
                 easing: linear;"> </a-sphere>
-      <a-entity></a-entity>
+      </a-entity>
 </a-scene>
 </body>
 </html>

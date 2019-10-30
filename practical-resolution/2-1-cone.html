@@ -13,15 +13,17 @@
     <a-entity camera look-controls>
 
   <a-cone
-            position="0 0 -28"
+            position="0 2 -28"
             radius-bottom="12"
-            height='15'
+            height="20"
             side="double"
+            wireframe="true"
+            wireframe-linewidth="10"            
             material="color: green"
             animation__rotation="
                 property: rotation;
-                from: 360 0 0;
-                to: 0 0 360;
+                from: 0 0 0;
+                to: 0 360 0;
                 dir: reverse;
                 dur: 10000;
                 loop: true;
