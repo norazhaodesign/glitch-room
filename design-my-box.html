@@ -202,7 +202,7 @@ document.querySelector('a-scene').addEventListener('enter-vr', () => {
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
   outsideCamera.setAttribute('camera', 'active', true);
-//  vrCamera.setAttribute('camera', 'active', false);
+  vrCamera.setAttribute('camera', 'active', false);
   document.body.classList.remove('in-vr');
 }, false);
 
