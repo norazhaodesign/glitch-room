@@ -33,37 +33,38 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
+  margin-left: 10px;
 }
 /*image gallery grid*/
 .grid1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .grid3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .grid4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .grid5 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 /*use container to style color picker*/
 .input-color-container {
