@@ -15,10 +15,10 @@
   background-color: transparent;
 }
 .research-portfolio div {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 /*use container to have text shown on top of picture*/
-.image-container {
+div.image-container {
   position: relative;
   padding: 0;
 }
@@ -26,6 +26,7 @@
   position: absolute;
   top: -7px;
   left: 5px;
+  padding: 0;
 }
 /*vertically center contents on a page*/
 .verticalCenter {
