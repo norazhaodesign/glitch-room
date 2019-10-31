@@ -5,6 +5,9 @@
 }
 html {
   font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 body {
   background-color: black;
@@ -66,6 +69,18 @@ a:link {
 a:visited {
   color: magenta;
 }
+/*underline effect for active page*/
+nav a.active {
+  border-bottom: 2px solid magenta;
+}
+nav a {
+  text-transform: uppercase;
+}
+
+
+
+
+
 button {
   width: 80%;
   height: 50px;
@@ -116,3 +131,5 @@ input[type=range]::-moz-range-thumb { /*slider handle (for firefox)*/
   background: #ff00ff;
   cursor: pointer;
 }
+
+

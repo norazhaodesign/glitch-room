@@ -26,6 +26,7 @@
 }
 /*vertically center contents on a page*/
 .verticalCenter {
+  z-index: 1;
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
