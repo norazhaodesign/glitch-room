@@ -10,7 +10,7 @@ html {
 }
 body {
   background-color: black;
-  margin: 0 0 10px 10px;
+  margin: 0 10px 10px 10px;
   font-family: "gt-mono-regular", "Courier New", "Courier";
   color: magenta;
   line-height: 1.2;
