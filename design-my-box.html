@@ -22,10 +22,6 @@
             camera 
             look-controls="false"
             position="-10 0 30"></a-entity>
-  <a-entity id="vrCamera" 
-            camera 
-            look-controls
-            position="0 0 0"></a-entity>
   
   <a-box id="object1"
          position="0 0 0"
@@ -75,92 +71,6 @@
   
 
 <!--javascript---------------------------------------------------------> 
-<script type="text/javascript">
-// change active camera when entering and exit vr
-document.querySelector('a-scene').addEventListener('enter-vr', () => {
-  vrCamera.setAttribute('camera', 'active', true);
-  document.body.classList.add('in-vr');
-}, false);
-document.querySelector('a-scene').addEventListener('exit-vr', () => {
-  outsideCamera.setAttribute('camera', 'active', true);
-  document.body.classList.remove('in-vr');
-}, false);
-
-// use color picker input to change object color
-colorPicker1.addEventListener('input', () => {
-  object1.setAttribute('material', {color: event.target.value});
-  console.log(colorPicker1.value)
-}, false);
-colorPicker2.addEventListener('input', () => {
-  object2.setAttribute('material', {color: event.target.value});
-}, false);
-colorPicker3.addEventListener('input', () => {
-  object3.setAttribute('material', {color: event.target.value});
-}, false);
-
-// press button to apply random colors on the object
-genrateRandomColorSet.addEventListener('click', () => {
-  var color1 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
-  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join(''); // generate random hex color
-  // or this but sometimes generate less digits = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
-  object1.setAttribute('material', {color: color1}); // apply color on object
-  colorPicker1.value = color1; // change color picker value
-
-  var color2 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
-  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
-  object2.setAttribute('material', {color: color2});
-  colorPicker2.value = color2;
-
-  var color3 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
-  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
-  object3.setAttribute('material', {color: color3});
-  colorPicker3.value = color3;
-
-  console.log(color1, color2, color3);
-  console.log(colorPicker1.value, colorPicker2.value, colorPicker3.value);
-}, false);
-
-// use silder to change object size
-sliderScale.addEventListener('input', () => {
-  object1.setAttribute('scale', {x: sliderScale.value,
-                                 y: sliderScale.value,
-                                 z: sliderScale.value});
-  object2.setAttribute('scale', {x: sliderScale.value,
-                                 y: sliderScale.value,
-                                 z: sliderScale.value});
-  object3.setAttribute('scale', {x: sliderScale.value,
-                                 y: sliderScale.value,
-                                 z: sliderScale.value});
-}, false);
-
-sliderSize1.addEventListener('input', () => {
-  object1.setAttribute('height', sliderSize1.value * 20);
-  object2.setAttribute('height', sliderSize1.value * 20);
-  object3.setAttribute('height', sliderSize1.value * 20);
-}, false);
-
-sliderSize2.addEventListener('input', () => {
-  object1.setAttribute('width', sliderSize2.value * 20);
-  object2.setAttribute('width', sliderSize2.value * 20);
-  object3.setAttribute('width', sliderSize2.value * 20);
-}, false);
-
-sliderSize3.addEventListener('input', () => {
-  object1.setAttribute('depth', sliderSize3.value * 20);
-  object2.setAttribute('depth', sliderSize3.value * 20);
-  object3.setAttribute('depth', sliderSize3.value * 20);
-}, false);
-
-// use silder to change movement speed
-sliderSpeed.addEventListener('input', () => {
-  object1.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
-  object2.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
-  object3.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
-}, false);
-
-
-
-
 
 
 </script>
