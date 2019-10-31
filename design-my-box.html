@@ -137,11 +137,11 @@
 <!--aframe--------------------------------------------------------->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-entity id="outsideCamera" 
-            camera="active: false"
+            camera="active: true"
             look-controls="false"
             position="-10 0 30"></a-entity>
   <a-entity id="vrCamera" 
-            camera="active: true"
+            camera="active: false"
             look-controls
             position="0 0 0"></a-entity>
   
@@ -196,13 +196,13 @@
 <script type="text/javascript">
 // change active camera when entering and exit vr
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
-  vrCamera.setAttribute('camera', 'active', true);
-  outsideCamera.setAttribute('camera', 'active', false);
+  document.querySelector('#vrCamera').setAttribute('camera', 'active', true);
+//  outsideCamera.setAttribute('camera', 'active', false);
   document.body.classList.add('in-vr');
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
-  outsideCamera.setAttribute('camera', 'active', true);
-  vrCamera.setAttribute('camera', 'active', false);
+  document.querySelector('#outsideCamera').setAttribute('camera', 'active', true);
+//  vrCamera.setAttribute('camera', 'active', false);
   document.body.classList.remove('in-vr');
 }, false);
 
