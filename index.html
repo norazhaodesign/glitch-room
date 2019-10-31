@@ -7,60 +7,84 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/styles-class.css">
 <script src="js/aframe.js"></script>
+  
+  
+     <style>
+            /*toggle icon display position*/
+            #navToggleIcon {
+              position: absolute;
+              left: 10px;
+              cursor: pointer; 
+            }
+            /*hide drop down menu by default*/
+            nav>ul {
+              list-style-type: none;
+              padding: 0;
+              display: none;
+            }
+            /*toggle menu list*/
+            .display {
+              display: block;
+              margin-left: 100px;
+            }
+            
+            /* for desktop */
+            @media screen and (min-width: 1000px) {
+              nav>ul {
+                display: flex;
+                flex-direction: row;
+              }
+              nav>ul>li>a {
+                margin-right: 10px;
+              }
+             #navToggleIcon {
+                display: none;
+              }
+            </style>
+  
+  
+  
 </head>
 
 <body>
-  <!--main layout-->
-<main class="desktop2ColMobile1Col">
-    <!--placeholder-->
-
+<!--main layout-->
+<main class="desktop2ColMobile1Col"> 
+  <!--placeholder-->
+  
   <div class="desktopOnly">
   </div>
-    <!--main column-->
-
+  <!--main column-->
+  
   <div>
-    
-      <nav 
-           style="z-index: 1; 
+    <nav style="z-index: 1; 
                   position: relative; 
                   margin-left: 10px;
                   margin-top: 12px;"> 
-      <a href="#" class="active">Practical Resolution.</a> 
-      <a href="#">Critical Rationale.</a> 
-      <a href="#">Critical Context Paper.</a> 
-      <a href="research-portfolio.html">Research Portfolio.</a> 
+      <span id="navToggleIcon"> MENU </span>
+      <ul id="navUl">
+        <li><a href="#" class="active">Practical Resolution.</a></li>
+        <li><a href="#">Critical Rationale.</a></li>
+        <li><a href="#">Critical Context Paper.</a></li>
+        <li><a href="research-portfolio.html">Research Portfolio.</a></li>
+      </ul>
     </nav>
-      
-      
-    
-    
-    
-    
-    
     <div class="verticalCenter">
-      
-      
-        
-
-      
-      
-      
       <h1>Glitch Room</h1>
       <div style="padding-top: 20px;">
       </div>
       a space for you to create your own digital artwork; <br>
-        a space where you can experience your creation in three-dimension; <br>
-        a space to share and explore... <br>
-      <br><br>
-      
-<div class="grid2 gridxto1">
-      <a href="choose-my-geometry.html">
-      <button style="max-width: 400px;">Create My Own Room</button>
-      </a> <a href="visit-existing-rooms.html">
-      <button style="max-width: 400px;">Visit Exsiting Rooms</button>
-      </a>
-
-</div>    </div>
+      a space where you can experience your creation in three-dimension; <br>
+      a space to share and explore... <br>
+      <br>
+      <br>
+      <div class="grid2 gridxto1">
+        <a href="choose-my-geometry.html">
+        <button style="max-width: 400px;">Create My Own Room</button>
+        </a> <a href="visit-existing-rooms.html">
+        <button style="max-width: 400px;">Visit Exsiting Rooms</button>
+        </a>
+      </div>
+    </div>
   </div>
 </main>
 <a-scene vr-mode-ui="enabled: false"> 
@@ -113,10 +137,10 @@
               easing: linear;"> </a-box>
   </a-box>
 </a-scene>
-  
-  <script>
-
-
-  </script>
+<script>
+document.getElementById("navToggleIcon").addEventListener("click", () => {
+    document.getElementById("navUl").classList.toggle("display");
+});
+</script>
 </body>
 </html>
