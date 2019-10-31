@@ -135,12 +135,12 @@
 <!--aframe--------------------------------------------------------->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-camera id="camera"
-            position="-10 0 60"> </a-camera>
+            position="-10 0 30"> </a-camera>
   <a-box id="object1"
          position="0 0 0"
-         height="40"
-         width="40"
-         depth="40"
+         height="20"
+         width="20"
+         depth="20"
          side="double"
          material="color: #ff0000"
          animation__rotation="property: rotation;
@@ -152,9 +152,9 @@
                               easing: linear;"> </a-box>
   <a-box id="object2"
          position="0 0 0"
-         height="40"
-         width="40"
-         depth="40"
+         height="20"
+         width="20"
+         depth="20"
          side="double"
          material="color: #00ff00"
          animation__rotation="property: rotation;
@@ -166,9 +166,9 @@
                               easing: linear;"> </a-box>
   <a-box id="object3"
          position="0 0 0"
-         height="40"
-         width="40"
-         depth="40"
+         height="20"
+         width="20"
+         depth="20"
          side="double"
          material="color: #0000ff"
          animation__rotation="property: rotation;
@@ -190,7 +190,7 @@ document.querySelector('a-scene').addEventListener('enter-vr', () => {
 
 // move camera location back outside when exiting vr
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
- camera.setAttribute('position', {x: -10, y: 0, z: 30});
+  camera.setAttribute('position', {x: -10, y: 0, z: 30});
   document.body.classList.remove('in-vr');
 }, false);
 
@@ -242,21 +242,21 @@ sliderScale.addEventListener('input', () => {
 }, false);
 
 sliderSize1.addEventListener('input', () => {
-  object1.setAttribute('height', sliderSize1.value * 40);
-  object2.setAttribute('height', sliderSize1.value * 40);
-  object3.setAttribute('height', sliderSize1.value * 40);
+  object1.setAttribute('height', sliderSize1.value * 20);
+  object2.setAttribute('height', sliderSize1.value * 20);
+  object3.setAttribute('height', sliderSize1.value * 20);
 }, false);
 
 sliderSize2.addEventListener('input', () => {
-  object1.setAttribute('width', sliderSize2.value * 40);
-  object2.setAttribute('width', sliderSize2.value * 40);
-  object3.setAttribute('width', sliderSize2.value * 40);
+  object1.setAttribute('width', sliderSize2.value * 20);
+  object2.setAttribute('width', sliderSize2.value * 20);
+  object3.setAttribute('width', sliderSize2.value * 20);
 }, false);
 
 sliderSize3.addEventListener('input', () => {
-  object1.setAttribute('depth', sliderSize3.value * 40);
-  object2.setAttribute('depth', sliderSize3.value * 40);
-  object3.setAttribute('depth', sliderSize3.value * 40);
+  object1.setAttribute('depth', sliderSize3.value * 20);
+  object2.setAttribute('depth', sliderSize3.value * 20);
+  object3.setAttribute('depth', sliderSize3.value * 20);
 }, false);
 
 // use silder to change movement speed
