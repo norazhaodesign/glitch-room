@@ -54,31 +54,9 @@
                               easing: linear;"> </a-box>
 </a-scene>
 <script>
-//  (window.innerWidth == screen.width && window.innerHeight == screen.height)
+//if (window.innerWidth == screen.width && window.innerHeight == screen.height) {
 //  document.querySelector('a-scene').enterVR();
-
-/* Standard syntax */
-document.addEventListener("fullscreenchange", function() {
-  document.querySelector('a-scene').enterVR();
-});
-
-/* Firefox */
-document.addEventListener("mozfullscreenchange", function() {
-  document.querySelector('a-scene').enterVR();
-});
-
-/* Chrome, Safari and Opera */
-document.addEventListener("webkitfullscreenchange", function() {
-  document.querySelector('a-scene').enterVR();
-});
-
-/* IE / Edge */
-document.addEventListener("msfullscreenchange", function() {
-  document.querySelector('a-scene').enterVR();
-});
-
-
-  
+//}
 </script>
 </body>
 </html>
