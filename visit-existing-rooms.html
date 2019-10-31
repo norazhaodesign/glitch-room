@@ -113,6 +113,7 @@
 // open full screen page when clicking iframe    
 iframeDiv1.addEventListener("click", () => {
   window.location.href = document.getElementById("iframe1").src;
+  document.querySelector('a-scene').enterVR();
 }, false);
   
 iframeDiv2.addEventListener("click", () => {
