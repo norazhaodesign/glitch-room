@@ -137,7 +137,7 @@
 <!--aframe--------------------------------------------------------->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <!--the combination of entity and camera is really weird but the only way for it to work on ios-->
-  <a-entity id="outsideCamera" 
+  <a-entity id="normalCamera" 
             camera
             position="-10 0 30"></a-entity>
   <a-camera id="vrCamera"
@@ -200,7 +200,7 @@ document.querySelector('a-scene').addEventListener('enter-vr', () => {
   document.body.classList.add('in-vr');
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
-  outsideCamera.setAttribute('camera', 'active', true);
+  normalCamera.setAttribute('camera', 'active', true);
   document.body.classList.remove('in-vr');
 }, false); 
   
