@@ -29,9 +29,6 @@ main {
   grid-gap: 10px;
   padding-top: 10px;
 }
-div {
-  padding-top: 15px;
-}
 img {
   border: 1px solid white;
   width: 100%;

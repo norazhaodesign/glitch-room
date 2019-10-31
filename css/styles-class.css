@@ -14,6 +14,9 @@
   color: white;
   background-color: transparent;
 }
+.research-portfolio div {
+  padding-top: 15px;
+}
 /*use container to have text shown on top of picture*/
 .image-container {
   position: relative;
