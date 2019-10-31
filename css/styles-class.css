@@ -31,7 +31,7 @@
 .verticalCenter {
   z-index: 1;
   position: fixed;
-  top: 55%;
+  top: 57%;
   transform: translateY(-50%);
   margin-left: 10px;
 }
