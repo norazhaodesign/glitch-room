@@ -127,7 +127,7 @@
           style="margin-top: 30px;
                  max-width: 400px;">Enter VR</button>
     </a>
-    <div style="height: 120px;">
+    <div style="height: 125px;">
     </div>
   </div>
 </main>
@@ -138,11 +138,12 @@
 
 <!--aframe--------------------------------------------------------->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
-  <a-entity id="cameraOut" 
-            camera look-controls wasd-controls 
-            position="-10 0 30"></a-entity>
-  <a-entity id="cameraVR" 
-            camera look-controls wasd-controls 
+  <a-entity id="outsideCamera" 
+            camera look-controls
+            position="-10 0 30"
+            rotation="0 0 0"></a-entity>
+  <a-entity id="vrCamera" 
+            camera look-controls
             position="0 0 0"></a-entity>
   
   <a-box id="object1"
@@ -193,13 +194,13 @@
 <script type="text/javascript">
 // move camera location to (0,0,0) when entering vr
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
-  cameraVR.setAttribute('camera', 'active', true);
+  vrCamera.setAttribute('camera', 'active', true);
   document.body.classList.add('in-vr');
 }, false);
 
 // move camera location back outside when exiting vr
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
-  cameraOut.setAttribute('camera', 'active', true);
+  outsideCamera.setAttribute('camera', 'active', true);
   document.body.classList.remove('in-vr');
 }, false);
 
