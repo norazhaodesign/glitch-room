@@ -9,8 +9,7 @@
 <!--aframe--------------------------------------------------------->
 <a-scene>
   <a-camera id="camera" 
-            position="0 0 0"> 
-  </a-camera>
+            position="0 0 0"> </a-camera>
   <a-box id="object1" 
          position="0 0 0" 
          height="2" 
@@ -24,8 +23,7 @@
                               dir: reverse;
                               dur: 200000;
                               loop: true;
-                              easing: linear;"> 
-  </a-box>
+                              easing: linear;"> </a-box>
   <a-box id="object2" 
          position="0 0 0" 
          height="2" 
@@ -39,8 +37,7 @@
                               dir: reverse;
                               dur: 200000;
                               loop: true;
-                              easing: linear;"> 
-  </a-box>
+                              easing: linear;"> </a-box>
   <a-box id="object3" 
          position="0 0 0" 
          height="2" 
@@ -54,9 +51,13 @@
                               dir: reverse;
                               dur: 200000;
                               loop: true;
-                              easing: linear;"> 
-  </a-box>
+                              easing: linear;"> </a-box>
 </a-scene>
-  <script>document.querySelector('a-scene').enterVR();</script>
+<script>
+
+if(window.innerWidth == screen.width && window.innerHeight == screen.height) {
+  document.querySelector('a-scene').enterVR();
+}
+</script>
 </body>
 </html>
