@@ -112,7 +112,7 @@
     display: none;
   }
 }
-@media screen and (min-width:650px) and (max-width: 810px) {
+@media screen and (min-width: 650px) and (max-width: 1000px) {
   .gridxto1 {
     grid-template-columns: 1fr 1fr;
   }
