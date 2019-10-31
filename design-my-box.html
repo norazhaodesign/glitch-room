@@ -196,11 +196,23 @@
 <script type="text/javascript">
 // change active camera when entering and exit vr
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
-  vrCamera.setAttribute('camera', 'active', true);
-  outsideCamera.setAttribute('camera', 'active', false);
+//  vrCamera.setAttribute('camera', 'active', true);
+//  outsideCamera.setAttribute('camera', 'active', false);
+    outsideCamera.setAttribute('position', {x: 0, y: 0, z: 0});
+  outsideCamera.setAttribute('look-controls', true);
+
+  document.body.classList.add('in-vr');
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
-  outsideCamera.setAttribute('camera', 'active', true);
+//  outsideCamera.setAttribute('camera', 'active', true);
+//  vrCamera.setAttribute('camera', 'active', false);
+  
+      outsideCamera.setAttribute('position', {x: -10, y: 0, z: 30});
+  outsideCamera.setAttribute('look-controls', false);
+
+  
+  
+  document.body.classList.remove('in-vr');
 }, false);
   
   
