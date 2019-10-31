@@ -29,48 +29,60 @@
         </div>
         <a id="iframeDestination1"
            href="design-my-box.html">
-        <button style="width: 100%; margin-top: 10px;">Design My Cube</button>
+        <button style="width: 100%; margin-top: 10px;">Design My Box</button>
         </a>
       </div>
       <!--obj sphere-->
       <div>
-        <div class="iframe-holder-square">
+        <div id="iframeDiv2"
+             class="iframe-holder-square">
           <iframe src="experiment/geometry-2-sphere.html"> </iframe>
         </div>
-        <a href="#">
+        <a id="iframeDestination2"
+           href="#">
         <button style="width: 100%; margin-top: 10px;">Design My Sphere</button>
         </a>
       </div>
       <!--obj cone-->
       <div>
-        <div class="iframe-holder-square">
+        <div id="iframeDiv3"
+             class="iframe-holder-square">
           <iframe src="experiment/geometry-3-cone.html"> </iframe>
         </div>
-        <a href="#">
+        <a id="iframeDestination3"
+           href="#">
         <button style="width: 100%; margin-top: 10px;">Design My Cone</button>
         </a>
       </div>
       <!--obj icosahedron-->
       <div>
-        <div class="iframe-holder-square">
+        <div id="iframeDiv4"
+             class="iframe-holder-square">
           <iframe src="experiment/geometry-4-icosahedron.html"> </iframe>
         </div>
-        <a href="#">
+        <a id="iframeDestination4"
+           href="#">
         <button style="width: 100%; margin-top: 10px;">Design My Icosahedron</button>
         </a>
       </div>
     </div>
   </div>
 </main>
-  
-  
-  <script>   
-// open full screen page when clicking iframe    
+<script>   
+// open full screen desatination page when clicking iframe    
 iframeDiv1.addEventListener("click", () => {
   window.location.href = document.getElementById("iframeDestination1").href;
 }, false);
+iframeDiv2.addEventListener("click", () => {
+  window.location.href = document.getElementById("iframeDestination2").href;
+}, false);
+iframeDiv3.addEventListener("click", () => {
+  window.location.href = document.getElementById("iframeDestination3").href;
+}, false);
+iframeDiv4.addEventListener("click", () => {
+  window.location.href = document.getElementById("iframeDestination4").href;
+}, false);
     
 </script>
-
 </body>
 </html>
