@@ -1,98 +1,64 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Box 2</title>
-  <script src="../js/aframe.min.js"></script>
+<meta charset="utf-8">
+<title>Box 2</title>
+<script src="../js/aframe.min.js"></script>
 </head>
 <body>
-  <a-scene>
-    <!-- background -->
-    <a-sky color="#FFF"></a-sky>
-
-    <!-- camera -->
-    <a-camera position="0 0 0"></a-camera>
-
-      <!-- geometry -->
-      <a-box
-        height="10"
-        width="10"
-        depth="10"
-        side="double"
-        opacity="0.5"
-        animation__rotation="
-          property: rotation;
-          from: 0 0 0;
-          to: -0.1 0 -0.1;
-          dir: alternate;
-          dur: 510000;
-          loop: true;
-          easing: linear;"
-        animation__color="
-          property: components.material.material.color;
-          type: color;
-          from: green;
-          to: blue;
-          dir: alternate;
-          dur: 4000;
-          loop: true;
-          easing: linear;"
-        ></a-box>
-
-        <!-- geometry -->
-        <a-box
-          height="10"
-          width="10"
-          depth="10"
-          side="double"
-          opacity="0.5"
-          animation__rotation="
-            property: rotation;
-            from: 0 0 0;
-            to: -0.1 0 0;
-            dir: alternate;
-            dur: 510000;
-            loop: true;
-            easing: linear;"
-          animation__color="
-            property: components.material.material.color;
-            type: color;
-            from: blue;
-            to: yellow;
-            dir: alternate;
-            dur: 3000;
-            loop: true;
-            easing: linear;"
-          ></a-box>
-
-          <!-- geometry -->
-          <a-box
-            height="10"
-            width="10"
-            depth="10"
-            side="double"
-            opacity="0.5"
-            animation__rotation="
-              property: rotation;
-              from: 0 0 0;
-              to: 0 0 -0.1;
-              dir: alternate;
-              dur: 510000;
-              loop: true;
-              easing: linear;"
-            animation__color="
-              property: components.material.material.color;
-              type: color;
-              from: yellow;
-              to: red;
-              dir: alternate;
-              dur: 5000;
-              loop: true;
-              easing: linear;"
-            ></a-box>
-
-  </a-scene>
-  <script>
-  </script>
+<!--aframe--------------------------------------------------------->
+<a-scene>
+  <a-camera id="camera" 
+            position="0 0 0"> 
+  </a-camera>
+  <a-box id="object1" 
+         position="0 0 0" 
+         height="2" 
+         width="2" 
+         depth="100" 
+         side="double" 
+         material="color: #ff0000" 
+         animation__rotation="property: rotation;
+                              from: 0 360 0;
+                              to: 0 0 360;
+                              dir: reverse;
+                              dur: 2000000;
+                              loop: true;
+                              easing: linear;" 
+         geometry=""> 
+  </a-box>
+  <a-box id="object2" 
+         position="0 0 0" 
+         height="2" 
+         width="2" 
+         depth="100" 
+         side="double" 
+         material="color: #00ff00"
+         animation__rotation="property: rotation;
+                              from: 0 359.99 0;
+                              to: 0 0 359.99;
+                              dir: reverse;
+                              dur: 2000000;
+                              loop: true;
+                              easing: linear;" 
+         geometry=""> 
+  </a-box>
+  <a-box id="object3" 
+         position="0 0 0" 
+         height="2" 
+         width="2" 
+         depth="100" 
+         side="double" 
+         material="color: #0000ff" 
+         animation__rotation="property: rotation;
+                              from: -0.001 360 0;
+                              to: -0.001 0 360;
+                              dir: reverse;
+                              dur: 2000000;
+                              loop: true;
+                              easing: linear;" 
+         geometry=""> 
+  </a-box>
+</a-scene>
 </body>
 </html>
