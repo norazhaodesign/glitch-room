@@ -24,7 +24,8 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 7px;
                 width: 100%;
-                max-width: 400px;">
+                max-width: 400px;
+                margin-top: 12px;">
       <div class="input-color-container">
         <input id="colorPicker1"
              type="color"
@@ -44,15 +45,14 @@
              class="input-color">
       </div>
     </div>
-    <br>
     <button id="genrateRandomColorSet"
-            style="max-width: 400px;">Generate Random Colours</button>
+            style="max-width: 400px;
+                   margin-top: 12px;">Generate Random Colours</button>
   </div>
   
   <!--scale-->
   <div>
     <h2>Set Scale</h2>
-    <!--size-->
     <label for="sliderScale">Scale:</label>
     <output id="displayScale">1</output>
     <input id="sliderScale"
@@ -62,9 +62,12 @@
            max="5"
            step="0.01"
            oninput="displayScale.value = sliderScale.value">
-    <br>
-    <!--height-->
+  </div>
+  
+  <!--shape-->
+  <div>
     <h2>Change Shape</h2>
+    <!--height-->
     <label for="sliderSize1">Height:</label>
     <output id="displaySize1">1</output>
     <input id="sliderSize1"
@@ -116,10 +119,10 @@
   <!--enter vr button--> 
   <a id="myEnterVRButton" href="#">
   <button id="VRButton"
-          style="margin-top: 40px;
+          style="margin-top: 30px;
                  max-width: 400px;">Enter VR</button>
   </a>
-  <div style="height: 140px;">
+  <div style="height: 120px;">
   </div>
 </div>
 
