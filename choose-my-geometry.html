@@ -21,10 +21,14 @@
     <div class="grid4 gridxto1">
       <!--obj cube-->
       <div>
-        <div class="iframe-holder-square">
+        <div id="iframeDiv1"
+             class="iframe-holder-square">
           <iframe src="experiment/geometry-1-box.html"> </iframe>
+          <div class="frame-dummy">
+          </div>
         </div>
-        <a href="design-my-geometry.html">
+        <a id="iframeDestination1"
+           href="design-my-box.html">
         <button style="width: 100%; margin-top: 10px;">Design My Cube</button>
         </a>
       </div>
@@ -58,5 +62,15 @@
     </div>
   </div>
 </main>
+  
+  
+  <script>   
+// open full screen page when clicking iframe    
+iframeDiv1.addEventListener("click", () => {
+  window.location.href = document.getElementById("iframeDestination1").href;
+}, false);
+    
+</script>
+
 </body>
 </html>
