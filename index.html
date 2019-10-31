@@ -54,20 +54,16 @@
   <div class="desktopOnly">
   </div>
   <!--main column-->
-  
   <div>
+
     <nav style="z-index: 1; 
                   position: relative; 
                   margin-left: 10px;
                   margin-top: 10px;"> 
-      <span id="navToggleIcon"
-            style="font-size: 40px"> &#9776; </span>
-      <ul id="navUl">
-        <li><a href="#" class="active">Practical Resolution.</a></li>
-        <li><a href="#">Critical Rationale.</a></li>
-        <li><a href="#">Critical Context Paper.</a></li>
-        <li><a href="research-portfolio.html">Research Portfolio.</a></li>
-      </ul>
+        <a href="#" class="active">Practical Resolution.</a>
+        <a href="#">Critical Rationale.</a>
+        <a href="#">Critical Context Paper.</a>
+        <a href="research-portfolio.html">Research Portfolio.</a>
     </nav>
     <div class="verticalCenter">
       <h1>Glitch Room</h1>
@@ -138,11 +134,5 @@
               easing: linear;"> </a-box>
   </a-box>
 </a-scene>
-<script>
-document.getElementById("navToggleIcon").addEventListener("click", () => {
-  document.getElementById("navUl").classList.toggle("display");
-  document.getElementById("navUl").style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-});
-</script>
 </body>
 </html>

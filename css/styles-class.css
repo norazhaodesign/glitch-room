@@ -31,7 +31,7 @@
 .verticalCenter {
   z-index: 1;
   position: fixed;
-  top: 57%;
+  top: 53%;
   transform: translateY(-50%);
   margin-left: 10px;
 }
@@ -120,6 +120,12 @@
 @media screen and (min-width: 650px) and (max-width: 1000px) {
   .gridxto1 {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav {
+    visibility: hidden;
   }
 }
 
