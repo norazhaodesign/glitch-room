@@ -1,20 +1,14 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Glitch Room</title>
-  <script src="../js/aframe.min.js"></script>
+<meta charset="utf-8">
+<title>Glitch Room</title>
+<script src="../js/aframe.min.js"></script>
 </head>
 <body>
-  <a-scene>
-    <!-- background -->
-    <a-sky color="#FFF"></a-sky>
-
-    <!-- camera -->
-    <a-camera position="0 0 0"></a-camera>
-
-    <!-- geometry -->
-    <a-sphere
+<a-scene vr-mode-ui="enabled: false">
+  <a-camera position="0 0 0"></a-camera>
+  <a-sphere
       radius="5"
       segments-height="32"
       segments-width="36"
@@ -37,9 +31,9 @@
         loop: true;
         easing: linear;"
       ></a-sphere>
-
-      <!-- geometry -->
-      <a-sphere
+  
+  <!-- geometry -->
+  <a-sphere
         radius="5"
         segments-height="28"
         segments-width="38"
@@ -62,9 +56,9 @@
           loop: true;
           easing: linear;"
         ></a-sphere>
-
-      <!-- geometry -->
-      <a-sphere
+  
+  <!-- geometry -->
+  <a-sphere
         radius="5"
         segments-height="42"
         segments-width="32"
@@ -87,9 +81,8 @@
           loop: true;
           easing: linear;"
         ></a-sphere>
-
-  </a-scene>
-  <script>
+</a-scene>
+<script>
   </script>
 </body>
 </html>
