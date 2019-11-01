@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Glitch Room</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/styles-class.css">
+<script src="js/aframe.min.js"></script>
+</head>
+
+<body>
+<!--controls------------------------------------------------------------------------------------------------------------------>
+<main class="desktop2ColMobile1Col">
+  <!--placeholder-->
+  <div class="hideOnMobile">
+  </div>
+  <!--main column-->
+  <div id="htmlContents"
+       style="z-index: 1;
+            position: relative;
+            overflow: auto;
+            height: 100vh;
+            margin: 0 20px 0 10px;">
+    <!--back and home buttons-->
+    <div style="margin-top: 5px;
+            margin-right: 10px;"
+     class="backButtons">
+      <a style="display:inline-block;"
+     href="choose-my-geometry.html">
+      <button style="margin: 0 0 0 0;
+                   width: 50px;">&lt;&lt;</button>
+      </a>
+      <a style="display:inline-block;"
+     href="index.html">
+      <button style="margin: 10px 0 0 -4px;
+                   width: 80px;">Home</button>
+      </a>
+    </div>
+    <!--title (desktop only)-->
+    <h1 class="desktopOnly">Design My Box</h1>
+    <div class="desktopOnly" style="padding-top: 10px;">
+    </div>
+    <!--color-->
+    <div>
+      <h2>Select Colours</h2>
+      <div style="display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 7px;
+                width: 100%;
+                max-width: 400px;
+                margin-top: 12px;">
+        <div class="input-color-container">
+          <input id="colorPicker1"
+             type="color"
+             value="#ff0000"
+             class="input-color">
+        </div>
+        <div class="input-color-container">
+          <input id="colorPicker2"
+             type="color"
+             value="#00ff00"
+             class="input-color">
+        </div>
+        <div class="input-color-container">
+          <input id="colorPicker3"
+             type="color"
+             value="#0000ff"
+             class="input-color">
+        </div>
+      </div>
+      <button id="genrateRandomColorSet"
+            style="max-width: 400px;
+                   margin-top: 12px;">Generate Random Colours</button>
+    </div>
+
+    <!--scale-->
+    <div>
+      <h2>Set Scale</h2>
+      <label for="sliderScale">Scale:</label>
+      <output id="displayScale">1</output>
+      <input id="sliderScale"
+           type="range"
+           value="1"
+           min="0.1"
+           max="5"
+           step="0.01"
+           oninput="displayScale.value = sliderScale.value">
+    </div>
+
+    <!--shape-->
+    <div>
+      <h2>Change Segments</h2>
+      <!--segments height-->
+      <label for="sliderSegmentHeight">Segments Height:</label>
+      <output id="displaySegments1">10</output>
+      <input id="sliderSegmentHeight"
+           type="range"
+           value="10"
+           min="1"
+           max="50"
+           step="1"
+           oninput="displaySegments1.value = sliderSegmentHeight.value">
+      <br>
+      <!--segments width-->
+      <label for="sliderSegmentsWidth">Segments Width:</label>
+      <output id="displaySegments2">20</output>
+      <input id="sliderSegmentsWidth"
+           type="range"
+           value="18"
+           min="1"
+           max="100"
+           step="1"
+           oninput="displaySegments2.value = sliderSegmentsWidth.value">
+   </div>
+   <!--open up-->
+   <div>
+      <h2>Open It Up</h2>
+      <!---->
+      <label for="sliderPhiLength">Depth:</label>
+      <output id="displayValue1">360</output>
+      <input id="sliderPhiLength"
+           type="range"
+           value="180"
+           min="1"
+           max="360"
+           step="1"
+           oninput="displayValue1.value = sliderPhiLength.value">
+       <br>
+       <label for="sliderThetaLength">Depth:</label>
+       <output id="displayValue2">180</output>
+       <input id="sliderThetaLength"
+            type="range"
+            value="1"
+            min="1"
+            max="180"
+            step="1"
+            oninput="displayValue2.value = sliderThetaLength.value">
+      <br>
+      <label for="sliderThetaStart">Depth:</label>
+      <output id="displayValue3">0</output>
+      <input id="sliderThetaStart"
+           type="range"
+           value="0"
+           min="0"
+           max="180"
+           step="1"
+           oninput="displayValue3.value = sliderThetaStart.value">
+    </div>
+
+    <!--movement-->
+    <div>
+      <h2>Adjust Movement</h2>
+      <!--speed-->
+      <label for="sliderSpeed">Speed:</label>
+      <output id="displaySpeed">1</output>
+      <input id="sliderSpeed"
+           type="range"
+           value="1"
+           min="0.1"
+           max="5"
+           step="0.01"
+           oninput="displaySpeed.value = sliderSpeed.value">
+    </div>
+
+    <!--enter vr button-->
+    <a id="myEnterVRButton" href="#">
+    <button style="margin-top: 30px;
+                   max-width: 400px;">Enter VR</button>
+    </a>
+    <div style="height: 125px;">
+    </div>
+  </div>
+</main>
+
+<!--aframe------------------------------------------------------------------------------------------------------------------>
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
+  <!--the combination of entity and camera is really weird but the only way for it to work on ios-->
+  <a-entity id="normalCamera"
+            camera
+            position="-10 0 30"></a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false"
+            ></a-camera>
+  <a-sphere id="object1"
+            wireframe="false"
+            position="0 0 0"
+            radius="15"
+            segments-height="10"
+            segments-width="20"
+            phi-length="360"
+            theta-length="180"
+            theta-start="0"
+            side="double"
+            material="color: #ff0000"
+            animation__rotation="property: rotation;
+                              from: 0 360 0;
+                              to: 0 0 360;
+                              dir: reverse;
+                              dur: 35000;
+                              loop: true;
+                              easing: linear;">
+  </a-sphere>
+  <a-sphere id="object2"
+         position="0 0 0"
+         radius="15"
+         segments-height="10"
+         segments-width="20"
+         phi-length="360"
+         theta-length="180"
+         theta-start="0"
+         side="double"
+         material="color: #00ff00"
+         animation__rotation="property: rotation;
+                              from: 0 359.99 0;
+                              to: 0 0 359.99;
+                              dir: reverse;
+                              dur: 35000;
+                              loop: true;
+                              easing: linear;">
+  </a-sphere>
+  <a-sphere id="object3"
+         position="0 0 0"
+         radius="15"
+         segments-height="10"
+         segments-width="20"
+         phi-length="360"
+         theta-length="180"
+         theta-start="0"
+         side="double"
+         material="color: #0000ff"
+         animation__rotation="property: rotation;
+                              from: -0.001 360 0;
+                              to: -0.001 0 360;
+                              dir: reverse;
+                              dur: 35000;
+                              loop: true;
+                              easing: linear;">
+  </a-sphere>
+</a-scene>
+
+<!--javascript------------------------------------------------------------------------------------------------------------------>
+<script type="text/javascript">
+// change active camera when entering and exit vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  vrCamera.setAttribute('camera', 'active', true);
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  normalCamera.setAttribute('camera', 'active', true);
+  document.body.classList.remove('in-vr');
+}, false);
+
+
+// use color picker input to change object color
+colorPicker1.addEventListener('input', () => {
+  object1.setAttribute('material', {color: event.target.value});
+  console.log(colorPicker1.value)
+}, false);
+colorPicker2.addEventListener('input', () => {
+  object2.setAttribute('material', {color: event.target.value});
+}, false);
+colorPicker3.addEventListener('input', () => {
+  object3.setAttribute('material', {color: event.target.value});
+}, false);
+
+// press button to apply random colors on the object
+genrateRandomColorSet.addEventListener('click', () => {
+  var color1 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join(''); // generate random hex color
+  // or this but sometimes generate less digits = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+  object1.setAttribute('material', {color: color1}); // apply color on object
+  colorPicker1.value = color1; // change color picker value
+
+  var color2 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+  object2.setAttribute('material', {color: color2});
+  colorPicker2.value = color2;
+
+  var color3 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+  object3.setAttribute('material', {color: color3});
+  colorPicker3.value = color3;
+
+  console.log(color1, color2, color3);
+  console.log(colorPicker1.value, colorPicker2.value, colorPicker3.value);
+}, false);
+
+// use silder to change sphere radius
+sliderScale.addEventListener('input', () => {
+  object1.setAttribute('radius', sliderScale.value * 15);
+  object2.setAttribute('radius', sliderScale.value * 15);
+  object3.setAttribute('radius', sliderScale.value * 15);
+}, false);
+
+// use silder to change sphere segments
+sliderSegmentHeight.addEventListener('input', () => {
+  object1.setAttribute('segments-height', sliderSegmentHeight.value);
+  object2.setAttribute('segments-height', sliderSegmentHeight.value);
+  object3.setAttribute('segments-height', sliderSegmentHeight.value);
+}, false);
+
+sliderSegmentsWidth.addEventListener('input', () => {
+  object1.setAttribute('segments-width', sliderSegmentsWidth.value);
+  object2.setAttribute('segments-width', sliderSegmentsWidth.value);
+  object3.setAttribute('segments-width', sliderSegmentsWidth.value);
+}, false);
+
+// phi-length
+sliderPhiLength.addEventListener('input', () => {
+  object1.setAttribute('phi-length', sliderPhiLength.value);
+  object2.setAttribute('phi-length', sliderPhiLength.value);
+  object3.setAttribute('phi-length', sliderPhiLength.value);
+}, false);
+
+// theta-length
+sliderThetaLength.addEventListener('input', () => {
+  object1.setAttribute('theta-length', sliderThetaLength.value);
+  object2.setAttribute('theta-length', sliderThetaLength.value);
+  object3.setAttribute('theta-length', sliderThetaLength.value);
+}, false);
+
+// theta-start
+sliderThetaStart.addEventListener('input', () => {
+  object1.setAttribute('theta-start', sliderThetaStart.value);
+  object2.setAttribute('theta-start', sliderThetaStart.value);
+  object3.setAttribute('theta-start', sliderThetaStart.value);
+}, false);
+
+
+
+
+
+
+
+// use silder to change movement speed
+sliderSpeed.addEventListener('input', () => {
+  object1.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+  object2.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+  object3.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+}, false);
+
+
+
+
+
+
+</script>
+</body>
+</html>
