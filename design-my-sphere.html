@@ -92,10 +92,10 @@
       <h2>Change Segments</h2>
       <!--segments height-->
       <label for="sliderSegmentHeight">Segments Height:</label>
-      <output id="displaySegments1">10</output>
+      <output id="displaySegments1">18</output>
       <input id="sliderSegmentHeight"
            type="range"
-           value="10"
+           value="18"
            min="1"
            max="50"
            step="1"
@@ -103,10 +103,10 @@
       <br>
       <!--segments width-->
       <label for="sliderSegmentsWidth">Segments Width:</label>
-      <output id="displaySegments2">20</output>
+      <output id="displaySegments2">36</output>
       <input id="sliderSegmentsWidth"
            type="range"
-           value="18"
+           value="36"
            min="1"
            max="100"
            step="1"
@@ -116,27 +116,17 @@
    <div>
       <h2>Open It Up</h2>
       <!---->
-      <label for="sliderPhiLength">Depth:</label>
-      <output id="displayValue1">360</output>
-      <input id="sliderPhiLength"
-           type="range"
-           value="180"
-           min="1"
-           max="360"
-           step="1"
-           oninput="displayValue1.value = sliderPhiLength.value">
-       <br>
-       <label for="sliderThetaLength">Depth:</label>
+       <label for="sliderThetaLength">Theta Length:</label>
        <output id="displayValue2">180</output>
        <input id="sliderThetaLength"
             type="range"
-            value="1"
+            value="180"
             min="1"
             max="180"
             step="1"
             oninput="displayValue2.value = sliderThetaLength.value">
       <br>
-      <label for="sliderThetaStart">Depth:</label>
+      <label for="sliderThetaStart">Theta Start:</label>
       <output id="displayValue3">0</output>
       <input id="sliderThetaStart"
            type="range"
@@ -145,6 +135,26 @@
            max="180"
            step="1"
            oninput="displayValue3.value = sliderThetaStart.value">
+     <br>
+     <label for="sliderPhiLength">Phi Length:</label>
+     <output id="displayValue1">360</output>
+     <input id="sliderPhiLength"
+          type="range"
+          value="360"
+          min="1"
+          max="360"
+          step="1"
+          oninput="displayValue1.value = sliderPhiLength.value">
+      <br>
+      <label for="sliderPhiStart">Phi Start:</label>
+      <output id="displayValue4">0</output>
+      <input id="sliderPhiStart"
+           type="range"
+           value="0"
+           min="0"
+           max="360"
+           step="1"
+           oninput="displayValue4.value = sliderPhiStart.value">
     </div>
 
     <!--movement-->
@@ -186,11 +196,12 @@
             wireframe="false"
             position="0 0 0"
             radius="15"
-            segments-height="10"
-            segments-width="20"
-            phi-length="360"
+            segments-height="18"
+            segments-width="36"
             theta-length="180"
             theta-start="0"
+            phi-length="360"
+            phi-start="0"
             side="double"
             material="color: #ff0000"
             animation__rotation="property: rotation;
@@ -204,11 +215,12 @@
   <a-sphere id="object2"
          position="0 0 0"
          radius="15"
-         segments-height="10"
-         segments-width="20"
-         phi-length="360"
+         segments-height="18"
+         segments-width="36"
          theta-length="180"
          theta-start="0"
+         phi-length="360"
+         phi-start="0"
          side="double"
          material="color: #00ff00"
          animation__rotation="property: rotation;
@@ -222,11 +234,12 @@
   <a-sphere id="object3"
          position="0 0 0"
          radius="15"
-         segments-height="10"
-         segments-width="20"
-         phi-length="360"
+         segments-height="18"
+         segments-width="36"
          theta-length="180"
          theta-start="0"
+         phi-length="360"
+         phi-start="0"
          side="double"
          material="color: #0000ff"
          animation__rotation="property: rotation;
@@ -286,14 +299,14 @@ genrateRandomColorSet.addEventListener('click', () => {
   console.log(colorPicker1.value, colorPicker2.value, colorPicker3.value);
 }, false);
 
-// use silder to change sphere radius
+// radius
 sliderScale.addEventListener('input', () => {
   object1.setAttribute('radius', sliderScale.value * 15);
   object2.setAttribute('radius', sliderScale.value * 15);
   object3.setAttribute('radius', sliderScale.value * 15);
 }, false);
 
-// use silder to change sphere segments
+// segments
 sliderSegmentHeight.addEventListener('input', () => {
   object1.setAttribute('segments-height', sliderSegmentHeight.value);
   object2.setAttribute('segments-height', sliderSegmentHeight.value);
@@ -306,34 +319,33 @@ sliderSegmentsWidth.addEventListener('input', () => {
   object3.setAttribute('segments-width', sliderSegmentsWidth.value);
 }, false);
 
-// phi-length
-sliderPhiLength.addEventListener('input', () => {
-  object1.setAttribute('phi-length', sliderPhiLength.value);
-  object2.setAttribute('phi-length', sliderPhiLength.value);
-  object3.setAttribute('phi-length', sliderPhiLength.value);
-}, false);
-
 // theta-length
 sliderThetaLength.addEventListener('input', () => {
   object1.setAttribute('theta-length', sliderThetaLength.value);
   object2.setAttribute('theta-length', sliderThetaLength.value);
   object3.setAttribute('theta-length', sliderThetaLength.value);
 }, false);
-
-// theta-start
 sliderThetaStart.addEventListener('input', () => {
   object1.setAttribute('theta-start', sliderThetaStart.value);
   object2.setAttribute('theta-start', sliderThetaStart.value);
   object3.setAttribute('theta-start', sliderThetaStart.value);
 }, false);
 
+// phi
+sliderPhiLength.addEventListener('input', () => {
+  object1.setAttribute('phi-length', sliderPhiLength.value);
+  object2.setAttribute('phi-length', sliderPhiLength.value);
+  object3.setAttribute('phi-length', sliderPhiLength.value);
+}, false);
+
+sliderPhiStart.addEventListener('input', () => {
+  object1.setAttribute('phi-start', sliderPhiStart.value);
+  object2.setAttribute('phi-start', sliderPhiStart.value);
+  object3.setAttribute('phi-start', sliderPhiStart.value);
+}, false);
 
 
-
-
-
-
-// use silder to change movement speed
+// speed
 sliderSpeed.addEventListener('input', () => {
   object1.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
   object2.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
