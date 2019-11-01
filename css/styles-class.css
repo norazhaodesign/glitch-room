@@ -32,7 +32,7 @@ div.image-container {
 .verticalCenter {
   z-index: 1;
   position: fixed;
-  top: 53%;
+  top: 50%;
   transform: translateY(-50%);
   margin-left: 10px;
 }
@@ -122,32 +122,32 @@ div.image-container {
   .hideOnMobile {
     display: none;
   }
-  nav {
-    visibility: hidden;
+}
+/*ipad*/
+@media screen and (min-width: 500px) and (max-width: 950px) {
+  .gridxto1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*mobile and ipad*/
+@media screen and (max-width: 950px) {
+  .desktopOnly {
+    display: none;
   }
   .h1ToH2OnMobile {
     font-size: 2em;
     margin-top: 20px;
   }
 }
-/*ipad*/
-@media screen and (min-width: 500px) and (max-width: 1000px) {
-  .gridxto1 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-/*mobile and ipad*/
-@media screen and (max-width: 1000px) {
-  .desktopOnly {
-    display: none;
-  }
-}
 /*desktop*/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 950px) {
   .backButtons {
     position: fixed;
     display: ;
     right: 10px;
+  }
+  .desktop2ColMobile1Col{
+    margin-top: 30px;
   }
 }
 

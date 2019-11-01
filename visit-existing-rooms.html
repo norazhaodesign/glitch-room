@@ -11,50 +11,28 @@
 
 <body>
 <!--main layout-->
-<main class="desktop2ColMobile1Col"> 
+<main class="desktop2ColMobile1Col">
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
   <!--main column-->
   <div style="z-index: 1;">
-    
-<div class="backButtons">
-  <a style="display:inline-block;" 
-     href="../visit-existing-rooms.html">
-    <button style="margin: 0 0 0 0;
-                   width: 50px;">&lt;&lt;</button>
-  </a>
-  <a style="display:inline-block;" 
-     href="../index.html">
-    <button style="margin: 10px 0 0 -4px;
-                   width: 80px;">Home</button>
-  </a>
-</div>
-
-
-    
-    
-    <h1 class="h1ToH2OnMobile">Visit The Rooms</h1>
-    <div style="padding-top: 20px;"></div>
-    <div class="desktopOnly" style="padding-top: 20px;"></div>
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <!--back and home buttons-->
+    <div style="margin-top: 5px;
+            margin-right: 10px;"
+     class="backButtons">
+      <a style="display:inline-block;" 
+     href="index.html">
+      <button style="margin: 10px 0 0 0;
+                     width: 110px;">&lt;&lt; Home</button>
+      </a>
+    </div>
+    <!--title-->
+    <h1 class="h1ToH2OnMobile">Visit A Room</h1>
+    <div style="padding-top: 20px;">
+    </div>
+    <div class="desktopOnly" style="padding-top: 10px;">
+    </div>
     <!--iframe objects container-->
     <div class="grid3 gridxto1">
       
@@ -63,7 +41,8 @@
         <div id="iframeDiv1"
              class="iframe-holder-square">
           <iframe id="iframe1"
-                  src="experiment/room-1-sphere.html"> </iframe>
+                  src="experiment/room-1-sphere.html">
+          </iframe>
           <div class="frame-dummy">
           </div>
         </div>
@@ -77,7 +56,8 @@
         <div id="iframeDiv2"
              class="iframe-holder-square">
           <iframe id="iframe2"
-                  src="experiment/room-2-cone.html"> </iframe>
+                  src="experiment/room-2-cone.html">
+          </iframe>
           <div class="frame-dummy">
           </div>
         </div>
@@ -91,7 +71,8 @@
         <div id="iframeDiv3"
              class="iframe-holder-square">
           <iframe id="iframe3"
-                  src="experiment/room-3-box.html"> </iframe>
+                  src="experiment/room-3-box.html">
+          </iframe>
           <div class="frame-dummy">
           </div>
         </div>
@@ -105,7 +86,8 @@
         <div id="iframeDiv4"
              class="iframe-holder-square">
           <iframe id="iframe4"
-                  src="experiment/room-4-box.html"> </iframe>
+                  src="experiment/room-4-box.html">
+          </iframe>
           <div class="frame-dummy">
           </div>
         </div>
@@ -118,7 +100,8 @@
         <div id="iframeDiv5"
              class="iframe-holder-square">
           <iframe id="iframe5"
-                  src="experiment/room-5-octahedron.html"> </iframe>
+                  src="experiment/room-5-octahedron.html">
+          </iframe>
           <div class="frame-dummy">
           </div>
         </div>
@@ -131,7 +114,8 @@
         <div id="iframeDiv6"
              class="iframe-holder-square">
           <iframe id="iframe6"
-                  src="experiment/room-6-octahedron.html"> </iframe>
+                  src="experiment/room-6-octahedron.html">
+          </iframe>
           <div class="frame-dummy">
           </div>
         </div>
@@ -142,7 +126,6 @@
     </div>
   </div>
 </main>
-
 <script>   
 // open full screen page when clicking iframe    
 iframeDiv1.addEventListener("click", () => {
