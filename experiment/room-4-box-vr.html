@@ -8,7 +8,8 @@
 <script src="../js/aframe.min.js"></script>
 </head>
 <body>
-<div style="z-index: 1;
+<div id="htmlContents"
+     style="z-index: 1;
             position: relative;
             margin: 10px 10px 0 10px;">
   <a href="../visit-existing-rooms.html">
@@ -74,12 +75,13 @@
                               easing: linear;">
   </a-box>
 </a-scene>
-<script>
-//document.querySelector('a-scene').enterVR();
-//document.querySelector('a-scene').requestFullscreen();
-//document.querySelector('a-scene').addEventListener('loaded', () => {
-//document.querySelector('a-scene').enterVR();
-//});
+<script type="text/javascript">
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  document.body.classList.remove('in-vr');
+}, false); 
 </script>
 </body>
 </html>
