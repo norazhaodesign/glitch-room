@@ -6,8 +6,7 @@
 <script src="../js/aframe.min.js"></script>
 </head>
 <body>
-<!--aframe--------------------------------------------------------->
-<a-scene>
+<a-scene vr-mode-ui="enabled: false">
   <a-camera id="camera" 
             position="0 0 0"> </a-camera>
   <a-box id="object1" 
@@ -53,10 +52,5 @@
                               loop: true;
                               easing: linear;"> </a-box>
 </a-scene>
-<script>
-//if (window.innerWidth == screen.width && window.innerHeight == screen.height) {
-//  document.querySelector('a-scene').enterVR();
-//}
-</script>
 </body>
 </html>

@@ -6,8 +6,7 @@
 <script src="../js/aframe.min.js"></script>
 </head>
 <body>
-<!--aframe--------------------------------------------------------->
-<a-scene>
+<a-scene  vr-mode-ui="enabled: true">
   <a-camera id="camera" 
             position="0 0 0"> </a-camera>
   <a-box id="object1" 
@@ -55,7 +54,7 @@
 </a-scene>
 <script>
 document.querySelector('a-scene').enterVR();
-  Element.requestFullscreen()
+Element.requestFullscreen();
 </script>
 </body>
 </html>
