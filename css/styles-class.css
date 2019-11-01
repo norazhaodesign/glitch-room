@@ -131,6 +131,9 @@ div.image-container {
 }
 
 @media screen and (max-width: 650px) {
+  nav {
+    visibility: hidden;
+  }
   .resizeOnMobile {
     font-size: 2em;
     margin-top: 20px;
