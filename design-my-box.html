@@ -156,7 +156,7 @@
                               from: 0 360 0;
                               to: 0 0 360;
                               dir: reverse;
-                              dur: 20000;
+                              dur: 35000;
                               loop: true;
                               easing: linear;"> </a-box>
   <a-box id="object2"
@@ -170,7 +170,7 @@
                               from: 0 359.99 0;
                               to: 0 0 359.99;
                               dir: reverse;
-                              dur: 20000;
+                              dur: 35000;
                               loop: true;
                               easing: linear;"> </a-box>
   <a-box id="object3"
@@ -184,7 +184,7 @@
                               from: -0.001 360 0;
                               to: -0.001 0 360;
                               dir: reverse;
-                              dur: 20000;
+                              dur: 35000;
                               loop: true;
                               easing: linear;"> </a-box>
 </a-scene>
@@ -272,9 +272,9 @@ sliderSize3.addEventListener('input', () => {
 
 // use silder to change movement speed
 sliderSpeed.addEventListener('input', () => {
-  object1.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
-  object2.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
-  object3.setAttribute('animation__rotation', {dur: 20000 / sliderSpeed.value});
+  object1.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+  object2.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+  object3.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
 }, false);
 
 
