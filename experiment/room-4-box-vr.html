@@ -7,11 +7,12 @@
 <link rel="stylesheet" type="text/css" href="../css/styles-class.css">
 <script src="../js/aframe.min.js"></script>
 </head>
-<body>
+<body>  
+<!--back and home buttons-->
 <div id="htmlContents"
      style="z-index: 1;
             position: relative;
-            margin: 10px 10px 0 10px;">
+            margin: 5px 10px 0 10px;">
   <a href="../visit-existing-rooms.html">
     <button style="margin: 0 0 0 0;
                    width: 50px;">&lt;&lt;</button>
@@ -25,14 +26,15 @@
                    width: 130px;">Enter VR</button>
   </a>
 </div>
+<!--aframe models-->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-camera id="camera" 
             position="0 0 0">
   </a-camera>
   <a-box id="object1" 
          position="0 0 0" 
-         height="2" 
-         width="2" 
+         height="4" 
+         width="4" 
          depth="100" 
          side="double" 
          material="color: #ff0000" 
@@ -46,8 +48,8 @@
   </a-box>
   <a-box id="object2" 
          position="0 0 0" 
-         height="2" 
-         width="2" 
+         height="4" 
+         width="4" 
          depth="100" 
          side="double" 
          material="color: #00ff00"
@@ -61,8 +63,8 @@
   </a-box>
   <a-box id="object3" 
          position="0 0 0" 
-         height="2" 
-         width="2" 
+         height="4" 
+         width="4" 
          depth="100" 
          side="double" 
          material="color: #0000ff" 
@@ -75,6 +77,7 @@
                               easing: linear;">
   </a-box>
 </a-scene>
+<!--hide buttons in vr-->
 <script type="text/javascript">
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   document.body.classList.add('in-vr');
