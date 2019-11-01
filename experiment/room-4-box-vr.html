@@ -53,8 +53,11 @@
                               easing: linear;"> </a-box>
 </a-scene>
 <script>
+//document.querySelector('a-scene').enterVR();
+//document.querySelector('a-scene').requestFullscreen();
+  document.querySelector('a-scene').addEventListener('loaded', () => {
 document.querySelector('a-scene').enterVR();
-document.querySelector('a-scene').requestFullscreen();
+  });
 </script>
 </body>
 </html>
