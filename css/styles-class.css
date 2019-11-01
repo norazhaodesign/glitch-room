@@ -102,6 +102,11 @@ div.image-container {
   left: 0px; 
   right: 0px;
 }
+.frame-dummy:hover {
+  cursor: pointer;
+}
+
+
 /*hide html contents when entering vr on ios*/
 .in-vr #htmlContents {
   display: none;
