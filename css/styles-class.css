@@ -123,6 +123,7 @@ div.image-container {
     display: none;
   }
 }
+
 @media screen and (min-width: 650px) and (max-width: 1000px) {
   .gridxto1 {
     grid-template-columns: 1fr 1fr;
@@ -130,14 +131,21 @@ div.image-container {
 }
 
 @media screen and (max-width: 650px) {
-  nav {
-    visibility: hidden;
+  .resizeOnMobile {
+    font-size: 2em;
+    margin-top: 20px;
   }
 }
 
 
-
-
-
-
+@media screen and (min-width: 1000px) {
+  .buttonsDiv {
+    position: fixed;
+    display: ;
+    right: 10px;
+  }
+}
+#buttonBack , #buttonHome {
+  display:inline-block;
+}
 
