@@ -115,7 +115,7 @@
    <!--open up-->
    <div>
       <h2>Open It Up</h2>
-      <!---->
+      <!--theta length-->
        <label for="sliderThetaLength">Theta Length:</label>
        <output id="displayValue1">180</output>
        <input id="sliderThetaLength"
@@ -126,6 +126,7 @@
             step="1"
             oninput="displayValue1.value = sliderThetaLength.value">
       <br>
+      <!--theta start-->
       <label for="sliderThetaStart">Theta Start:</label>
       <output id="displayValue2">0</output>
       <input id="sliderThetaStart"
@@ -136,6 +137,7 @@
            step="1"
            oninput="displayValue2.value = sliderThetaStart.value">
      <br>
+     <!--phi length-->
      <label for="sliderPhiLength">Phi Length:</label>
      <output id="displayValue3">360</output>
      <input id="sliderPhiLength"
@@ -146,6 +148,7 @@
           step="1"
           oninput="displayValue3.value = sliderPhiLength.value">
       <br>
+      <!--phi start-->
       <label for="sliderPhiStart">Phi Start:</label>
       <output id="displayValue4">0</output>
       <input id="sliderPhiStart"
@@ -195,7 +198,7 @@
   <a-sphere id="object1"
             wireframe="false"
             position="0 0 0"
-            radius="15"
+            radius="14.9995"
             segments-height="18"
             segments-width="36"
             theta-length="180"
@@ -233,7 +236,7 @@
   </a-sphere>
   <a-sphere id="object3"
          position="0 0 0"
-         radius="15"
+         radius="15.0005"
          segments-height="18"
          segments-width="36"
          theta-length="180"
@@ -301,9 +304,9 @@ genrateRandomColorSet.addEventListener('click', () => {
 
 // radius
 sliderScale.addEventListener('input', () => {
-  object1.setAttribute('radius', sliderScale.value * 15);
+  object1.setAttribute('radius', sliderScale.value * 14.9995);
   object2.setAttribute('radius', sliderScale.value * 15);
-  object3.setAttribute('radius', sliderScale.value * 15);
+  object3.setAttribute('radius', sliderScale.value * 15.0005);
 }, false);
 
 // segments
