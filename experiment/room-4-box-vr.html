@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Box 2</title>
+<script src="../js/aframe.min.js"></script>
+</head>
+<body>
+<!--aframe--------------------------------------------------------->
+<a-scene>
+  <a-camera id="camera" 
+            position="0 0 0"> </a-camera>
+  <a-box id="object1" 
+         position="0 0 0" 
+         height="2" 
+         width="2" 
+         depth="100" 
+         side="double" 
+         material="color: #ff0000" 
+         animation__rotation="property: rotation;
+                              from: 0 360 0;
+                              to: 0 0 360;
+                              dir: reverse;
+                              dur: 200000;
+                              loop: true;
+                              easing: linear;"> </a-box>
+  <a-box id="object2" 
+         position="0 0 0" 
+         height="2" 
+         width="2" 
+         depth="100" 
+         side="double" 
+         material="color: #00ff00"
+         animation__rotation="property: rotation;
+                              from: 0 359.99 0;
+                              to: 0 0 359.99;
+                              dir: reverse;
+                              dur: 200000;
+                              loop: true;
+                              easing: linear;"> </a-box>
+  <a-box id="object3" 
+         position="0 0 0" 
+         height="2" 
+         width="2" 
+         depth="100" 
+         side="double" 
+         material="color: #0000ff" 
+         animation__rotation="property: rotation;
+                              from: -0.001 360 0;
+                              to: -0.001 0 360;
+                              dir: reverse;
+                              dur: 200000;
+                              loop: true;
+                              easing: linear;"> </a-box>
+</a-scene>
+<script>
+document.querySelector('a-scene').enterVR();
+</script>
+</body>
+</html>
