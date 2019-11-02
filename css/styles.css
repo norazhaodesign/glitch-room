@@ -107,8 +107,7 @@ input[type=range]::-webkit-slider-thumb { /*slider handle*/
   appearance: none;
   width: 15px;
   height: 15px;
-
-  z-index: 2;
+  border: 9px solid rgba(0,0,0,0);
   background: #ff00ff;
   cursor: pointer;
 }
