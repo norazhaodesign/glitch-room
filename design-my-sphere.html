@@ -10,7 +10,8 @@
 
 <body>
 <!--controls------------------------------------------------------------------------------------------------------------------>
-<main class="desktop2ColMobile1Col">
+<main class="desktop2ColMobile1Col"
+      style="margin-top: 0;">
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
@@ -22,9 +23,7 @@
             height: 100vh;
             margin: 0 20px 0 10px;">
     <!--back and home buttons-->
-    <div style="margin-top: 5px;
-            margin-right: 10px;"
-     class="backButtons">
+    <div>
       <a style="display:inline-block;"
      href="choose-my-geometry.html">
       <button style="margin: 0 0 0 0;
@@ -35,10 +34,28 @@
       <button style="margin: 10px 0 0 -4px;
                    width: 80px;">Home</button>
       </a>
-    </div>
-    <!--title (desktop only)-->
-    <h1 class="desktopOnly">Design My Box</h1>
-    <div class="desktopOnly" style="padding-top: 10px;">
+      <!--enter vr button-->
+      <a id="myEnterVRButton" href="#">
+      <button style="margin: 10px 0 0 -4px;
+                   max-width: 258px;">Enter VR</button>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      <!--enter vr button-->
+      <a id="myEnterVRButton2" href="#">
+      <button style="margin: 10px 0 0 -4px;
+                   max-width: 258px;">Enter VR</button>
+      </a>
+      
+      
+      
+      
+      
     </div>
     <!--color-->
     <div>
@@ -174,12 +191,6 @@
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
     </div>
-    
-    <!--enter vr button-->
-    <a id="myEnterVRButton" href="#">
-    <button style="margin-top: 30px;
-                   max-width: 400px;">Enter VR</button>
-    </a>
     <div style="height: 125px;">
     </div>
   </div>
@@ -353,6 +364,10 @@ sliderSpeed.addEventListener('input', () => {
   object2.setAttribute('animation', {dur: 50000.2 / sliderSpeed.value});
   object3.setAttribute('animation', {dur: 50000.3 / sliderSpeed.value});
 }, false);
+// click the second enter vr button to trigger the first button
+myEnterVRButton2.addEventListener('click', () => {
+  myEnterVRButton.click();
+})
 </script>
 </body>
 </html>
