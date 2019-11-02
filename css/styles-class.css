@@ -106,7 +106,6 @@ div.image-container {
   cursor: pointer;
 }
 
-
 /*hide html contents when entering vr on ios*/
 .in-vr #htmlContents {
   display: none;
