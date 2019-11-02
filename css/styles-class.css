@@ -111,7 +111,7 @@ div.image-container {
 .in-vr #htmlContents {
   display: none;
 }
-/*mobile media query*/
+/*mobile*/
 @media screen and (max-width: 500px) {
   .desktop2ColMobile1Col {
     grid-template-columns: 1fr;
@@ -134,20 +134,39 @@ div.image-container {
   .desktopOnly {
     display: none;
   }
+}
+/*desktop only*/
+@media screen and (min-width: 950px) {
+  .backButtons {
+    position: absolute;
+    right: 10px;
+  }
+  .desktop2ColMobile1Col{
+    margin-top: 30px;
+  }
+}
+/*class h1ToH2OnMobile*/
+@media screen and (max-width: 500px) {
   .h1ToH2OnMobile {
     font-size: 2em;
     margin-top: 20px;
   }
 }
-/*desktop*/
-@media screen and (min-width: 950px) {
-  .backButtons {
-    position: fixed;
-    display: ;
-    right: 10px;
+@media screen and (min-width: 500px) and (max-width: 615px) {
+  .h1ToH2OnMobile {
+    font-size: 2.4em;
+    margin-top: 20px;
   }
-  .desktop2ColMobile1Col{
-    margin-top: 30px;
+}
+@media screen and (min-width: 615px) and (max-width: 800px) {
+  .h1ToH2OnMobile {
+    font-size: 3em;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 950px) {
+  .h1ToH2OnMobile {
+    margin-top: 20px;/*add margin on top of h1*/
   }
 }
 

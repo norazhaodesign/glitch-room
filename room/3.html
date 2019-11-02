@@ -1,95 +1,77 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Glitch Room</title>
-  <script src="../js/aframe.min.js"></script>
+<meta charset="utf-8">
+<title>Glitch Room</title>
+<script src="../js/aframe.min.js"></script>
 </head>
 <body>
-  <a-scene>
-    <!-- background -->
-    <a-sky color="#FFF"></a-sky>
-
-    <!-- camera -->
-    <a-camera position="0 0 0"></a-camera>
-
-      <!-- geometry -->
-      <a-box
-        height="10"
-        width="10"
-        depth="10"
-        side="double"
-        animation__rotation="
-          property: rotation;
-          from: 0 0 0;
-          to: -0.5 0 -0.5;
-          dir: alternate;
-          dur: 510000;
-          loop: true;
-          easing: linear;"
-        animation__color="
-          property: components.material.material.color;
-          type: color;
-          from: green;
-          to: blue;
-          dir: alternate;
-          dur: 4000;
-          loop: true;
-          easing: linear;"
-        ></a-box>
-
-        <!-- geometry -->
-        <a-box
-          height="10"
-          width="10"
-          depth="10"
-          side="double"
-          animation__rotation="
-            property: rotation;
-            from: 0 0 0;
-            to: -0.5 0 -0.3;
-            dir: alternate;
-            dur: 510000;
-            loop: true;
-            easing: linear;"
-          animation__color="
-            property: components.material.material.color;
-            type: color;
-            from: blue;
-            to: yellow;
-            dir: alternate;
-            dur: 3000;
-            loop: true;
-            easing: linear;"
-          ></a-box>
-
-          <!-- geometry -->
-          <a-box
-            height="10"
-            width="10"
-            depth="10"
-            side="double"
-            animation__rotation="
-              property: rotation;
-              from: 0 0 0;
-              to: -0.3 0 -0.5;
-              dir: alternate;
-              dur: 510000;
-              loop: true;
-              easing: linear;"
-            animation__color="
-              property: components.material.material.color;
-              type: color;
-              from: yellow;
-              to: red;
-              dir: alternate;
-              dur: 5000;
-              loop: true;
-              easing: linear;"
-            ></a-box>
-
-  </a-scene>
-  <script>
-  </script>
+<a-scene vr-mode-ui="enabled: false">
+  <a-camera id="vrCamera" position="0 0 0">
+  </a-camera>
+  <a-sky material="color: #000000">
+  </a-sky>
+  <a-sphere id="object1" 
+            wireframe="false" 
+            position="0 0 0" 
+            radius="15" 
+            segments-height="8" 
+            segments-width="16" 
+            theta-length="180" 
+            theta-start="98" 
+            phi-length="360" 
+            phi-start="261" 
+            side="double" 
+            material="color: #050e52" 
+            animation="property: rotation;
+                       from: 360 360 360;
+                       to: 0 0 0;
+                       dir: reverse;
+                       dur: 50000.1;
+                       loop: true;
+                       easing: linear;" 
+            geometry="">
+  </a-sphere>
+  <a-sphere id="object2" 
+            position="0 0 0" 
+            radius="15.0005" 
+            segments-height="8" 
+            segments-width="16" 
+            theta-length="180" 
+            theta-start="98" 
+            phi-length="360" 
+            phi-start="261" 
+            side="double" 
+            material="color: #ff2626" 
+            animation="property: rotation;
+                       from: 360 360 360;
+                       to: 0 0 0;
+                       dir: reverse;
+                       dur: 50000.2;
+                       loop: true;
+                       easing: linear;" 
+            geometry="">
+  </a-sphere>
+  <a-sphere id="object3" 
+            position="0 0 0" 
+            radius="15.001" 
+            segments-height="8" 
+            segments-width="16" 
+            theta-length="180" 
+            theta-start="98" 
+            phi-length="360" 
+            phi-start="261" 
+            side="double" 
+            material="color: #6b0b16" 
+            animation="property: rotation;
+                       from: 360 360 360;
+                       to: 0 0 0;
+                       dir: reverse;
+                       dur: 50000.3;
+                       loop: true;
+                       easing: linear;" 
+            geometry="">
+  </a-sphere>
+</a-scene>
 </body>
 </html>

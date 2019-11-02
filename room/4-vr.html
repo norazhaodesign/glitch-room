@@ -7,26 +7,45 @@
 <link rel="stylesheet" type="text/css" href="../css/styles-class.css">
 <script src="../js/aframe.min.js"></script>
 </head>
-<body>  
-<!--back and home buttons-->
-<div id="htmlContents"
-     style="z-index: 1;
-            position: relative;
-            margin: 5px 10px 0 10px;">
-  <a href="../visit-existing-rooms.html">
-    <button style="margin: 0 0 0 0;
-                   width: 50px;">&lt;&lt;</button>
-  </a>
-  <a href="../index.html">
-    <button style="margin: 10px 0 0 -4px;
+<body>
+<!--main layout-->
+<main class="desktop2ColMobile1Col" 
+      id="htmlContents" 
+      style="z-index: 1; 
+             position:relative;
+             margin-top: 0;">
+  <!--placeholder-->
+  <div class="hideOnMobile">
+  </div>
+  <!--main column-->
+  <div style="margin-left: 10px;">
+    <!--buttons-->
+    <div>
+      <a href="../visit-existing-rooms.html">
+      <button style="margin: 0 0 0 0;
+                     width: 50px;">&lt;&lt;</button>
+      </a>
+      <a href="../index.html">
+      <button style="margin: 10px 0 0 -4px;
                    width: 80px;">Home</button>
-  </a>
-  <a id="myEnterVRButton" href="#">
-    <button style="margin: 10px 0 0 -4px;
+      </a>
+      <a id="myEnterVRButton" href="#">
+      <button style="margin: 10px 0 0 -4px;
                    width: 130px;">Enter VR</button>
-  </a>
-</div>
-<!--aframe models-->
+      </a>
+      <div class="hideOnMobile"
+           style="padding-top: 15px;">
+      </div>
+    </div> 
+    <!--text-->
+    <h1 class="h1ToH2OnMobile">The Circus</h1>
+    <div style="padding-top: 8px;">
+    </div>
+    Created by: DOOOOOOOOOOlala <br>
+    At: 22 Oct 2019 <br>
+  </div>
+</main>
+<!--aframe-->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-camera position="0 0 0">
   </a-camera>
