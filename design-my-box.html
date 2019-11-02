@@ -161,14 +161,14 @@
             ></a-camera>
   <a-box id="object1"
          position="0 0 0"
-         height="20.003"
-         width="20.003"
-         depth="20.003"
+         height="20"
+         width="20"
+         depth="20"
          side="double"
          material="color: #ff0000"
          animation="property: rotation;
-                    from: 360 360 360;
-                    to: 0 0 0;
+                    from: 0 360 0;
+                    to: 0 0 360;
                     dir: reverse;
                     dur: 50000;
                     loop: true;
@@ -177,14 +177,14 @@
   <a-box id="object2"
          visible="true"
          position="0 0 0"
-         height="20.002"
-         width="20.002"
-         depth="20.002"
+         height="20"
+         width="20"
+         depth="20"
          side="double"
          material="color: #00ff00"
          animation="property: rotation;
-                    from: 360 360 360;
-                    to: 0 0 0;
+                    from: 0 360 -0.002;
+                    to: 0 0 359.998;
                     dir: reverse;
                     dur: 50000;
                     loop: true;
@@ -199,8 +199,8 @@
          side="double"
          material="color: #0000ff"
          animation="property: rotation;
-                    from: 360 360 360;
-                    to: 0 0 0;
+                    from: 0 360 -0.005;
+                    to: 0 0 359.995;
                     dir: reverse;
                     dur: 50000;
                     loop: true;
@@ -214,27 +214,6 @@
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   vrCamera.setAttribute('camera', 'active', true);
   document.body.classList.add('in-vr');
-  
-  
-  object1.setAttribute('height', sliderSize1.value * 20 - 0.003);
-  object2.setAttribute('height', sliderSize1.value * 20 - 0.001);
-  object3.setAttribute('height', sliderSize1.value * 20);
-  
-  object1.setAttribute('width', sliderSize2.value * 20 - 0.003);
-  object2.setAttribute('width', sliderSize2.value * 20 - 0.001);
-  object3.setAttribute('width', sliderSize2.value * 20);
-  
-  object1.setAttribute('depth', sliderSize3.value * 20 - 0.003);
-  object2.setAttribute('depth', sliderSize3.value * 20 - 0.001);
-  object3.setAttribute('depth', sliderSize3.value * 20);
-  
-
-  
-  
-  
-  
-  
-  
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
   normalCamera.setAttribute('camera', 'active', true);
@@ -290,20 +269,20 @@ sliderScale.addEventListener('input', () => {
 }, false);
 
 sliderSize1.addEventListener('input', () => {
-  object1.setAttribute('height', sliderSize1.value * 20 + 0.003);
-  object2.setAttribute('height', sliderSize1.value * 20 + 0.002);
+  object1.setAttribute('height', sliderSize1.value * 20);
+  object2.setAttribute('height', sliderSize1.value * 20);
   object3.setAttribute('height', sliderSize1.value * 20 );
 }, false);
 
 sliderSize2.addEventListener('input', () => {
-  object1.setAttribute('width', sliderSize2.value * 20 + 0.003);
-  object2.setAttribute('width', sliderSize2.value * 20 + 0.002);
+  object1.setAttribute('width', sliderSize2.value * 20);
+  object2.setAttribute('width', sliderSize2.value * 20);
   object3.setAttribute('width', sliderSize2.value * 20);
 }, false);
 
 sliderSize3.addEventListener('input', () => {
-  object1.setAttribute('depth', sliderSize3.value * 20 + 0.003);
-  object2.setAttribute('depth', sliderSize3.value * 20 + 0.002);
+  object1.setAttribute('depth', sliderSize3.value * 20);
+  object2.setAttribute('depth', sliderSize3.value * 20);
   object3.setAttribute('depth', sliderSize3.value * 20);
 }, false);
 
