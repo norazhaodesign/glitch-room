@@ -96,8 +96,8 @@ input[type=range] { /*slider bar*/
   margin-top: 12px;
   -webkit-appearance: none; /*override default look*/
   appearance: none;
-  width: 98.5%; /*set the bar to be shorter than screen width*/
-  max-width: 400px; /*limit the width of the bar when screen is wide*/
+  width: 98.45%; /*set the bar to be shorter than screen width*/
+  max-width: 396px; /*limit the width of the bar when screen is wide*/
   height: 15px;
   background: none;
   outline: 2px solid #ff00ff;
