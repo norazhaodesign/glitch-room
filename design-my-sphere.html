@@ -12,11 +12,11 @@
 <!--controls------------------------------------------------------------------------------------------------------------------>
 <!--main layout-->
 <main class="desktop2ColMobile1Col">
-  
+
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
-  
+
   <!--main column-->
   <div id="htmlContents"
        style="z-index: 1;
@@ -24,7 +24,7 @@
               overflow: auto;
               height: 100vh;
               margin: 0 20px 0 10px;">
-    
+
     <!--top buttons-->
     <div style="max-width: 400px;
                 display: grid;
@@ -45,7 +45,7 @@
       <button>Enter VR</button>
       </a>
     </div>
-    
+
     <!--color-->
     <div>
       <h2 style="margin-top: 20px;">Select Colours</h2>
@@ -73,7 +73,7 @@
               style="max-width: 400px;
                      margin-top: 12px;">Generate Random Colours</button>
     </div>
-    
+
     <!--scale-->
     <div>
       <h2>Set Scale</h2>
@@ -87,7 +87,7 @@
            step="0.01"
            oninput="displayScale.value = sliderScale.value">
     </div>
-    
+
     <!--shape-->
     <div>
       <h2>Change Segments</h2>
@@ -160,7 +160,7 @@
            step="1"
            oninput="displayValue4.value = sliderPhiStart.value">
     </div>
-    
+
     <!--movement-->
     <div>
       <h2>Adjust Movement</h2>
@@ -209,10 +209,10 @@
             side="double"
             material="color: #ff0000"
             animation="property: rotation;
-                       from: 360 360 360;
-                       to: 0 0 0;
+                       from: 0 360 0;
+                       to: 0 0 360;
                        dir: reverse;
-                       dur: 50000.1;
+                       dur: 50000;
                        loop: true;
                        easing: linear;">
   </a-sphere>
@@ -228,10 +228,10 @@
             side="double"
             material="color: #00ff00"
             animation="property: rotation;
-                       from: 360 360 360;
-                       to: 0 0 0;
+                       from: 0 360 -0.002;
+                       to: 0 0 359.998;
                        dir: reverse;
-                       dur: 50000.2;
+                       dur: 50000;
                        loop: true;
                        easing: linear;">
   </a-sphere>
@@ -247,10 +247,10 @@
             side="double"
             material="color: #0000ff"
             animation="property: rotation;
-                       from: 360 360 360;
-                       to: 0 0 0;
+                       from: 0 360 -0.005;
+                       to: 0 0 359.995;
                        dir: reverse;
-                       dur: 50000.3;
+                       dur: 50000;
                        loop: true;
                        easing: linear;">
   </a-sphere>
@@ -354,9 +354,9 @@ sliderPhiStart.addEventListener('input', () => {
 
 // speed
 sliderSpeed.addEventListener('input', () => {
-  object1.setAttribute('animation', {dur: 50000.1 / sliderSpeed.value});
-  object2.setAttribute('animation', {dur: 50000.2 / sliderSpeed.value});
-  object3.setAttribute('animation', {dur: 50000.3 / sliderSpeed.value});
+  object1.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+  object2.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+  object3.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
 }, false);
 </script>
 </body>
