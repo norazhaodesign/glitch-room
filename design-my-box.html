@@ -161,32 +161,32 @@
             ></a-camera>
   <a-box id="object1"
          position="0 0 0"
-         height="20"
-         width="20"
-         depth="20"
+         height="20.003"
+         width="20.003"
+         depth="20.003"
          side="double"
          material="color: #ff0000"
          animation="property: rotation;
                     from: 360 360 360;
                     to: 0 0 0;
                     dir: reverse;
-                    dur: 50000.1;
+                    dur: 50000;
                     loop: true;
                     easing: linear;">
   </a-box>
   <a-box id="object2"
          visible="true"
          position="0 0 0"
-         height="20"
-         width="20"
-         depth="20"
+         height="20.002"
+         width="20.002"
+         depth="20.002"
          side="double"
          material="color: #00ff00"
          animation="property: rotation;
                     from: 360 360 360;
                     to: 0 0 0;
                     dir: reverse;
-                    dur: 50000.2;
+                    dur: 50000;
                     loop: true;
                     easing: linear;">
   </a-box>
@@ -202,7 +202,7 @@
                     from: 360 360 360;
                     to: 0 0 0;
                     dir: reverse;
-                    dur: 50000.3;
+                    dur: 50000;
                     loop: true;
                     easing: linear;">
   </a-box>
@@ -214,6 +214,27 @@
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   vrCamera.setAttribute('camera', 'active', true);
   document.body.classList.add('in-vr');
+  
+  
+  object1.setAttribute('height', sliderSize1.value * 20 - 0.003);
+  object2.setAttribute('height', sliderSize1.value * 20 - 0.001);
+  object3.setAttribute('height', sliderSize1.value * 20);
+  
+  object1.setAttribute('width', sliderSize2.value * 20 - 0.003);
+  object2.setAttribute('width', sliderSize2.value * 20 - 0.001);
+  object3.setAttribute('width', sliderSize2.value * 20);
+  
+  object1.setAttribute('depth', sliderSize3.value * 20 - 0.003);
+  object2.setAttribute('depth', sliderSize3.value * 20 - 0.001);
+  object3.setAttribute('depth', sliderSize3.value * 20);
+  
+
+  
+  
+  
+  
+  
+  
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
   normalCamera.setAttribute('camera', 'active', true);
@@ -269,28 +290,28 @@ sliderScale.addEventListener('input', () => {
 }, false);
 
 sliderSize1.addEventListener('input', () => {
-  object1.setAttribute('height', sliderSize1.value * 20);
-  object2.setAttribute('height', sliderSize1.value * 20);
-  object3.setAttribute('height', sliderSize1.value * 20);
+  object1.setAttribute('height', sliderSize1.value * 20 + 0.003);
+  object2.setAttribute('height', sliderSize1.value * 20 + 0.002);
+  object3.setAttribute('height', sliderSize1.value * 20 );
 }, false);
 
 sliderSize2.addEventListener('input', () => {
-  object1.setAttribute('width', sliderSize2.value * 20);
-  object2.setAttribute('width', sliderSize2.value * 20);
+  object1.setAttribute('width', sliderSize2.value * 20 + 0.003);
+  object2.setAttribute('width', sliderSize2.value * 20 + 0.002);
   object3.setAttribute('width', sliderSize2.value * 20);
 }, false);
 
 sliderSize3.addEventListener('input', () => {
-  object1.setAttribute('depth', sliderSize3.value * 20);
-  object2.setAttribute('depth', sliderSize3.value * 20);
+  object1.setAttribute('depth', sliderSize3.value * 20 + 0.003);
+  object2.setAttribute('depth', sliderSize3.value * 20 + 0.002);
   object3.setAttribute('depth', sliderSize3.value * 20);
 }, false);
 
 // use silder to change movement speed
 sliderSpeed.addEventListener('input', () => {
-  object1.setAttribute('animation', {dur: 50000.1 / sliderSpeed.value});
-  object2.setAttribute('animation', {dur: 50000.2 / sliderSpeed.value});
-  object3.setAttribute('animation', {dur: 50000.3 / sliderSpeed.value});
+  object1.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+  object2.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+  object3.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
 }, false);
 </script>
 </body>
