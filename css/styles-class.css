@@ -74,7 +74,7 @@ div.image-container {
   display: inline-block;
   overflow: hidden;
   /*width: 124px;*/
-  height: 40px;
+  height: 45px;
   border: solid 2px magenta;
 }
 /*position color picker behind container to hide default border*/
@@ -85,6 +85,15 @@ div.image-container {
   width: 200px;
   height: 100px;
   border: none;
+}
+/*div container of three color pickers*/
+.color-picker-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 7px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 12px;
 }
 /*div around iframe*/
 .iframe-holder-square {
@@ -127,6 +136,9 @@ div.image-container {
   .gridxto1 {
     grid-template-columns: 1fr 1fr;
   }
+  .desktop2ColMobile1Col{
+    margin-top: 10px;
+  }
 }
 /*mobile and ipad*/
 @media screen and (max-width: 950px) {
@@ -141,7 +153,7 @@ div.image-container {
     right: 10px;
   }
   .desktop2ColMobile1Col{
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 /*class h1ToH2OnMobile*/

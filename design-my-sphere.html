@@ -23,71 +23,55 @@
             height: 100vh;
             margin: 0 20px 0 10px;">
     <!--back and home buttons-->
-    <div>
+    <div style="width: 100%;
+                display: grid;
+                grid-template-columns: 50px 80px auto;
+                grid-gap: 6px;
+                margin-top: 15px;">
       <a style="display:inline-block;"
-     href="choose-my-geometry.html">
-      <button style="margin: 0 0 0 0;
+         href="choose-my-geometry.html">
+      <button style="
                    width: 50px;">&lt;&lt;</button>
       </a>
       <a style="display:inline-block;"
-     href="index.html">
-      <button style="margin: 10px 0 0 -4px;
+         href="index.html">
+      <button style="
                    width: 80px;">Home</button>
       </a>
-      <!--enter vr button-->
-      <a id="myEnterVRButton" href="#">
-      <button style="margin: 10px 0 0 -4px;
+            <a id="myEnterVRButton"
+               style="display:inline-block;"
+         href="#">
+      <button style="
                    max-width: 258px;">Enter VR</button>
       </a>
-      
-      
-      
-      
-      
-      
-      
-      <!--enter vr button-->
-      <a id="myEnterVRButton2" href="#">
-      <button style="margin: 10px 0 0 -4px;
-                   max-width: 258px;">Enter VR</button>
-      </a>
-      
-      
-      
-      
-      
+  
     </div>
     <!--color-->
     <div>
       <h2>Select Colours</h2>
-      <div style="display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: 7px;
-                width: 100%;
-                max-width: 400px;
-                margin-top: 12px;">
+      <div class="color-picker-div">
         <div class="input-color-container">
           <input id="colorPicker1"
-             type="color"
-             value="#ff0000"
-             class="input-color">
+                 type="color"
+                 value="#ff0000"
+                 class="input-color">
         </div>
         <div class="input-color-container">
           <input id="colorPicker2"
-             type="color"
-             value="#00ff00"
-             class="input-color">
+                 type="color"
+                 value="#00ff00"
+                 class="input-color">
         </div>
         <div class="input-color-container">
           <input id="colorPicker3"
-             type="color"
-             value="#0000ff"
-             class="input-color">
+                 type="color"
+                 value="#0000ff"
+                 class="input-color">
         </div>
       </div>
       <button id="genrateRandomColorSet"
-            style="max-width: 400px;
-                   margin-top: 12px;">Generate Random Colours</button>
+              style="max-width: 400px;
+                     margin-top: 12px;">Generate Random Colours</button>
     </div>
     
     <!--scale-->
@@ -191,6 +175,12 @@
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
     </div>
+    <!--enter vr button-->
+    <a id="myEnterVRButton2" href="#">
+    <button style="margin-top: 30px;
+                   max-width: 400px;">Enter VR</button>
+    </a>
+
     <div style="height: 125px;">
     </div>
   </div>
@@ -278,6 +268,10 @@ document.querySelector('a-scene').addEventListener('exit-vr', () => {
   document.body.classList.remove('in-vr');
 }, false);
 
+// click the second enter vr button to trigger the first button
+myEnterVRButton2.addEventListener('click', () => {
+  myEnterVRButton.click();
+}, false);
 
 // use color picker input to change object color
 colorPicker1.addEventListener('input', () => {
@@ -364,10 +358,6 @@ sliderSpeed.addEventListener('input', () => {
   object2.setAttribute('animation', {dur: 50000.2 / sliderSpeed.value});
   object3.setAttribute('animation', {dur: 50000.3 / sliderSpeed.value});
 }, false);
-// click the second enter vr button to trigger the first button
-myEnterVRButton2.addEventListener('click', () => {
-  myEnterVRButton.click();
-})
 </script>
 </body>
 </html>
