@@ -34,6 +34,7 @@
     </div>
     <!--iframe objects container-->
     <div class="grid3 gridxto1">
+      
       <!--obj1-->
       <div>
         <div id="iframeDiv1"
@@ -44,9 +45,10 @@
           <div class="frame-dummy">
           </div>
         </div>
-        <p> A Rounded World </p>
-        <h6> Created by: Alex the Bird <br>
-          At: 24 Oct 2019 </h6>
+        <a id="iframeDestination1"
+           href="room/1-vr.html">
+        <button>A Rounded World</button>
+        </a>
       </div>
       
       <!--obj2-->
@@ -59,9 +61,10 @@
           <div class="frame-dummy">
           </div>
         </div>
-        <p> Above the Horizon </p>
-        <h6> Created by: Mark <br>
-          At: 29 Oct 2019 </h6>
+        <a id="iframeDestination2"
+           href="room/2-vr.html">
+        <button>Above the Horizon</button>
+        </a>
       </div>
       
       <!--obj3-->
@@ -74,9 +77,10 @@
           <div class="frame-dummy">
           </div>
         </div>
-        <p> feeling a bit sad but that's ok </p>
-        <h6> Created by: cat in the rain <br>
-          At: 25 Oct 2019 </h6>
+        <a id="iframeDestination3"
+           href="room/3-vr.html">
+        <button>Sharpened Edges</button>
+        </a>
       </div>
       
       <!--obj4-->
@@ -89,10 +93,12 @@
           <div class="frame-dummy">
           </div>
         </div>
-        <p> The Circus </p>
-        <h6> Created by: DOOOOOOOOOOlala <br>
-          At: 22 Oct 2019 </h6>
+        <a id="iframeDestination4"
+           href="room/4-vr.html">
+        <button>The Circus</button>
+        </a>
       </div>
+      
       <!--obj5-->
       <div>
         <div id="iframeDiv5"
@@ -103,10 +109,12 @@
           <div class="frame-dummy">
           </div>
         </div>
-        <p> A Challenge </p>
-        <h6> Created by: Lily <br>
-          At: 22 Oct 2019 </h6>
+        <a id="iframeDestination5"
+           href="room/5-vr.html">
+        <button>A Challenge</button>
+        </a>      
       </div>
+      
       <!--obj6-->
       <div>
         <div id="iframeDiv6"
@@ -117,37 +125,40 @@
           <div class="frame-dummy">
           </div>
         </div>
-        <p> Late </p>
-        <h6> Created by: Sleepy Cat <br>
-          At: 27 Oct 2019 </h6>
+        <a id="iframeDestination6"
+           href="room/6-vr.html">
+        <button>Late</button>
+        </a>
       </div>
+      
     </div>
   </div>
 </main>
+  
 <script>   
 // open full screen page when clicking iframe    
 iframeDiv1.addEventListener("click", () => {
-  window.location.href = document.getElementById("iframe1").src;
+  window.location.href = document.getElementById("iframeDestination1").href;
 }, false);
   
 iframeDiv2.addEventListener("click", () => {
-  window.location.href = document.getElementById("iframe2").src;
+  window.location.href = document.getElementById("iframeDestination2").href;
 }, false);
   
 iframeDiv3.addEventListener("click", () => {
-  window.location.href = document.getElementById("iframe3").src;
+  window.location.href = document.getElementById("iframeDestination3").href;
 }, false);
   
   iframeDiv4.addEventListener("click", () => {
-  window.location.href = "room/4-vr.html";
+  window.location.href = document.getElementById("iframeDestination4").href;
 }, false);
   
 iframeDiv5.addEventListener("click", () => {
-  window.location.href = document.getElementById("iframe5").src;
+  window.location.href = document.getElementById("iframeDestination5").href;
 }, false);
   
 iframeDiv6.addEventListener("click", () => {
-  window.location.href = document.getElementById("iframe6").src;
+  window.location.href = document.getElementById("iframeDestination6").href;
 }, false);
 </script>
 </body>
