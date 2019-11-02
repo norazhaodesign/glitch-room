@@ -107,7 +107,11 @@ input[type=range]::-webkit-slider-thumb { /*slider handle*/
   appearance: none;
   width: 15px;
   height: 15px;
-  margin: 10px;
+  
+  display: inline-block;  
+  position: relative;
+  padding: 10px;     
+  margin:-10px;
   background: #ff00ff;
   cursor: pointer;
 }
@@ -116,7 +120,6 @@ input[type=range]::-moz-range-thumb { /*slider handle (for firefox)*/
   border-radius: 0;
   width: 15px;
   height: 15px;
-  margin: 10px;
   background: #ff00ff;
   cursor: pointer;
 }
