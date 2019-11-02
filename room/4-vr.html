@@ -7,44 +7,52 @@
 <link rel="stylesheet" type="text/css" href="../css/styles-class.css">
 <script src="../js/aframe.min.js"></script>
 </head>
+  
 <body>
 <!--main layout-->
-<main class="desktop2ColMobile1Col" 
-      id="htmlContents" 
-      style="z-index: 1; 
-             position:relative;
-             margin-top: 0;">
+<main class="desktop2ColMobile1Col">
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
+  
   <!--main column-->
-  <div style="margin-left: 10px;">
+  <div id="htmlContents"
+       style="z-index: 1;
+              position: relative;
+              overflow: auto;
+              height: 100vh;
+              margin: 0 20px 0 10px;">
+    
     <!--buttons-->
-    <div>
-      <a href="../visit-existing-rooms.html">
-      <button style="margin: 0 0 0 0;
-                     width: 50px;">&lt;&lt;</button>
+    <div style="width: 100%;
+                display: grid;
+                grid-template-columns: 50px 80px auto;
+                grid-gap: 6px;
+                margin-top: 15px;">
+      <a style="display:inline-block;"
+         href="../visit-existing-rooms.html">
+      <button style="width: 50px;">&lt;&lt;</button>
       </a>
-      <a href="../index.html">
-      <button style="margin: 10px 0 0 -4px;
-                   width: 80px;">Home</button>
+      <a style="display:inline-block;"
+         href="../index.html">
+      <button style="width: 80px;">Home</button>
       </a>
-      <a id="myEnterVRButton" href="#">
-      <button style="margin: 10px 0 0 -4px;
-                   width: 130px;">Enter VR</button>
+      <a id="myEnterVRButton"
+         style="display:inline-block;"
+         href="#">
+      <button style="max-width: 258px;">Enter VR</button>
       </a>
-      <div class="hideOnMobile"
-           style="padding-top: 15px;">
-      </div>
-    </div> 
+    </div>
+    
     <!--text-->
-    <h1 class="h1ToH2OnMobile">The Circus</h1>
+    <h2>The Circus</h2>
     <div style="padding-top: 8px;">
     </div>
     Created by: DOOOOOOOOOOlala <br>
     At: 22 Oct 2019 <br>
   </div>
 </main>
+  
 <!--aframe-->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
   <a-camera position="0 0 0">
@@ -92,6 +100,7 @@
                               easing: linear;">
   </a-box>
 </a-scene>
+  
 <!--hide buttons in vr-->
 <script type="text/javascript">
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
