@@ -47,140 +47,131 @@
     </div>
 
     <!--color-->
-    <div>
-      <h2 style="margin-top: 20px;">Select Colours</h2>
-      <div class="color-picker-div">
-        <div class="input-color-container">
-          <input id="colorPicker1"
+    <h2 style="margin-top: 20px;">Select Colours</h2>
+    <div class="color-picker-div">
+      <div class="input-color-container">
+        <input id="colorPicker1"
                  type="color"
                  value="#ff0000"
                  class="input-color">
-        </div>
-        <div class="input-color-container">
-          <input id="colorPicker2"
+      </div>
+      <div class="input-color-container">
+        <input id="colorPicker2"
                  type="color"
                  value="#00ff00"
                  class="input-color">
-        </div>
-        <div class="input-color-container">
-          <input id="colorPicker3"
+      </div>
+      <div class="input-color-container">
+        <input id="colorPicker3"
                  type="color"
                  value="#0000ff"
                  class="input-color">
-        </div>
       </div>
-      <button id="genrateRandomColorSet"
+    </div>
+    <button id="genrateRandomColorSet"
               style="max-width: 400px;
                      margin-top: 12px;">Generate Random Colours</button>
-    </div>
 
     <!--scale-->
-    <div>
-      <h2>Set Scale</h2>
-      <label for="sliderScale">Scale:</label>
-      <output id="displayScale">1</output>
-      <input id="sliderScale"
+    <h2>Set Scale</h2>
+    <label for="sliderScale">Scale:</label>
+    <output id="displayScale">1</output>
+    <input id="sliderScale"
            type="range"
            value="1"
            min="0.1"
            max="5"
            step="0.01"
            oninput="displayScale.value = sliderScale.value">
-    </div>
 
-    <!--shape-->
-    <div>
-      <h2>Change Segments</h2>
-      <!--segments height-->
-      <label for="sliderSegmentHeight">Segments Height:</label>
-      <output id="displaySegments1">8</output>
-      <input id="sliderSegmentHeight"
+    <!--segments height-->
+    <h2>Change Segments</h2>
+    <label for="sliderSegmentHeight">Segments Height:</label>
+    <output id="displaySegmentsHeight">8</output>
+    <input id="sliderSegmentHeight"
            type="range"
            value="8"
            min="1"
            max="50"
            step="1"
-           oninput="displaySegments1.value = sliderSegmentHeight.value">
-      <br>
-      <!--segments width-->
-      <label for="sliderSegmentsWidth">Segments Width:</label>
-      <output id="displaySegments2">16</output>
-      <input id="sliderSegmentsWidth"
+           oninput="displaySegmentsHeight.value = sliderSegmentHeight.value">
+    <br>
+
+    <!--segments width-->
+    <label for="sliderSegmentsWidth">Segments Width:</label>
+    <output id="displaySegmentsWidth">16</output>
+    <input id="sliderSegmentsWidth"
            type="range"
            value="16"
            min="1"
            max="100"
            step="1"
-           oninput="displaySegments2.value = sliderSegmentsWidth.value">
-    </div>
-    <!--open up-->
-    <div>
-      <h2>Open It Up</h2>
-      <!--theta length-->
-      <label for="sliderThetaLength">Theta Length:</label>
-      <output id="displayValue1">180</output>
-      <input id="sliderThetaLength"
+           oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
+    <h2>Open It Up</h2>
+    <!--theta length-->
+    <label for="sliderThetaLength">Theta Length:</label>
+    <output id="displayThetaLength">180</output>
+    <input id="sliderThetaLength"
             type="range"
             value="180"
             min="1"
             max="180"
             step="1"
-            oninput="displayValue1.value = sliderThetaLength.value">
-      <br>
-      <!--theta start-->
-      <label for="sliderThetaStart">Theta Start:</label>
-      <output id="displayValue2">0</output>
-      <input id="sliderThetaStart"
+            oninput="displayThetaLength.value = sliderThetaLength.value">
+    <br>
+
+    <!--theta start-->
+    <label for="sliderThetaStart">Theta Start:</label>
+    <output id="displayThetaStart">0</output>
+    <input id="sliderThetaStart"
            type="range"
            value="0"
            min="0"
            max="180"
            step="1"
-           oninput="displayValue2.value = sliderThetaStart.value">
-      <br>
-      <!--phi length-->
-      <label for="sliderPhiLength">Phi Length:</label>
-      <output id="displayValue3">360</output>
-      <input id="sliderPhiLength"
+           oninput="displayThetaStart.value = sliderThetaStart.value">
+    <br>
+
+    <!--phi length-->
+    <label for="sliderPhiLength">Phi Length:</label>
+    <output id="displayPhiLength">360</output>
+    <input id="sliderPhiLength"
           type="range"
           value="360"
           min="1"
           max="360"
           step="1"
-          oninput="displayValue3.value = sliderPhiLength.value">
-      <br>
-      <!--phi start-->
-      <label for="sliderPhiStart">Phi Start:</label>
-      <output id="displayValue4">0</output>
-      <input id="sliderPhiStart"
+          oninput="displayPhiLength.value = sliderPhiLength.value">
+    <br>
+
+    <!--phi start-->
+    <label for="sliderPhiStart">Phi Start:</label>
+    <output id="displayPhiStart">0</output>
+    <input id="sliderPhiStart"
            type="range"
            value="0"
            min="0"
            max="360"
            step="1"
-           oninput="displayValue4.value = sliderPhiStart.value">
-    </div>
+           oninput="displayPhiStart.value = sliderPhiStart.value">
 
-    <!--movement-->
-    <div>
-      <h2>Adjust Movement</h2>
-      <!--speed-->
-      <label for="sliderSpeed">Speed:</label>
-      <output id="displaySpeed">1</output>
-      <input id="sliderSpeed"
+    <!--speed-->
+    <h2>Adjust Movement</h2>
+    <label for="sliderSpeed">Speed:</label>
+    <output id="displaySpeed">1</output>
+    <input id="sliderSpeed"
            type="range"
            value="1"
            min="0.01"
            max="5"
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
-    </div>
+
     <!--enter vr button-->
     <a id="myEnterVRButton2" href="#">
     <button style="margin-top: 30px;
                    max-width: 400px;">Enter VR</button>
     </a>
-
     <div style="height: 125px;">
     </div>
   </div>
@@ -307,45 +298,49 @@ genrateRandomColorSet.addEventListener('click', () => {
   console.log(colorPicker1.value, colorPicker2.value, colorPicker3.value);
 }, false);
 
-// radius
+// scale
 sliderScale.addEventListener('input', () => {
   object1.setAttribute('radius', sliderScale.value * 15);
   object2.setAttribute('radius', sliderScale.value * 15);
   object3.setAttribute('radius', sliderScale.value * 15);
 }, false);
 
-// segments
+// segments height
 sliderSegmentHeight.addEventListener('input', () => {
   object1.setAttribute('segments-height', sliderSegmentHeight.value);
   object2.setAttribute('segments-height', sliderSegmentHeight.value);
   object3.setAttribute('segments-height', sliderSegmentHeight.value);
 }, false);
 
+// segments width
 sliderSegmentsWidth.addEventListener('input', () => {
   object1.setAttribute('segments-width', sliderSegmentsWidth.value);
   object2.setAttribute('segments-width', sliderSegmentsWidth.value);
   object3.setAttribute('segments-width', sliderSegmentsWidth.value);
 }, false);
 
-// theta-length
+// theta length
 sliderThetaLength.addEventListener('input', () => {
   object1.setAttribute('theta-length', sliderThetaLength.value);
   object2.setAttribute('theta-length', sliderThetaLength.value);
   object3.setAttribute('theta-length', sliderThetaLength.value);
 }, false);
+
+// theta start
 sliderThetaStart.addEventListener('input', () => {
   object1.setAttribute('theta-start', sliderThetaStart.value);
   object2.setAttribute('theta-start', sliderThetaStart.value);
   object3.setAttribute('theta-start', sliderThetaStart.value);
 }, false);
 
-// phi
+// phi length
 sliderPhiLength.addEventListener('input', () => {
   object1.setAttribute('phi-length', sliderPhiLength.value);
   object2.setAttribute('phi-length', sliderPhiLength.value);
   object3.setAttribute('phi-length', sliderPhiLength.value);
 }, false);
 
+// phi start
 sliderPhiStart.addEventListener('input', () => {
   object1.setAttribute('phi-start', sliderPhiStart.value);
   object2.setAttribute('phi-start', sliderPhiStart.value);

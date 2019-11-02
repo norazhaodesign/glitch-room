@@ -12,11 +12,11 @@
 <!--controls------------------------------------------------------------------------------------------------------------------>
 <!--main layout-->
 <main class="desktop2ColMobile1Col">
-  
+
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
-  
+
   <!--main column-->
   <div id="htmlContents"
        style="z-index: 1;
@@ -24,7 +24,7 @@
               overflow: auto;
               height: 100vh;
               margin: 0 20px 0 10px;">
-    
+
     <!--top buttons-->
     <div style="max-width: 400px;
                 display: grid;
@@ -45,7 +45,7 @@
       <button>Enter VR</button>
       </a>
     </div>
-    
+
     <!--color-->
     <h2 style="margin-top: 20px;">Select Colours</h2>
     <div class="color-picker-div">
@@ -71,7 +71,7 @@
     <button id="genrateRandomColorSet"
             style="max-width: 400px;
                    margin-top: 12px;">Generate Random Colours</button>
-    
+
     <!--scale-->
     <h2>Set Scale</h2>
     <label for="sliderScale">Scale:</label>
@@ -83,41 +83,66 @@
            max="5"
            step="0.01"
            oninput="displayScale.value = sliderScale.value">
-    
+
     <h2>Change Shape</h2>
     <!--height-->
     <label for="sliderSizeHeight">Height:</label>
-    <output id="displaySizeHeight">1</output>
+    <output id="displaySizeHeight">24</output>
     <input id="sliderSizeHeight"
            type="range"
-           value="1"
-           min="0.1"
-           max="5"
-           step="0.01"
+           value="24"
+           min="1"
+           max="100"
+           step="1"
            oninput="displaySizeHeight.value = sliderSizeHeight.value">
     <br>
-    <!--width-->
-    <label for="sliderSizeWidth">Width:</label>
-    <output id="displaySizeWidth">1</output>
-    <input id="sliderSizeWidth"
+
+    <!--radius top-->
+    <label for="sliderRadiusTop">Radius Top:</label>
+    <output id="displayRadiusTop">0</output>
+    <input id="sliderRadiusTop"
            type="range"
-           value="1"
-           min="0.1"
-           max="5"
-           step="0.01"
-           oninput="displaySizeWidth.value = sliderSizeWidth.value">
+           value="0"
+           min="0"
+           max="70"
+           step="1"
+           oninput="displayRadiusTop.value = sliderRadiusTop.value">
     <br>
-    <!--depth-->
-    <label for="sliderSizeDepth">Depth:</label>
-    <output id="displaySizeDepth">1</output>
-    <input id="sliderSizeDepth"
+
+    <!--radius bottom-->
+    <label for="sliderRadiusBottom">Radius Bottom:</label>
+    <output id="displayRadiusBottom">14</output>
+    <input id="sliderRadiusBottom"
            type="range"
-           value="1"
-           min="0.1"
-           max="5"
-           step="0.01"
-           oninput="displaySizeDepth.value = sliderSizeDepth.value">
-    
+           value="14"
+           min="1"
+           max="70"
+           step="1"
+           oninput="displayRadiusBottom.value = sliderRadiusBottom.value">
+
+    <!--segments height-->
+    <h2>Change Segments</h2>
+    <label for="sliderSegmentHeight">Segments Height:</label>
+    <output id="displaySegmentsHeight">1</output>
+    <input id="sliderSegmentHeight"
+          type="range"
+          value="1"
+          min="1"
+          max="50"
+          step="1"
+          oninput="displaySegmentsHeight.value = sliderSegmentHeight.value">
+    <br>
+    <!--segments radial-->
+    <label for="sliderSegmentRadial">Segments Radial:</label>
+    <output id="displaySegmentsRadial">18</output>
+    <input id="sliderSegmentRadial"
+           type="range"
+           value="18"
+           min="3"
+           max="100"
+           step="1"
+           oninput="displaySegmentsRadial.value = sliderSegmentRadial.value">
+
     <!--speed-->
     <h2>Adjust Movement</h2>
     <label for="sliderSpeed">Speed:</label>
@@ -129,7 +154,7 @@
            max="5"
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
-    
+
     <!--enter vr button-->
     <a id="myEnterVRButton2" href="#">
     <button style="margin-top: 30px;
@@ -147,56 +172,84 @@
             camera
             position="-10 0 30"></a-entity>
   <a-camera id="vrCamera"
-            position="0 0 0"
+            position="0 4 0"
             active="false"
             ></a-camera>
-  <a-box id="object1"
-         position="0 0 0"
-         height="20"
-         width="20"
-         depth="20"
-         side="double"
-         material="color: #ff0000"
-         animation="property: rotation;
-                    from: 0 360 0;
-                    to: 0 0 360;
-                    dir: reverse;
-                    dur: 50000;
-                    loop: true;
-                    easing: linear;">
-  </a-box>
-  <a-box id="object2"
-         visible="true"
-         position="0 0 0"
-         height="20"
-         width="20"
-         depth="20"
-         side="double"
-         material="color: #00ff00"
-         animation="property: rotation;
-                    from: 0 360 -0.002;
-                    to: 0 0 359.998;
-                    dir: reverse;
-                    dur: 50000;
-                    loop: true;
-                    easing: linear;">
-  </a-box>
-  <a-box id="object3"
-         visible="true"
-         position="0 0 0"
-         height="20"
-         width="20"
-         depth="20"
-         side="double"
-         material="color: #0000ff"
-         animation="property: rotation;
-                    from: 0 360 -0.005;
-                    to: 0 0 359.995;
-                    dir: reverse;
-                    dur: 50000;
-                    loop: true;
-                    easing: linear;">
-  </a-box>
+  <!--
+  radius-bottom [1]
+  radius-top [0.8]
+  height [1]
+  segments-radial [36]: segments on the bottom (and top)
+  segments-height [18]: segments on the side
+  open-ended [false]: get rid of the bottom (and top)
+  theta-length [360]: horizontal completion degree
+  theta-start [0]
+  -->
+  <a-cone id="object1"
+          wireframe="false"
+          position="0 4 0"
+
+          radius-bottom="14"
+          radius-top="0"
+          height="24"
+          segments-radial="18"
+          segments-height="1"
+          open-ended="false"
+          theta-length="360"
+          theta-start="0"
+
+          side="double"
+          material="color: #ff0000"
+          animation="property: rotation;
+                     from: 0 360 0;
+                     to: 0 0 0;
+                     dir: reverse;
+                     dur: 50000;
+                     loop: true;
+                     easing: linear;">
+  </a-cone>
+  <a-cone id="object2"
+          visible="true"
+          position="0 4 0"
+          radius-bottom="14"
+          radius-top="0"
+          height="24"
+          segments-radial="18"
+          segments-height="1"
+          open-ended="false"
+          theta-length="360"
+          theta-start="0"
+          side="double"
+          material="color: #00ff00"
+          animation="property: rotation;
+                     from: 0 360 -0.002;
+                     to: 0 0 -0.002;
+                     dir: reverse;
+                     dur: 50000;
+                     loop: true;
+                     easing: linear;">
+  </a-cone>
+  <a-cone id="object3"
+          visible="true"
+          position="0 4 0"
+          radius-bottom="14"
+          radius-top="0"
+          height="24"
+          segments-radial="18"
+          segments-height="1"
+          open-ended="false"
+          theta-length="360"
+          theta-start="0"
+          side="double"
+          material="color: #0000ff"
+          animation="property: rotation;
+                     from: 0 360 -0.005;
+                     to: 0 0 -0.005;
+                     dir: reverse;
+                     dur: 50000;
+                     loop: true;
+                     easing: linear;">
+  </a-cone>
 </a-scene>
 
 <!--javascript------------------------------------------------------------------------------------------------------------------>
@@ -264,23 +317,37 @@ sliderScale.addEventListener('input', () => {
 
 // height
 sliderSizeHeight.addEventListener('input', () => {
-  object1.setAttribute('height', sliderSizeHeight.value * 20);
-  object2.setAttribute('height', sliderSizeHeight.value * 20);
-  object3.setAttribute('height', sliderSizeHeight.value * 20 );
+  object1.setAttribute('height', sliderSizeHeight.value);
+  object2.setAttribute('height', sliderSizeHeight.value);
+  object3.setAttribute('height', sliderSizeHeight.value);
 }, false);
 
-// width
-sliderSizeWidth.addEventListener('input', () => {
-  object1.setAttribute('width', sliderSizeWidth.value * 20);
-  object2.setAttribute('width', sliderSizeWidth.value * 20);
-  object3.setAttribute('width', sliderSizeWidth.value * 20);
+// radius top
+sliderRadiusTop.addEventListener('input', () => {
+  object1.setAttribute('radius-top', sliderRadiusTop.value);
+  object2.setAttribute('radius-top', sliderRadiusTop.value);
+  object3.setAttribute('radius-top', sliderRadiusTop.value);
 }, false);
 
-// depth
-sliderSizeDepth.addEventListener('input', () => {
-  object1.setAttribute('depth', sliderSizeDepth.value * 20);
-  object2.setAttribute('depth', sliderSizeDepth.value * 20);
-  object3.setAttribute('depth', sliderSizeDepth.value * 20);
+// radius bottom
+sliderRadiusBottom.addEventListener('input', () => {
+  object1.setAttribute('radius-bottom', sliderRadiusBottom.value);
+  object2.setAttribute('radius-bottom', sliderRadiusBottom.value);
+  object3.setAttribute('radius-bottom', sliderRadiusBottom.value);
+}, false);
+
+// segments height
+sliderSegmentHeight.addEventListener('input', () => {
+  object1.setAttribute('segments-height', sliderSegmentHeight.value);
+  object2.setAttribute('segments-height', sliderSegmentHeight.value);
+  object3.setAttribute('segments-height', sliderSegmentHeight.value);
+}, false);
+
+// segments radial
+sliderSegmentRadial.addEventListener('input', () => {
+  object1.setAttribute('segments-radial', sliderSegmentRadial.value);
+  object2.setAttribute('segments-radial', sliderSegmentRadial.value);
+  object3.setAttribute('segments-radial', sliderSegmentRadial.value);
 }, false);
 
 // speed
