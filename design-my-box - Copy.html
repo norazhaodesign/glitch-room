@@ -10,7 +10,7 @@
 
 <body>
 <!--controls------------------------------------------------------------------------------------------------------------------>
-<main class="desktop2ColMobile1Col"> 
+<main class="desktop2ColMobile1Col">
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
@@ -133,13 +133,13 @@
       <input id="sliderSpeed"
            type="range"
            value="1"
-           min="0.1"
+           min="0.01"
            max="5"
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
     </div>
     
-    <!--enter vr button--> 
+    <!--enter vr button-->
     <a id="myEnterVRButton" href="#">
     <button style="margin-top: 30px;
                    max-width: 400px;">Enter VR</button>
@@ -148,10 +148,6 @@
     </div>
   </div>
 </main>
-  
-  
-  
-  
 
 <!--aframe------------------------------------------------------------------------------------------------------------------>
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
@@ -163,7 +159,6 @@
             position="0 0 0"
             active="false"
             ></a-camera>
-  
   <a-box id="object1"
          position="0 0 0"
          height="20"
@@ -171,47 +166,49 @@
          depth="20"
          side="double"
          material="color: #ff0000"
-         animation__rotation="property: rotation;
-                              from: 0 360 0;
-                              to: 0 0 360;
-                              dir: reverse;
-                              dur: 35000;
-                              loop: true;
-                              easing: linear;"> </a-box>
+         animation="property: rotation;
+                    from: 360 360 360;
+                    to: 0 0 0;
+                    dir: reverse;
+                    dur: 50000.1;
+                    loop: true;
+                    easing: linear;">
+  </a-box>
   <a-box id="object2"
+         visible="true"
          position="0 0 0"
          height="20"
          width="20"
          depth="20"
          side="double"
          material="color: #00ff00"
-         animation__rotation="property: rotation;
-                              from: 0 359.99 0;
-                              to: 0 0 359.99;
-                              dir: reverse;
-                              dur: 35000;
-                              loop: true;
-                              easing: linear;"> </a-box>
+         animation="property: rotation;
+                    from: 360 360 360;
+                    to: 0 0 0;
+                    dir: reverse;
+                    dur: 50000.2;
+                    loop: true;
+                    easing: linear;">
+  </a-box>
   <a-box id="object3"
+         visible="true"
          position="0 0 0"
          height="20"
          width="20"
          depth="20"
          side="double"
          material="color: #0000ff"
-         animation__rotation="property: rotation;
-                              from: -0.001 360 0;
-                              to: -0.001 0 360;
-                              dir: reverse;
-                              dur: 35000;
-                              loop: true;
-                              easing: linear;"> </a-box>
+         animation="property: rotation;
+                    from: 360 360 360;
+                    to: 0 0 0;
+                    dir: reverse;
+                    dur: 50000.3;
+                    loop: true;
+                    easing: linear;">
+  </a-box>
 </a-scene>
-  
-  
-  
 
-<!--javascript------------------------------------------------------------------------------------------------------------------> 
+<!--javascript------------------------------------------------------------------------------------------------------------------>
 <script type="text/javascript">
 // change active camera when entering and exit vr
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
@@ -291,16 +288,10 @@ sliderSize3.addEventListener('input', () => {
 
 // use silder to change movement speed
 sliderSpeed.addEventListener('input', () => {
-  object1.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
-  object2.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
-  object3.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+  object1.setAttribute('animation', {dur: 50000.1 / sliderSpeed.value});
+  object2.setAttribute('animation', {dur: 50000.2 / sliderSpeed.value});
+  object3.setAttribute('animation', {dur: 50000.3 / sliderSpeed.value});
 }, false);
-
-
-
-
-
-
 </script>
 </body>
 </html>

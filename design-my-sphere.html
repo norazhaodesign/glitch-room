@@ -72,7 +72,7 @@
             style="max-width: 400px;
                    margin-top: 12px;">Generate Random Colours</button>
     </div>
-
+    
     <!--scale-->
     <div>
       <h2>Set Scale</h2>
@@ -86,16 +86,16 @@
            step="0.01"
            oninput="displayScale.value = sliderScale.value">
     </div>
-
+    
     <!--shape-->
     <div>
       <h2>Change Segments</h2>
       <!--segments height-->
       <label for="sliderSegmentHeight">Segments Height:</label>
-      <output id="displaySegments1">18</output>
+      <output id="displaySegments1">8</output>
       <input id="sliderSegmentHeight"
            type="range"
-           value="18"
+           value="8"
            min="1"
            max="50"
            step="1"
@@ -103,22 +103,22 @@
       <br>
       <!--segments width-->
       <label for="sliderSegmentsWidth">Segments Width:</label>
-      <output id="displaySegments2">36</output>
+      <output id="displaySegments2">16</output>
       <input id="sliderSegmentsWidth"
            type="range"
-           value="36"
+           value="16"
            min="1"
            max="100"
            step="1"
            oninput="displaySegments2.value = sliderSegmentsWidth.value">
-   </div>
-   <!--open up-->
-   <div>
+    </div>
+    <!--open up-->
+    <div>
       <h2>Open It Up</h2>
       <!--theta length-->
-       <label for="sliderThetaLength">Theta Length:</label>
-       <output id="displayValue1">180</output>
-       <input id="sliderThetaLength"
+      <label for="sliderThetaLength">Theta Length:</label>
+      <output id="displayValue1">180</output>
+      <input id="sliderThetaLength"
             type="range"
             value="180"
             min="1"
@@ -136,11 +136,11 @@
            max="180"
            step="1"
            oninput="displayValue2.value = sliderThetaStart.value">
-     <br>
-     <!--phi length-->
-     <label for="sliderPhiLength">Phi Length:</label>
-     <output id="displayValue3">360</output>
-     <input id="sliderPhiLength"
+      <br>
+      <!--phi length-->
+      <label for="sliderPhiLength">Phi Length:</label>
+      <output id="displayValue3">360</output>
+      <input id="sliderPhiLength"
           type="range"
           value="360"
           min="1"
@@ -159,7 +159,7 @@
            step="1"
            oninput="displayValue4.value = sliderPhiStart.value">
     </div>
-
+    
     <!--movement-->
     <div>
       <h2>Adjust Movement</h2>
@@ -169,12 +169,12 @@
       <input id="sliderSpeed"
            type="range"
            value="1"
-           min="0.1"
+           min="0.01"
            max="5"
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
     </div>
-
+    
     <!--enter vr button-->
     <a id="myEnterVRButton" href="#">
     <button style="margin-top: 30px;
@@ -198,60 +198,60 @@
   <a-sphere id="object1"
             wireframe="false"
             position="0 0 0"
-            radius="14.9995"
-            segments-height="18"
-            segments-width="36"
+            radius="15"
+            segments-height="8"
+            segments-width="16"
             theta-length="180"
             theta-start="0"
             phi-length="360"
             phi-start="0"
             side="double"
             material="color: #ff0000"
-            animation__rotation="property: rotation;
-                              from: 0 360 0;
-                              to: 0 0 360;
-                              dir: reverse;
-                              dur: 35000;
-                              loop: true;
-                              easing: linear;">
+            animation="property: rotation;
+                       from: 360 360 360;
+                       to: 0 0 0;
+                       dir: reverse;
+                       dur: 50000.1;
+                       loop: true;
+                       easing: linear;">
   </a-sphere>
   <a-sphere id="object2"
-         position="0 0 0"
-         radius="15"
-         segments-height="18"
-         segments-width="36"
-         theta-length="180"
-         theta-start="0"
-         phi-length="360"
-         phi-start="0"
-         side="double"
-         material="color: #00ff00"
-         animation__rotation="property: rotation;
-                              from: 0 359.99 0;
-                              to: 0 0 359.99;
-                              dir: reverse;
-                              dur: 35000;
-                              loop: true;
-                              easing: linear;">
+            position="0 0 0"
+            radius="15"
+            segments-height="8"
+            segments-width="16"
+            theta-length="180"
+            theta-start="0"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #00ff00"
+            animation="property: rotation;
+                       from: 360 360 360;
+                       to: 0 0 0;
+                       dir: reverse;
+                       dur: 50000.2;
+                       loop: true;
+                       easing: linear;">
   </a-sphere>
   <a-sphere id="object3"
-         position="0 0 0"
-         radius="15.0005"
-         segments-height="18"
-         segments-width="36"
-         theta-length="180"
-         theta-start="0"
-         phi-length="360"
-         phi-start="0"
-         side="double"
-         material="color: #0000ff"
-         animation__rotation="property: rotation;
-                              from: -0.001 360 0;
-                              to: -0.001 0 360;
-                              dir: reverse;
-                              dur: 35000;
-                              loop: true;
-                              easing: linear;">
+            position="0 0 0"
+            radius="15"
+            segments-height="8"
+            segments-width="16"
+            theta-length="180"
+            theta-start="0"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #0000ff"
+            animation="property: rotation;
+                       from: 360 360 360;
+                       to: 0 0 0;
+                       dir: reverse;
+                       dur: 50000.3;
+                       loop: true;
+                       easing: linear;">
   </a-sphere>
 </a-scene>
 
@@ -304,9 +304,9 @@ genrateRandomColorSet.addEventListener('click', () => {
 
 // radius
 sliderScale.addEventListener('input', () => {
-  object1.setAttribute('radius', sliderScale.value * 14.9995);
+  object1.setAttribute('radius', sliderScale.value * 15);
   object2.setAttribute('radius', sliderScale.value * 15);
-  object3.setAttribute('radius', sliderScale.value * 15.0005);
+  object3.setAttribute('radius', sliderScale.value * 15);
 }, false);
 
 // segments
@@ -347,19 +347,12 @@ sliderPhiStart.addEventListener('input', () => {
   object3.setAttribute('phi-start', sliderPhiStart.value);
 }, false);
 
-
 // speed
 sliderSpeed.addEventListener('input', () => {
-  object1.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
-  object2.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
-  object3.setAttribute('animation__rotation', {dur: 35000 / sliderSpeed.value});
+  object1.setAttribute('animation', {dur: 50000.1 / sliderSpeed.value});
+  object2.setAttribute('animation', {dur: 50000.2 / sliderSpeed.value});
+  object3.setAttribute('animation', {dur: 50000.3 / sliderSpeed.value});
 }, false);
-
-
-
-
-
-
 </script>
 </body>
 </html>
