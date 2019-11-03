@@ -47,33 +47,48 @@
     <!--text-->
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <div style="max-width: 400px;">
-      <h2 style="margin-top: 20px;">Christmas Vibe</h2>
+      <h2 style="margin-top: 20px;">Broken Edges</h2>
       <br>
       <div style="padding-top: 8px;
                   border-top: 2px solid magenta;">
       </div>
-      Created by: A Lazy Cat On The Couch <br>
-      On: 01 November 2019 <br>
+      Created by: Dashwood <br>
+      On: 03 November 2019 <br>
       Base Geometry Model: Sphere <br>
       <div style="padding-top: 10px;
                   border-bottom: 2px solid magenta;">
       </div>
       <br>
-      a star on my sweater <br>
-      a star on my christmas tree <br>
-      a star haging outside my window <br>
-      on the street <br>
-      in the sky <br>
+      I want to share with you a poem here: <br>
       <br>
-      or <br>
+      Breaking Beautifully <br>
+      by Molly Nicole <br>
       <br>
-      just a carambola <br>
-      rotating on my screen <br>
+      Cracks in my character <br>
+      Lined with silk <br>
+      Lovers touch <br>
+      Like a sharpened blade <br>
+      Gliding smoothly <br>
+      Only painful when removed <br>
+      I'm a story book of unfortunate events and cliches <br>
+      And the morbidly curious find their way <br>
+      Into my arms <br>
+      A comforting fear <br>
+      A lion taming circus <br>
+      <br>
+      I'm not sure anymore if this gun <br>
+      Is still loaded with flowers <br>
+      <br>
+      But you <br>
+      Hold me so tight <br>
+      Squeeze out the anxiety <br>
+      Catch it <br>
+      Make me a balloon animal with its breath <br>
     </div>
 
     <!--remix botton-->
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <a href="5-remix.html">
+    <a href="2-remix.html">
     <button style="margin-top: 30px;
                    max-width: 400px;">Remix This Room</button>
     </a>
@@ -98,64 +113,75 @@
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <a-sphere id="object1"
-            wireframe="false"
-            position="0 0 0"
-            radius="15"
-            segments-height="50"
-            segments-width="1"
-            theta-length="360"
-            theta-start="180"
-            phi-length="360"
-            phi-start="0"
-            side="double"
-            material="color: #c66233"
-            animation="property: rotation;
-                       from: 0 360 0;
-                       to: 0 0 360;
-                       dir: reverse;
-                       dur: 25000;
-                       loop: true;
-                       easing: linear;" geometry="">
-  </a-sphere>
-  <a-sphere id="object2"
-            position="0 0 0"
-            radius="15"
-            segments-height="50"
-            segments-width="1"
-            theta-length="360"
-            theta-start="180"
-            phi-length="360"
-            phi-start="0"
-            side="double"
-            material="color: #d7e2c1"
-            animation="property: rotation;
-                       from: 0 360 -0.002;
-                       to: 0 0 359.998;
-                       dir: reverse;
-                       dur: 25000;
-                       loop: true;
-                       easing: linear;" geometry="">
-  </a-sphere>
-  <a-sphere id="object3"
-            position="0 0 0"
-            radius="15"
-            segments-height="50"
-            segments-width="1"
-            theta-length="360"
-            theta-start="180"
-            phi-length="360"
-            phi-start="0"
-            side="double"
-            material="color: #1c3f64"
-            animation="property: rotation;
-                       from: 0 360 -0.005;
-                       to: 0 0 359.995;
-                       dir: reverse;
-                       dur: 25000;
-                       loop: true;
-                       easing: linear;" geometry="">
-  </a-sphere>
+  <a-cone id="object1"
+          wireframe="false"
+          position="0 0 0"
+          radius-bottom="8"
+          radius-top="8"
+          height="13"
+          segments-radial="5"
+          segments-height="50"
+          open-ended="false"
+          theta-length="360"
+          theta-start="0"
+          side="double"
+          material="color: #199c57"
+          animation="property: rotation;
+                     from: 0 360 0;
+                     to: 0 0 0;
+                     dir: reverse;
+                     dur: 71428;
+                     loop: true;
+                     easing: linear;"
+          geometry=""
+          scale="1.8 1.8 1.8">
+  </a-cone>
+  <a-cone id="object2"
+          visible="true"
+          position="0 0 0"
+          radius-bottom="8"
+          radius-top="8"
+          height="13"
+          segments-radial="5"
+          segments-height="50"
+          open-ended="false"
+          theta-length="360"
+          theta-start="0"
+          side="double"
+          material="color: #e55235"
+          animation="property: rotation;
+                     from: 0 360 -0.002;
+                     to: 0 0 -0.002;
+                     dir: reverse;
+                     dur: 71428;
+                     loop: true;
+                     easing: linear;"
+          geometry=""
+          scale="1.8 1.8 1.8">
+  </a-cone>
+  <a-cone id="object3"
+          visible="true"
+          position="0 0 0"
+          radius-bottom="8"
+          radius-top="8"
+          height="13"
+          segments-radial="5"
+          segments-height="50"
+          open-ended="false"
+          theta-length="360"
+          theta-start="0"
+          side="double"
+          material="color: #1539ed"
+          animation="property: rotation;
+                     from: 0 360 -0.005;
+                     to: 0 0 -0.005;
+                     dir: reverse;
+                     dur: 71428;
+                     loop: true;
+                     easing: linear;"
+          geometry=""
+          scale="1.8 1.8 1.8">
+  </a-cone>
 </a-scene>
 
 <script type="text/javascript">
