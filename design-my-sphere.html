@@ -226,7 +226,7 @@
 
 <!--javascript------------------------------------------------------------------------------------------------------------------>
 <script type="text/javascript">
-// change active camera when entering and exit vr
+// switch active camera
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   vrCamera.setAttribute('camera', 'active', true);
   document.body.classList.add('in-vr');
@@ -236,12 +236,12 @@ document.querySelector('a-scene').addEventListener('exit-vr', () => {
   document.body.classList.remove('in-vr');
 }, false);
 
-// click the second enter vr button to trigger the first button
+// enter vr 2nd button
 myEnterVRButton2.addEventListener('click', () => {
   myEnterVRButton.click();
 }, false);
 
-// use color picker input to change object color
+// color picker
 colorPicker1.addEventListener('input', () => {
   object1.setAttribute('material', {color: event.target.value});
   console.log(colorPicker1.value)
@@ -253,11 +253,10 @@ colorPicker3.addEventListener('input', () => {
   object3.setAttribute('material', {color: event.target.value});
 }, false);
 
-// press button to apply random colors on the object
+// generate random color set
 genrateRandomColorSet.addEventListener('click', () => {
   var color1 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
   return i>5 ? null : a[Math.floor(Math.random()*16)] }).join(''); // generate random hex color
-  // or this but sometimes generate less digits = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
   object1.setAttribute('material', {color: color1}); // apply color on object
   colorPicker1.value = color1; // change color picker value
 
