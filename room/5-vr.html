@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Glitch Room</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/styles-class.css">
+<script src="../js/aframe.min.js"></script>
+</head>
+
+<body>
+<!--main layout-->
+<main class="desktop2ColMobile1Col">
+  <!--placeholder-->
+  <div class="hideOnMobile">
+  </div>
+
+  <!--main column-->
+  <div id="htmlContents"
+       style="z-index: 1;
+              position: relative;
+              overflow: auto;
+              height: 100vh;
+              margin: 0 20px 0 10px;">
+
+    <!--buttons-->
+    <div style="display: grid;
+                grid-template-columns: 50px 80px auto;
+                grid-gap: 6px;
+                margin-top: 15px;
+                max-width: 400px;">
+      <a style="display:inline-block;"
+         href="../visit-existing-rooms.html">
+      <button style="width: 50px;">&lt;&lt;</button>
+      </a>
+      <a style="display:inline-block;"
+         href="../index.html">
+      <button style="width: 80px;">Home</button>
+      </a>
+      <a id="myEnterVRButton"
+         style="display:inline-block;"
+         href="#">
+      <button>Enter VR</button>
+      </a>
+    </div>
+
+    <!--text-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div style="max-width: 400px;">
+      <h2 style="margin-top: 20px;">Christmas Vibe</h2>
+      <br>
+      <div style="padding-top: 8px;
+                  border-top: 2px solid magenta;">
+      </div>
+      Created by: A Lazy Cat On The Couch <br>
+      On: 01 November 2019 <br>
+      Base Geometry Model: Sphere <br>
+      <div style="padding-top: 10px;
+                  border-bottom: 2px solid magenta;">
+      </div>
+      <br>
+      a star on my sweater <br>
+      a star on my christmas tree <br>
+      a star haging outside my window <br>
+      on the street <br>
+      in the sky <br>
+      <br>
+      or <br>
+      <br>
+      just a carambola <br>
+      rotating on my screen <br>
+    </div>
+
+    <!--remix botton-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <a href="5-remix.html">
+    <button style="margin-top: 30px;
+                   max-width: 400px;">Remix This Room</button>
+    </a>
+    <div style="height: 125px;">
+    </div>
+
+  </div>
+</main>
+
+<!--aframe-->
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
+  <a-sky color="#000000">
+  </a-sky>
+  <a-entity id="normalCamera"
+            camera
+            position="-10 0 30">
+  </a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false">
+  </a-camera>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-sphere id="object1"
+            wireframe="false"
+            position="0 0 0"
+            radius="15"
+            segments-height="50"
+            segments-width="1"
+            theta-length="360"
+            theta-start="180"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #4193cb"
+            animation="property: rotation;
+                       from: 0 360 0;
+                       to: 0 0 360;
+                       dir: reverse;
+                       dur: 25000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object2"
+            position="0 0 0"
+            radius="15"
+            segments-height="50"
+            segments-width="1"
+            theta-length="360"
+            theta-start="180"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #8cdcde"
+            animation="property: rotation;
+                       from: 0 360 -0.002;
+                       to: 0 0 359.998;
+                       dir: reverse;
+                       dur: 25000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object3"
+            position="0 0 0"
+            radius="15"
+            segments-height="50"
+            segments-width="1"
+            theta-length="360"
+            theta-start="180"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #201235"
+            animation="property: rotation;
+                       from: 0 360 -0.005;
+                       to: 0 0 359.995;
+                       dir: reverse;
+                       dur: 25000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+</a-scene>
+
+<script type="text/javascript">
+// change active camera when entering and exit vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  vrCamera.setAttribute('camera', 'active', true);
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  normalCamera.setAttribute('camera', 'active', true);
+  document.body.classList.remove('in-vr');
+}, false);
+
+// hide buttons in vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  document.body.classList.remove('in-vr');
+}, false);
+</script>
+</body>
+</html>
