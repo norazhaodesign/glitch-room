@@ -12,11 +12,11 @@
 <!--controls------------------------------------------------------------------------------------------------------------------>
 <!--main layout-->
 <main class="desktop2ColMobile1Col">
-  
+
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
-  
+
   <!--main column-->
   <div id="htmlContents"
        style="z-index: 1;
@@ -24,7 +24,7 @@
               overflow: auto;
               height: 100vh;
               margin: 0 20px 0 10px;">
-    
+
     <!--top buttons-->
     <div style="max-width: 400px;
                 display: grid;
@@ -45,7 +45,7 @@
       <button>Enter VR</button>
       </a>
     </div>
-    
+
     <!--color-->
     <h2 style="margin-top: 20px;">Select Colours</h2>
     <div class="color-picker-div">
@@ -71,7 +71,7 @@
     <button id="genrateRandomColorSet"
             style="max-width: 400px;
                    margin-top: 12px;">Generate Random Colours</button>
-    
+
     <!--scale-->
     <h2>Set Scale</h2>
     <label for="sliderScale">Scale:</label>
@@ -83,41 +83,41 @@
            max="5"
            step="0.01"
            oninput="displayScale.value = sliderScale.value">
-    
+
     <h2>Change Shape</h2>
     <!--height-->
     <label for="sliderSizeHeight">Height:</label>
-    <output id="displaySizeHeight">1</output>
+    <output id="displaySizeHeight">20</output>
     <input id="sliderSizeHeight"
            type="range"
-           value="1"
-           min="0.1"
-           max="5"
-           step="0.01"
+           value="20"
+           min="1"
+           max="100"
+           step="1"
            oninput="displaySizeHeight.value = sliderSizeHeight.value">
     <br>
     <!--width-->
     <label for="sliderSizeWidth">Width:</label>
-    <output id="displaySizeWidth">1</output>
+    <output id="displaySizeWidth">20</output>
     <input id="sliderSizeWidth"
            type="range"
-           value="1"
-           min="0.1"
-           max="5"
-           step="0.01"
+           value="20"
+           min="1"
+           max="100"
+           step="1"
            oninput="displaySizeWidth.value = sliderSizeWidth.value">
     <br>
     <!--depth-->
     <label for="sliderSizeDepth">Depth:</label>
-    <output id="displaySizeDepth">1</output>
+    <output id="displaySizeDepth">20</output>
     <input id="sliderSizeDepth"
            type="range"
-           value="1"
-           min="0.1"
-           max="5"
-           step="0.01"
+           value="20"
+           min="1"
+           max="100"
+           step="1"
            oninput="displaySizeDepth.value = sliderSizeDepth.value">
-    
+
     <!--speed-->
     <h2>Adjust Movement</h2>
     <label for="sliderSpeed">Speed:</label>
@@ -129,7 +129,7 @@
            max="5"
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
-    
+
     <!--enter vr button-->
     <a id="myEnterVRButton2" href="#">
     <button style="margin-top: 30px;
@@ -264,23 +264,23 @@ sliderScale.addEventListener('input', () => {
 
 // height
 sliderSizeHeight.addEventListener('input', () => {
-  object1.setAttribute('height', sliderSizeHeight.value * 20);
-  object2.setAttribute('height', sliderSizeHeight.value * 20);
-  object3.setAttribute('height', sliderSizeHeight.value * 20 );
+  object1.setAttribute('height', sliderSizeHeight.value);
+  object2.setAttribute('height', sliderSizeHeight.value);
+  object3.setAttribute('height', sliderSizeHeight.value);
 }, false);
 
 // width
 sliderSizeWidth.addEventListener('input', () => {
-  object1.setAttribute('width', sliderSizeWidth.value * 20);
-  object2.setAttribute('width', sliderSizeWidth.value * 20);
-  object3.setAttribute('width', sliderSizeWidth.value * 20);
+  object1.setAttribute('width', sliderSizeWidth.value);
+  object2.setAttribute('width', sliderSizeWidth.value);
+  object3.setAttribute('width', sliderSizeWidth.value);
 }, false);
 
 // depth
 sliderSizeDepth.addEventListener('input', () => {
-  object1.setAttribute('depth', sliderSizeDepth.value * 20);
-  object2.setAttribute('depth', sliderSizeDepth.value * 20);
-  object3.setAttribute('depth', sliderSizeDepth.value * 20);
+  object1.setAttribute('depth', sliderSizeDepth.value);
+  object2.setAttribute('depth', sliderSizeDepth.value);
+  object3.setAttribute('depth', sliderSizeDepth.value);
 }, false);
 
 // speed

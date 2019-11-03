@@ -104,7 +104,7 @@
            type="range"
            value="0"
            min="0"
-           max="70"
+           max="60"
            step="1"
            oninput="displayRadiusTop.value = sliderRadiusTop.value">
     <br>
@@ -115,8 +115,8 @@
     <input id="sliderRadiusBottom"
            type="range"
            value="14"
-           min="1"
-           max="70"
+           min="0"
+           max="60"
            step="1"
            oninput="displayRadiusBottom.value = sliderRadiusBottom.value">
 
@@ -172,7 +172,7 @@
             camera
             position="-10 0 30"></a-entity>
   <a-camera id="vrCamera"
-            position="0 4 0"
+            position="0 0 0"
             active="false"
             ></a-camera>
   <!--
@@ -187,8 +187,7 @@
   -->
   <a-cone id="object1"
           wireframe="false"
-          position="0 4 0"
-
+          position="0 0 0"
           radius-bottom="14"
           radius-top="0"
           height="24"
@@ -197,7 +196,6 @@
           open-ended="false"
           theta-length="360"
           theta-start="0"
-
           side="double"
           material="color: #ff0000"
           animation="property: rotation;
@@ -210,7 +208,7 @@
   </a-cone>
   <a-cone id="object2"
           visible="true"
-          position="0 4 0"
+          position="0 0 0"
           radius-bottom="14"
           radius-top="0"
           height="24"
@@ -231,7 +229,7 @@
   </a-cone>
   <a-cone id="object3"
           visible="true"
-          position="0 4 0"
+          position="0 0 0"
           radius-bottom="14"
           radius-top="0"
           height="24"
