@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Glitch Room</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/styles-class.css">
+<script src="../js/aframe.min.js"></script>
+</head>
+
+<body>
+<!--controls------------------------------------------------------------------------------------------------------------------>
+<!--main layout-->
+<main class="desktop2ColMobile1Col">
+
+  <!--placeholder-->
+  <div class="hideOnMobile">
+  </div>
+
+  <!--main column-->
+  <div id="htmlContents"
+       style="z-index: 1;
+              position: relative;
+              overflow: auto;
+              height: 100vh;
+              margin: 0 20px 0 10px;">
+
+    <!--top buttons-->
+    <div style="max-width: 400px;
+                display: grid;
+                grid-template-columns: 50px 80px auto;
+                grid-gap: 6px;
+                margin-top: 15px;">
+      <a style="display:inline-block;"
+         href="1-vr.html">
+      <button style="width: 50px;">&lt;&lt;</button>
+      </a>
+      <a style="display:inline-block;"
+         href="../index.html">
+      <button style="width: 80px;">Home</button>
+      </a>
+      <a id="myEnterVRButton"
+         style="display:inline-block;"
+         href="#">
+      <button>Enter VR</button>
+      </a>
+    </div>
+
+    <!--color-->
+    <h2 style="margin-top: 20px;">Select Colours</h2>
+    <div class="color-picker-div">
+      <div class="input-color-container">
+        <input id="colorPicker1"
+                 type="color"
+                 value="#ff0000"
+                 class="input-color">
+      </div>
+      <div class="input-color-container">
+        <input id="colorPicker2"
+                 type="color"
+                 value="#00ff00"
+                 class="input-color">
+      </div>
+      <div class="input-color-container">
+        <input id="colorPicker3"
+                 type="color"
+                 value="#0000ff"
+                 class="input-color">
+      </div>
+    </div>
+    <button id="genrateRandomColorSet"
+              style="max-width: 400px;
+                     margin-top: 12px;">Generate Random Colours</button>
+
+    <!--scale-->
+    <h2>Set Scale</h2>
+    <label for="sliderScale">Scale:</label>
+    <output id="displayScale">1</output>
+    <input id="sliderScale" type="range" value="1" min="0.1" max="5" step="0.01" oninput="displayScale.value = sliderScale.value">
+
+    <!--segments height-->
+    <h2>Change Segments</h2>
+    <label for="sliderSegmentHeight">Segments Height:</label>
+    <output id="displaySegmentsHeight">1</output>
+    <input id="sliderSegmentHeight" type="range" value="1" min="1" max="50" step="1" oninput="displaySegmentsHeight.value = sliderSegmentHeight.value">
+    <br>
+
+    <!--segments width-->
+    <label for="sliderSegmentsWidth">Segments Width:</label>
+    <output id="displaySegmentsWidth">8</output>
+    <input id="sliderSegmentsWidth" type="range" value="8" min="1" max="100" step="1" oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
+    <h2>Open It Up</h2>
+    <!--theta length-->
+    <label for="sliderThetaLength">Theta Length:</label>
+    <output id="displayThetaLength">233</output>
+    <input id="sliderThetaLength" type="range" value="233" min="1" max="360" step="1" oninput="displayThetaLength.value = sliderThetaLength.value">
+    <br>
+
+    <!--theta start-->
+    <label for="sliderThetaStart">Theta Start:</label>
+    <output id="displayThetaStart">110</output>
+    <input id="sliderThetaStart" type="range" value="110" min="0" max="180" step="1" oninput="displayThetaStart.value = sliderThetaStart.value">
+
+    <!--speed-->
+    <h2>Adjust Movement</h2>
+    <label for="sliderSpeed">Speed:</label>
+    <output id="displaySpeed">1.8</output>
+    <input id="sliderSpeed" type="range" value="1.8" min="0.01" max="5" step="0.01" oninput="displaySpeed.value = sliderSpeed.value">
+
+    <!--enter vr button-->
+    <a id="myEnterVRButton2" href="#">
+    <button style="margin-top: 30px;
+                   max-width: 400px;">Enter VR</button>
+    </a>
+    <div style="height: 125px;">
+    </div>
+  </div>
+</main>
+
+<!--aframe-->
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
+  <a-sky color="#000000">
+  </a-sky>
+  <a-entity id="normalCamera"
+            camera=""
+            position="-10 0 30">
+  </a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false"
+            camera=""
+            rotation=""
+            look-controls=""
+            wasd-controls="">
+  </a-camera>
+  <a-sphere id="object1"
+            wireframe="false"
+            position="0 0 0"
+            radius="15"
+            segments-height="1"
+            segments-width="8"
+            theta-length="233"
+            theta-start="110"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #ff0000"
+            animation="property: rotation;
+                       from: 0 360 0;
+                       to: 0 0 360;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object2"
+            position="0 0 0"
+            radius="15"
+            segments-height="1"
+            segments-width="8"
+            theta-length="233"
+            theta-start="110"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #00ff00"
+            animation="property: rotation;
+                       from: 0 360 -0.002;
+                       to: 0 0 359.998;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object3"
+            position="0 0 0"
+            radius="15"
+            segments-height="1"
+            segments-width="8"
+            theta-length="233"
+            theta-start="110"
+            phi-length="360"
+            phi-start="0"
+            side="double"
+            material="color: #0000ff"
+            animation="property: rotation;
+                       from: 0 360 -0.005;
+                       to: 0 0 359.995;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+</a-scene>
+
+
+<!--javascript------------------------------------------------------------------------------------------------------------------>
+<script type="text/javascript">
+// change active camera when entering and exit vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  vrCamera.setAttribute('camera', 'active', true);
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  normalCamera.setAttribute('camera', 'active', true);
+  document.body.classList.remove('in-vr');
+}, false);
+
+// click the second enter vr button to trigger the first button
+myEnterVRButton2.addEventListener('click', () => {
+  myEnterVRButton.click();
+}, false);
+
+// use color picker input to change object color
+colorPicker1.addEventListener('input', () => {
+  object1.setAttribute('material', {color: event.target.value});
+  console.log(colorPicker1.value)
+}, false);
+colorPicker2.addEventListener('input', () => {
+  object2.setAttribute('material', {color: event.target.value});
+}, false);
+colorPicker3.addEventListener('input', () => {
+  object3.setAttribute('material', {color: event.target.value});
+}, false);
+
+// press button to apply random colors on the object
+genrateRandomColorSet.addEventListener('click', () => {
+  var color1 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join(''); // generate random hex color
+  // or this but sometimes generate less digits = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+  object1.setAttribute('material', {color: color1}); // apply color on object
+  colorPicker1.value = color1; // change color picker value
+
+  var color2 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+  object2.setAttribute('material', {color: color2});
+  colorPicker2.value = color2;
+
+  var color3 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+  object3.setAttribute('material', {color: color3});
+  colorPicker3.value = color3;
+
+  console.log(color1, color2, color3);
+  console.log(colorPicker1.value, colorPicker2.value, colorPicker3.value);
+}, false);
+
+// scale
+sliderScale.addEventListener('input', () => {
+  object1.setAttribute('radius', sliderScale.value * 15);
+  object2.setAttribute('radius', sliderScale.value * 15);
+  object3.setAttribute('radius', sliderScale.value * 15);
+}, false);
+
+// segments height
+sliderSegmentHeight.addEventListener('input', () => {
+  object1.setAttribute('segments-height', sliderSegmentHeight.value);
+  object2.setAttribute('segments-height', sliderSegmentHeight.value);
+  object3.setAttribute('segments-height', sliderSegmentHeight.value);
+}, false);
+
+// segments width
+sliderSegmentsWidth.addEventListener('input', () => {
+  object1.setAttribute('segments-width', sliderSegmentsWidth.value);
+  object2.setAttribute('segments-width', sliderSegmentsWidth.value);
+  object3.setAttribute('segments-width', sliderSegmentsWidth.value);
+}, false);
+
+// theta length
+sliderThetaLength.addEventListener('input', () => {
+  object1.setAttribute('theta-length', sliderThetaLength.value);
+  object2.setAttribute('theta-length', sliderThetaLength.value);
+  object3.setAttribute('theta-length', sliderThetaLength.value);
+}, false);
+
+// theta start
+sliderThetaStart.addEventListener('input', () => {
+  object1.setAttribute('theta-start', sliderThetaStart.value);
+  object2.setAttribute('theta-start', sliderThetaStart.value);
+  object3.setAttribute('theta-start', sliderThetaStart.value);
+}, false);
+
+// speed
+sliderSpeed.addEventListener('input', () => {
+  object1.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+  object2.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+  object3.setAttribute('animation', {dur: 50000 / sliderSpeed.value});
+}, false);
+</script>
+</body>
+</html>
