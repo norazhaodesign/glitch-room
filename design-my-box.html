@@ -130,6 +130,13 @@
            step="0.01"
            oninput="displaySpeed.value = sliderSpeed.value">
 
+    <!--checkbox-->
+    <!-- <div>
+      <input id="checkboxRotationX"
+             type="checkbox">
+      <label for="checkboxRotationX">Rotate on X</label>
+    </div> -->
+
     <!--enter vr button-->
     <a id="myEnterVRButton2" href="#">
     <button style="margin-top: 30px;
@@ -282,6 +289,11 @@ sliderSizeDepth.addEventListener('input', () => {
   object2.setAttribute('depth', sliderSizeDepth.value);
   object3.setAttribute('depth', sliderSizeDepth.value);
 }, false);
+
+// checkbox
+// checkboxRotationX.addEventListener('change', () => {
+//   alert(event.target.checked);
+// }, false);
 
 // speed
 sliderSpeed.addEventListener('input', () => {
