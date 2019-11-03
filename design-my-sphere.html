@@ -130,30 +130,6 @@
            max="180"
            step="1"
            oninput="displayThetaStart.value = sliderThetaStart.value">
-    <br>
-
-    <!--phi length-->
-    <label for="sliderPhiLength">Phi Length:</label>
-    <output id="displayPhiLength">360</output>
-    <input id="sliderPhiLength"
-          type="range"
-          value="360"
-          min="1"
-          max="360"
-          step="1"
-          oninput="displayPhiLength.value = sliderPhiLength.value">
-    <br>
-
-    <!--phi start-->
-    <label for="sliderPhiStart">Phi Start:</label>
-    <output id="displayPhiStart">0</output>
-    <input id="sliderPhiStart"
-           type="range"
-           value="0"
-           min="0"
-           max="360"
-           step="1"
-           oninput="displayPhiStart.value = sliderPhiStart.value">
 
     <!--speed-->
     <h2>Adjust Movement</h2>
@@ -331,20 +307,6 @@ sliderThetaStart.addEventListener('input', () => {
   object1.setAttribute('theta-start', sliderThetaStart.value);
   object2.setAttribute('theta-start', sliderThetaStart.value);
   object3.setAttribute('theta-start', sliderThetaStart.value);
-}, false);
-
-// phi length
-sliderPhiLength.addEventListener('input', () => {
-  object1.setAttribute('phi-length', sliderPhiLength.value);
-  object2.setAttribute('phi-length', sliderPhiLength.value);
-  object3.setAttribute('phi-length', sliderPhiLength.value);
-}, false);
-
-// phi start
-sliderPhiStart.addEventListener('input', () => {
-  object1.setAttribute('phi-start', sliderPhiStart.value);
-  object2.setAttribute('phi-start', sliderPhiStart.value);
-  object3.setAttribute('phi-start', sliderPhiStart.value);
 }, false);
 
 // speed
