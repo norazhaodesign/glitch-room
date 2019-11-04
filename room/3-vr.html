@@ -47,22 +47,24 @@
     <!--text-->
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <div style="max-width: 400px;">
-      <h2 style="margin-top: 20px;">Energy Unit</h2>
+      <h2 style="margin-top: 20px;">Solar Radiation</h2>
       <br>
       <div style="padding-top: 8px;
                   border-top: 2px solid magenta;">
       </div>
-      Created by: Mark <br>
-      On: 26 October 2019 <br>
-      Base Geometry Model: Cone <br>
+      Created by: Maria <br>
+      On: 05 November 2019 <br>
+      Base Geometry Model: Sphere <br>
       <div style="padding-top: 10px;
                   border-bottom: 2px solid magenta;">
       </div>
+      <br>
+      Just feel it in VR! <br>
     </div>
 
     <!--remix botton-->
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <a href="2-remix.html">
+    <a href="3-remix.html">
     <button style="margin-top: 30px;
                    max-width: 400px;">Remix This Room</button>
     </a>
@@ -87,75 +89,30 @@
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <a-cone id="object1"
-          wireframe="false"
-          position="0 0 0"
-          radius-bottom="8"
-          radius-top="8"
-          height="13"
-          segments-radial="10"
-          segments-height="50"
-          open-ended="false"
-          theta-length="360"
-          theta-start="0"
-          side="double"
-          material="color: #aeb1f9"
-          animation="property: rotation;
-                     from: 0 0 0;
-                     to: 360 360 360;
-                     dir: reverse;
-                     dur: 71428;
-                     loop: true;
-                     easing: linear;"
-          geometry=""
-          scale="1.8 1.8 1.8">
-  </a-cone>
-  <a-cone id="object2"
-          visible="true"
-          position="0 0 0"
-          radius-bottom="8"
-          radius-top="8"
-          height="13"
-          segments-radial="10"
-          segments-height="50"
-          open-ended="false"
-          theta-length="360"
-          theta-start="0"
-          side="double"
-          material="color: #330d5e"
-          animation="property: rotation;
-                     from: 0 0 -0.002;
-                     to: 360 360 359.998;
-                     dir: reverse;
-                     dur: 71428;
-                     loop: true;
-                     easing: linear;"
-          geometry=""
-          scale="1.8 1.8 1.8">
-  </a-cone>
-  <a-cone id="object3"
-          visible="true"
-          position="0 0 0"
-          radius-bottom="8"
-          radius-top="8"
-          height="13"
-          segments-radial="10"
-          segments-height="50"
-          open-ended="false"
-          theta-length="360"
-          theta-start="0"
-          side="double"
-          material="color: #54a703"
-          animation="property: rotation;
-                     from: 0 0 -0.005;
-                     to: 360 360 359.995;
-                     dir: reverse;
-                     dur: 71428;
-                     loop: true;
-                     easing: linear;"
-          geometry=""
-          scale="1.8 1.8 1.8">
-  </a-cone>
+  <a-sphere id="object1" wireframe="false" position="0 0 0" radius="15" segments-height="1" segments-width="70" theta-length="291" theta-start="65" phi-length="360" phi-start="0" side="double" material="color: #8754f2" animation="property: rotation;
+                       from: 0 0 0;
+                       to: 360 360 360;
+                       dir: reverse;
+                       dur: 40000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object2" position="0 0 0" radius="15" segments-height="1" segments-width="70" theta-length="291" theta-start="65" phi-length="360" phi-start="0" side="double" material="color: #8b762a" animation="property: rotation;
+                       from: 0 0 -0.002;
+                       to: 360 360 359.998;
+                       dir: reverse;
+                       dur: 40000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object3" position="0 0 0" radius="15" segments-height="1" segments-width="70" theta-length="291" theta-start="65" phi-length="360" phi-start="0" side="double" material="color: #b349f3" animation="property: rotation;
+                       from: 0 0 -0.005;
+                       to: 360 360 359.995;
+                       dir: reverse;
+                       dur: 40000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
 </a-scene>
 
 <script type="text/javascript">
