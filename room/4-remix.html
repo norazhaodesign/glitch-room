@@ -32,7 +32,7 @@
                 margin-top: 15px;">
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
       <a style="display:inline-block;"
-         href="5-vr.html">
+         href="1-vr.html">
       <button style="width: 50px;">&lt;&lt;</button>
       </a>
       <a style="display:inline-block;"
@@ -53,19 +53,19 @@
       <div class="input-color-container">
         <input id="colorPicker1"
                  type="color"
-                 value="#ac2319"
+                 value="#ff0000"
                  class="input-color">
       </div>
       <div class="input-color-container">
         <input id="colorPicker2"
                  type="color"
-                 value="#2c671a"
+                 value="#00ff00"
                  class="input-color">
       </div>
       <div class="input-color-container">
         <input id="colorPicker3"
                  type="color"
-                 value="#e78e0e"
+                 value="#0000ff"
                  class="input-color">
       </div>
     </div>
@@ -74,7 +74,7 @@
                      margin-top: 12px;">Generate Random Colours</button>
 
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change all value to match display !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change all following values to match display !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <!--scale-->
     <h2>Set Scale</h2>
     <label for="sliderScale">Scale:</label>
@@ -84,31 +84,31 @@
     <!--segments height-->
     <h2>Change Segments</h2>
     <label for="sliderSegmentHeight">Segments Height:</label>
-    <output id="displaySegmentsHeight">50</output>
-    <input id="sliderSegmentHeight" type="range" value="50" min="1" max="50" step="1" oninput="displaySegmentsHeight.value = sliderSegmentHeight.value">
+    <output id="displaySegmentsHeight">3</output>
+    <input id="sliderSegmentHeight" type="range" value="3" min="1" max="50" step="1" oninput="displaySegmentsHeight.value = sliderSegmentHeight.value">
     <br>
 
     <!--segments width-->
     <label for="sliderSegmentsWidth">Segments Width:</label>
-    <output id="displaySegmentsWidth">1</output>
-    <input id="sliderSegmentsWidth" type="range" value="1" min="1" max="100" step="1" oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
+    <output id="displaySegmentsWidth">3</output>
+    <input id="sliderSegmentsWidth" type="range" value="3" min="1" max="100" step="1" oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
     <h2>Open It Up</h2>
     <!--theta length-->
     <label for="sliderThetaLength">Theta Length:</label>
-    <output id="displayThetaLength">360</output>
-    <input id="sliderThetaLength" type="range" value="360" min="1" max="360" step="1" oninput="displayThetaLength.value = sliderThetaLength.value">
+    <output id="displayThetaLength">302</output>
+    <input id="sliderThetaLength" type="range" value="302" min="1" max="360" step="1" oninput="displayThetaLength.value = sliderThetaLength.value">
     <br>
 
     <!--theta start-->
     <label for="sliderThetaStart">Theta Start:</label>
-    <output id="displayThetaStart">180</output>
-    <input id="sliderThetaStart" type="range" value="180" min="0" max="180" step="1" oninput="displayThetaStart.value = sliderThetaStart.value">
+    <output id="displayThetaStart">92</output>
+    <input id="sliderThetaStart" type="range" value="92" min="0" max="180" step="1" oninput="displayThetaStart.value = sliderThetaStart.value">
 
     <!--speed-->
     <h2>Adjust Movement</h2>
     <label for="sliderSpeed">Speed:</label>
-    <output id="displaySpeed">2</output>
-    <input id="sliderSpeed" type="range" value="2" min="0.1" max="10" step="0.1" oninput="displaySpeed.value = sliderSpeed.value">
+    <output id="displaySpeed">1</output>
+    <input id="sliderSpeed" type="range" value="1" min="0.1" max="10" step="0.1" oninput="displaySpeed.value = sliderSpeed.value">
 
     <!--enter vr button-->
     <a id="myEnterVRButton2" href="#">
@@ -135,61 +135,27 @@
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <a-sphere id="object1"
-            wireframe="false"
-            position="0 0 0"
-            radius="15"
-            segments-height="50"
-            segments-width="1"
-            theta-length="360"
-            theta-start="180"
-            phi-length="360"
-            phi-start="0"
-            side="double"
-            material="color: #ac2319"
-            animation="property: rotation;
+  <a-sphere id="object1" wireframe="false" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #ff0000" animation="property: rotation;
                        from: 0 0 0;
                        to: 360 360 360;
                        dir: reverse;
-                       dur: 25000;
+                       dur: 50000;
                        loop: true;
                        easing: linear;" geometry="">
   </a-sphere>
-  <a-sphere id="object2"
-            position="0 0 0"
-            radius="15"
-            segments-height="50"
-            segments-width="1"
-            theta-length="360"
-            theta-start="180"
-            phi-length="360"
-            phi-start="0"
-            side="double"
-            material="color: #2c671a"
-            animation="property: rotation;
+  <a-sphere id="object2" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #00ff00" animation="property: rotation;
                        from: 0 0 -0.002;
                        to: 360 360 359.998;
                        dir: reverse;
-                       dur: 25000;
+                       dur: 50000;
                        loop: true;
                        easing: linear;" geometry="">
   </a-sphere>
-  <a-sphere id="object3"
-            position="0 0 0"
-            radius="15"
-            segments-height="50"
-            segments-width="1"
-            theta-length="360"
-            theta-start="180"
-            phi-length="360"
-            phi-start="0"
-            side="double"
-            material="color: #e78e0e"
-            animation="property: rotation;
+  <a-sphere id="object3" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #0000ff" animation="property: rotation;
                        from: 0 0 -0.005;
                        to: 360 360 359.995;
                        dir: reverse;
-                       dur: 25000;
+                       dur: 50000;
                        loop: true;
                        easing: linear;" geometry="">
   </a-sphere>
@@ -198,7 +164,7 @@
 <!--javascript------------------------------------------------------------------------------------------------------------------>
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace this whole part !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <script type="text/javascript">
-// change active camera when entering and exit vr
+// switch active camera
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   vrCamera.setAttribute('camera', 'active', true);
   document.body.classList.add('in-vr');
@@ -208,12 +174,12 @@ document.querySelector('a-scene').addEventListener('exit-vr', () => {
   document.body.classList.remove('in-vr');
 }, false);
 
-// click the second enter vr button to trigger the first button
+// enter vr 2nd button
 myEnterVRButton2.addEventListener('click', () => {
   myEnterVRButton.click();
 }, false);
 
-// use color picker input to change object color
+// color picker
 colorPicker1.addEventListener('input', () => {
   object1.setAttribute('material', {color: event.target.value});
   console.log(colorPicker1.value)
@@ -225,7 +191,7 @@ colorPicker3.addEventListener('input', () => {
   object3.setAttribute('material', {color: event.target.value});
 }, false);
 
-// press button to apply random colors on the object
+// generate random color set
 genrateRandomColorSet.addEventListener('click', () => {
   var color1 = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
   return i>5 ? null : a[Math.floor(Math.random()*16)] }).join(''); // generate random hex color

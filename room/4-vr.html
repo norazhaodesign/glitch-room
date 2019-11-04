@@ -7,14 +7,14 @@
 <link rel="stylesheet" type="text/css" href="../css/styles-class.css">
 <script src="../js/aframe.min.js"></script>
 </head>
-  
+
 <body>
 <!--main layout-->
 <main class="desktop2ColMobile1Col">
   <!--placeholder-->
   <div class="hideOnMobile">
   </div>
-  
+
   <!--main column-->
   <div id="htmlContents"
        style="z-index: 1;
@@ -22,13 +22,13 @@
               overflow: auto;
               height: 100vh;
               margin: 0 20px 0 10px;">
-    
+
     <!--buttons-->
-    <div style="max-width: 400px;
-                display: grid;
+    <div style="display: grid;
                 grid-template-columns: 50px 80px auto;
                 grid-gap: 6px;
-                margin-top: 15px;">
+                margin-top: 15px;
+                max-width: 400px;">
       <a style="display:inline-block;"
          href="../visit-existing-rooms.html">
       <button style="width: 50px;">&lt;&lt;</button>
@@ -43,72 +43,120 @@
       <button>Enter VR</button>
       </a>
     </div>
-    
+
     <!--text-->
-    <h2 style="margin-top: 20px;">The Circus</h2>
-    <div style="padding-top: 8px;">
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div style="max-width: 400px;">
+      <h2 style="margin-top: 20px;">Broken Edges</h2>
+      <br>
+      <div style="padding-top: 8px;
+                  border-top: 2px solid magenta;">
+      </div>
+      Created by: Dashwood <br>
+      On: 03 November 2019 <br>
+      Base Geometry Model: Sphere <br>
+      <div style="padding-top: 10px;
+                  border-bottom: 2px solid magenta;">
+      </div>
+      <br>
+      I want to share with you a poem here: <br>
+      <br>
+      Breaking Beautifully <br>
+      by Molly Nicole <br>
+      <br>
+      Cracks in my character <br>
+      Lined with silk <br>
+      Lovers touch <br>
+      Like a sharpened blade <br>
+      Gliding smoothly <br>
+      Only painful when removed <br>
+      I'm a story book of unfortunate events and cliches <br>
+      And the morbidly curious find their way <br>
+      Into my arms <br>
+      A comforting fear <br>
+      A lion taming circus <br>
+      <br>
+      I'm not sure anymore if this gun <br>
+      Is still loaded with flowers <br>
+      <br>
+      But you <br>
+      Hold me so tight <br>
+      Squeeze out the anxiety <br>
+      Catch it <br>
+      Make me a balloon animal with its breath <br>
     </div>
-    Created by: DOOOOOOOOOOlala <br>
-    At: 22 Oct 2019 <br>
+
+    <!--remix botton-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <a href="4-remix.html">
+    <button style="margin-top: 30px;
+                   max-width: 400px;">Remix This Room</button>
+    </a>
+    <div style="height: 125px;">
+    </div>
+
   </div>
 </main>
-  
+
 <!--aframe-->
 <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
-  <a-camera position="0 0 0">
+  <a-sky color="#000000">
+  </a-sky>
+  <a-entity id="normalCamera"
+            camera
+            position="-10 0 30">
+  </a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false">
   </a-camera>
-  <a-box position="0 0 0" 
-         height="4" 
-         width="4" 
-         depth="100" 
-         side="double" 
-         material="color: #ff0000" 
-         animation__rotation="property: rotation;
-                              from: 0 360 0;
-                              to: 0 0 360;
-                              dir: reverse;
-                              dur: 200000;
-                              loop: true;
-                              easing: linear;">
-  </a-box>
-  <a-box position="0 0 0" 
-         height="4" 
-         width="4" 
-         depth="100" 
-         side="double" 
-         material="color: #00ff00"
-         animation__rotation="property: rotation;
-                              from: 0 359.99 0;
-                              to: 0 0 359.99;
-                              dir: reverse;
-                              dur: 200000;
-                              loop: true;
-                              easing: linear;">
-  </a-box>
-  <a-box position="0 0 0" 
-         height="4" 
-         width="4" 
-         depth="100" 
-         side="double" 
-         material="color: #0000ff" 
-         animation__rotation="property: rotation;
-                              from: -0.001 360 0;
-                              to: -0.001 0 360;
-                              dir: reverse;
-                              dur: 200000;
-                              loop: true;
-                              easing: linear;">
-  </a-box>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-sphere id="object1" wireframe="false" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #ff0000" animation="property: rotation;
+                       from: 0 0 0;
+                       to: 360 360 360;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object2" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #00ff00" animation="property: rotation;
+                       from: 0 0 -0.002;
+                       to: 360 360 359.998;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object3" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #0000ff" animation="property: rotation;
+                       from: 0 0 -0.005;
+                       to: 360 360 359.995;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
 </a-scene>
-  
-<!--hide buttons in vr-->
+
 <script type="text/javascript">
+// change active camera when entering and exit vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  vrCamera.setAttribute('camera', 'active', true);
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  normalCamera.setAttribute('camera', 'active', true);
+  document.body.classList.remove('in-vr');
+}, false);
+
+// hide buttons in vr
 document.querySelector('a-scene').addEventListener('enter-vr', () => {
   document.body.classList.add('in-vr');
 }, false);
 document.querySelector('a-scene').addEventListener('exit-vr', () => {
   document.body.classList.remove('in-vr');
-}, false); 
+}, false);
 </script>
 </body>
 </html>

@@ -7,50 +7,44 @@
 </head>
 <body>
 <a-scene vr-mode-ui="enabled: false">
-  <a-camera position="0 0 0">
+  <a-sky color="#000000">
+  </a-sky>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! adjust camera z value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-entity id="normalCamera"
+            camera
+            position="0 0 26">
+  </a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false">
   </a-camera>
-  <a-box position="0 0 0" 
-         height="2" 
-         width="2" 
-         depth="100" 
-         side="double" 
-         material="color: #ff0000" 
-         animation__rotation="property: rotation;
-                              from: 0 360 0;
-                              to: 0 0 360;
-                              dir: reverse;
-                              dur: 200000;
-                              loop: true;
-                              easing: linear;">
-  </a-box>
-  <a-box position="0 0 0" 
-         height="2" 
-         width="2" 
-         depth="100" 
-         side="double" 
-         material="color: #00ff00"
-         animation__rotation="property: rotation;
-                              from: 0 359.99 0;
-                              to: 0 0 359.99;
-                              dir: reverse;
-                              dur: 200000;
-                              loop: true;
-                              easing: linear;">
-  </a-box>
-  <a-box position="0 0 0" 
-         height="2" 
-         width="2" 
-         depth="100" 
-         side="double" 
-         material="color: #0000ff" 
-         animation__rotation="property: rotation;
-                              from: -0.001 360 0;
-                              to: -0.001 0 360;
-                              dir: reverse;
-                              dur: 200000;
-                              loop: true;
-                              easing: linear;">
-  </a-box>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-sphere id="object1" wireframe="false" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #ff0000" animation="property: rotation;
+                       from: 0 0 0;
+                       to: 360 360 360;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object2" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #00ff00" animation="property: rotation;
+                       from: 0 0 -0.002;
+                       to: 360 360 359.998;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
+  <a-sphere id="object3" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #0000ff" animation="property: rotation;
+                       from: 0 0 -0.005;
+                       to: 360 360 359.995;
+                       dir: reverse;
+                       dur: 50000;
+                       loop: true;
+                       easing: linear;" geometry="">
+  </a-sphere>
 </a-scene>
 </body>
 </html>
