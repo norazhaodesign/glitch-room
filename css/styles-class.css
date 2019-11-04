@@ -145,6 +145,11 @@ div.image-container {
   .desktopOnly {
     display: none;
   }
+} 
+@media screen and (max-width: 800px) {
+  .subHeadline {
+    grid-template-columns: 1fr;
+  }
 }
 /*desktop only*/
 @media screen and (min-width: 950px) {
@@ -178,5 +183,22 @@ div.image-container {
 @media screen and (min-width: 800px) and (max-width: 950px) {
   .h1ToH2OnMobile {
     margin-top: 20px;/*add margin on top of h1*/
+  }
+}
+  
+
+@media screen and (max-width: 500px) {
+  .projectTitle {
+    font-size: 4.8em;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .projectTitle {
+    font-size: 5.75em;
+  }
+}
+@media screen and (min-width: 800px) {
+  .projectTitle {
+    font-size: 6.35em;
   }
 }
