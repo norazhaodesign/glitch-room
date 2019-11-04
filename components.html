@@ -101,7 +101,6 @@ sliderSegmentHeight.addEventListener('input', () => {
 }, false);
 </script>
 
-
 <!--segments radial-->
 <label for="sliderSegmentRadial">Segments Radial:</label>
 <output id="displaySegmentsRadial"></output>
@@ -122,6 +121,25 @@ sliderSegmentRadial.addEventListener('input', () => {
 }, false);
 </script>
 
+<!--segments height-->
+<label for="sliderSegmentsHeight">Segments Height:</label>
+<output id="displaySegmentsHeight"></output>
+<input id="sliderSegmentsHeight"
+       type="range"
+       value=""
+       min=""
+       max=""
+       step=""
+       oninput="displaySegmentsHeight.value = sliderSegmentsHeight.value">
+<br>
+<script type="text/javascript">
+// segments height
+sliderSegmentsHeight.addEventListener('input', () => {
+  object1.setAttribute('segments-height', sliderSegmentsHeight.value);
+  object2.setAttribute('segments-height', sliderSegmentsHeight.value);
+  object3.setAttribute('segments-height', sliderSegmentsHeight.value);
+}, false);
+</script>
 
 <!--segments width-->
 <label for="sliderSegmentsWidth">Segments Width:</label>
@@ -143,6 +161,25 @@ sliderSegmentsWidth.addEventListener('input', () => {
 }, false);
 </script>
 
+<!--segments depth-->
+<label for="sliderSegmentsDepth">Segments Depth:</label>
+<output id="displaySegmentsDepth"></output>
+<input id="sliderSegmentsDepth"
+       type="range"
+       value=""
+       min=""
+       max=""
+       step=""
+       oninput="displaySegmentsDepth.value = sliderSegmentsDepth.value">
+<br>
+<script type="text/javascript">
+// segments depth
+sliderSegmentsDepth.addEventListener('input', () => {
+  object1.setAttribute('segments-depth', sliderSegmentsDepth.value);
+  object2.setAttribute('segments-depth', sliderSegmentsDepth.value);
+  object3.setAttribute('segments-depth', sliderSegmentsDepth.value);
+}, false);
+</script>
 
 <!--theta length-->
 <label for="sliderThetaLength">Theta Length:</label>

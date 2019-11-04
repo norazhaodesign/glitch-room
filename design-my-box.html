@@ -117,6 +117,41 @@
            max="100"
            step="1"
            oninput="displaySizeDepth.value = sliderSizeDepth.value">
+    <br>
+
+    <h2>Change Segments</h2>
+    <!--segments height-->
+    <label for="sliderSegmentsHeight">Segments Height:</label>
+    <output id="displaySegmentsHeight">1</output>
+    <input id="sliderSegmentsHeight"
+           type="range"
+           value="1"
+           min="1"
+           max="50"
+           step="1"
+           oninput="displaySegmentsHeight.value = sliderSegmentsHeight.value">
+    <br>
+    <!--segments width-->
+    <label for="sliderSegmentsWidth">Segments Width:</label>
+    <output id="displaySegmentsWidth">1</output>
+    <input id="sliderSegmentsWidth"
+           type="range"
+           value="1"
+           min="1"
+           max="50"
+           step="1"
+           oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
+    <br>
+    <!--segments depth-->
+    <label for="sliderSegmentsDepth">Segments Depth:</label>
+    <output id="displaySegmentsDepth">1</output>
+    <input id="sliderSegmentsDepth"
+           type="range"
+           value="1"
+           min="1"
+           max="50"
+           step="1"
+           oninput="displaySegmentsDepth.value = sliderSegmentsDepth.value">
 
     <!--speed-->
     <h2>Adjust Movement</h2>
@@ -289,6 +324,28 @@ sliderSizeDepth.addEventListener('input', () => {
   object2.setAttribute('depth', sliderSizeDepth.value);
   object3.setAttribute('depth', sliderSizeDepth.value);
 }, false);
+
+// segments height
+sliderSegmentsHeight.addEventListener('input', () => {
+  object1.setAttribute('segments-height', sliderSegmentsHeight.value);
+  object2.setAttribute('segments-height', sliderSegmentsHeight.value);
+  object3.setAttribute('segments-height', sliderSegmentsHeight.value);
+}, false);
+
+// segments width
+sliderSegmentsWidth.addEventListener('input', () => {
+  object1.setAttribute('segments-width', sliderSegmentsWidth.value);
+  object2.setAttribute('segments-width', sliderSegmentsWidth.value);
+  object3.setAttribute('segments-width', sliderSegmentsWidth.value);
+}, false);
+
+// segments depth
+sliderSegmentsDepth.addEventListener('input', () => {
+  object1.setAttribute('segments-depth', sliderSegmentsDepth.value);
+  object2.setAttribute('segments-depth', sliderSegmentsDepth.value);
+  object3.setAttribute('segments-depth', sliderSegmentsDepth.value);
+}, false);
+
 
 // checkbox
 // checkboxRotationX.addEventListener('change', () => {

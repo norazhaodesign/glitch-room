@@ -32,7 +32,7 @@
                 margin-top: 15px;">
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
       <a style="display:inline-block;"
-         href="4-vr.html">
+         href="6-vr.html">
       <button style="width: 50px;">&lt;&lt;</button>
       </a>
       <a style="display:inline-block;"
@@ -53,19 +53,19 @@
       <div class="input-color-container">
         <input id="colorPicker1"
                  type="color"
-                 value="#ff0000"
+                 value="#fff953"
                  class="input-color">
       </div>
       <div class="input-color-container">
         <input id="colorPicker2"
                  type="color"
-                 value="#00ff00"
+                 value="#3e96f7"
                  class="input-color">
       </div>
       <div class="input-color-container">
         <input id="colorPicker3"
                  type="color"
-                 value="#0000ff"
+                 value="#000000"
                  class="input-color">
       </div>
     </div>
@@ -81,34 +81,44 @@
     <output id="displayScale">1</output>
     <input id="sliderScale" type="range" value="1" min="0.1" max="5" step="0.01" oninput="displayScale.value = sliderScale.value">
 
-    <!--segments height-->
-    <h2>Change Segments</h2>
-    <label for="sliderSegmentHeight">Segments Height:</label>
-    <output id="displaySegmentsHeight">3</output>
-    <input id="sliderSegmentHeight" type="range" value="3" min="1" max="50" step="1" oninput="displaySegmentsHeight.value = sliderSegmentHeight.value">
+    <h2>Change Shape</h2>
+    <!--height-->
+    <label for="sliderSizeHeight">Height:</label>
+    <output id="displaySizeHeight">20</output>
+    <input id="sliderSizeHeight" type="range" value="20" min="1" max="100" step="1" oninput="displaySizeHeight.value = sliderSizeHeight.value">
+    <br>
+    <!--width-->
+    <label for="sliderSizeWidth">Width:</label>
+    <output id="displaySizeWidth">20</output>
+    <input id="sliderSizeWidth" type="range" value="20" min="1" max="100" step="1" oninput="displaySizeWidth.value = sliderSizeWidth.value">
+    <br>
+    <!--depth-->
+    <label for="sliderSizeDepth">Depth:</label>
+    <output id="displaySizeDepth">20</output>
+    <input id="sliderSizeDepth" type="range" value="20" min="1" max="100" step="1" oninput="displaySizeDepth.value = sliderSizeDepth.value">
     <br>
 
+    <h2>Change Segments</h2>
+    <!--segments height-->
+    <label for="sliderSegmentsHeight">Segments Height:</label>
+    <output id="displaySegmentsHeight">50</output>
+    <input id="sliderSegmentsHeight" type="range" value="50" min="1" max="50" step="1" oninput="displaySegmentsHeight.value = sliderSegmentsHeight.value">
+    <br>
     <!--segments width-->
     <label for="sliderSegmentsWidth">Segments Width:</label>
-    <output id="displaySegmentsWidth">3</output>
-    <input id="sliderSegmentsWidth" type="range" value="3" min="1" max="100" step="1" oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
-    <h2>Open It Up</h2>
-    <!--theta length-->
-    <label for="sliderThetaLength">Theta Length:</label>
-    <output id="displayThetaLength">302</output>
-    <input id="sliderThetaLength" type="range" value="302" min="1" max="360" step="1" oninput="displayThetaLength.value = sliderThetaLength.value">
+    <output id="displaySegmentsWidth">25</output>
+    <input id="sliderSegmentsWidth" type="range" value="25" min="1" max="50" step="1" oninput="displaySegmentsWidth.value = sliderSegmentsWidth.value">
     <br>
-
-    <!--theta start-->
-    <label for="sliderThetaStart">Theta Start:</label>
-    <output id="displayThetaStart">92</output>
-    <input id="sliderThetaStart" type="range" value="92" min="0" max="180" step="1" oninput="displayThetaStart.value = sliderThetaStart.value">
+    <!--segments depth-->
+    <label for="sliderSegmentsDepth">Segments Depth:</label>
+    <output id="displaySegmentsDepth">1</output>
+    <input id="sliderSegmentsDepth" type="range" value="1" min="1" max="50" step="1" oninput="displaySegmentsDepth.value = sliderSegmentsDepth.value">
 
     <!--speed-->
     <h2>Adjust Movement</h2>
     <label for="sliderSpeed">Speed:</label>
-    <output id="displaySpeed">5</output>
-    <input id="sliderSpeed" type="range" value="5" min="0.1" max="10" step="0.1" oninput="displaySpeed.value = sliderSpeed.value">
+    <output id="displaySpeed">1</output>
+    <input id="sliderSpeed" type="range" value="1" min="0.1" max="10" step="0.1" oninput="displaySpeed.value = sliderSpeed.value">
 
     <!--enter vr button-->
     <a id="myEnterVRButton2" href="#">
@@ -135,30 +145,30 @@
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <a-sphere id="object1" wireframe="false" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #ff0000" animation="property: rotation;
-                       from: 0 0 0;
-                       to: 360 360 360;
-                       dir: reverse;
-                       dur: 10000;
-                       loop: true;
-                       easing: linear;" geometry="">
-  </a-sphere>
-  <a-sphere id="object2" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #00ff00" animation="property: rotation;
-                       from: 0 0 -0.002;
-                       to: 360 360 359.998;
-                       dir: reverse;
-                       dur: 10000;
-                       loop: true;
-                       easing: linear;" geometry="">
-  </a-sphere>
-  <a-sphere id="object3" position="0 0 0" radius="15" segments-height="3" segments-width="3" theta-length="302" theta-start="92" phi-length="360" phi-start="0" side="double" material="color: #0000ff" animation="property: rotation;
-                       from: 0 0 -0.005;
-                       to: 360 360 359.995;
-                       dir: reverse;
-                       dur: 10000;
-                       loop: true;
-                       easing: linear;" geometry="">
-  </a-sphere>
+  <a-box id="object1" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #fff953" animation="property: rotation;
+                    from: 0 0 0;
+                    to: 360 360 360;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+  <a-box id="object2" visible="true" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #3e96f7" animation="property: rotation;
+                    from: 0 0 -0.002;
+                    to: 360 360 359.998;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+  <a-box id="object3" visible="true" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #000000" animation="property: rotation;
+                   from: 0 0 -0.005;
+                   to: 360 360 359.995;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
 </a-scene>
 
 <!--javascript------------------------------------------------------------------------------------------------------------------>
@@ -214,16 +224,43 @@ genrateRandomColorSet.addEventListener('click', () => {
 
 // scale
 sliderScale.addEventListener('input', () => {
-  object1.setAttribute('radius', sliderScale.value * 15);
-  object2.setAttribute('radius', sliderScale.value * 15);
-  object3.setAttribute('radius', sliderScale.value * 15);
+  object1.setAttribute('scale', {x: sliderScale.value,
+                                 y: sliderScale.value,
+                                 z: sliderScale.value});
+  object2.setAttribute('scale', {x: sliderScale.value,
+                                 y: sliderScale.value,
+                                 z: sliderScale.value});
+  object3.setAttribute('scale', {x: sliderScale.value,
+                                 y: sliderScale.value,
+                                 z: sliderScale.value});
+}, false);
+
+// height
+sliderSizeHeight.addEventListener('input', () => {
+  object1.setAttribute('height', sliderSizeHeight.value);
+  object2.setAttribute('height', sliderSizeHeight.value);
+  object3.setAttribute('height', sliderSizeHeight.value);
+}, false);
+
+// width
+sliderSizeWidth.addEventListener('input', () => {
+  object1.setAttribute('width', sliderSizeWidth.value);
+  object2.setAttribute('width', sliderSizeWidth.value);
+  object3.setAttribute('width', sliderSizeWidth.value);
+}, false);
+
+// depth
+sliderSizeDepth.addEventListener('input', () => {
+  object1.setAttribute('depth', sliderSizeDepth.value);
+  object2.setAttribute('depth', sliderSizeDepth.value);
+  object3.setAttribute('depth', sliderSizeDepth.value);
 }, false);
 
 // segments height
-sliderSegmentHeight.addEventListener('input', () => {
-  object1.setAttribute('segments-height', sliderSegmentHeight.value);
-  object2.setAttribute('segments-height', sliderSegmentHeight.value);
-  object3.setAttribute('segments-height', sliderSegmentHeight.value);
+sliderSegmentsHeight.addEventListener('input', () => {
+  object1.setAttribute('segments-height', sliderSegmentsHeight.value);
+  object2.setAttribute('segments-height', sliderSegmentsHeight.value);
+  object3.setAttribute('segments-height', sliderSegmentsHeight.value);
 }, false);
 
 // segments width
@@ -233,19 +270,18 @@ sliderSegmentsWidth.addEventListener('input', () => {
   object3.setAttribute('segments-width', sliderSegmentsWidth.value);
 }, false);
 
-// theta length
-sliderThetaLength.addEventListener('input', () => {
-  object1.setAttribute('theta-length', sliderThetaLength.value);
-  object2.setAttribute('theta-length', sliderThetaLength.value);
-  object3.setAttribute('theta-length', sliderThetaLength.value);
+// segments depth
+sliderSegmentsDepth.addEventListener('input', () => {
+  object1.setAttribute('segments-depth', sliderSegmentsDepth.value);
+  object2.setAttribute('segments-depth', sliderSegmentsDepth.value);
+  object3.setAttribute('segments-depth', sliderSegmentsDepth.value);
 }, false);
 
-// theta start
-sliderThetaStart.addEventListener('input', () => {
-  object1.setAttribute('theta-start', sliderThetaStart.value);
-  object2.setAttribute('theta-start', sliderThetaStart.value);
-  object3.setAttribute('theta-start', sliderThetaStart.value);
-}, false);
+
+// checkbox
+// checkboxRotationX.addEventListener('change', () => {
+//   alert(event.target.checked);
+// }, false);
 
 // speed
 sliderSpeed.addEventListener('input', () => {

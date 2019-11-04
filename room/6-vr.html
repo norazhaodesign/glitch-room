@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Glitch Room</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/styles-class.css">
+<script src="../js/aframe.min.js"></script>
+</head>
+
+<body>
+<!--main layout-->
+<main class="desktop2ColMobile1Col">
+  <!--placeholder-->
+  <div class="hideOnMobile">
+  </div>
+
+  <!--main column-->
+  <div id="htmlContents"
+       style="z-index: 1;
+              position: relative;
+              overflow: auto;
+              height: 100vh;
+              margin: 0 20px 0 10px;">
+
+    <!--buttons-->
+    <div style="display: grid;
+                grid-template-columns: 50px 80px auto;
+                grid-gap: 6px;
+                margin-top: 15px;
+                max-width: 400px;">
+      <a style="display:inline-block;"
+         href="../visit-existing-rooms.html">
+      <button style="width: 50px;">&lt;&lt;</button>
+      </a>
+      <a style="display:inline-block;"
+         href="../index.html">
+      <button style="width: 80px;">Home</button>
+      </a>
+      <a id="myEnterVRButton"
+         style="display:inline-block;"
+         href="#">
+      <button>Enter VR</button>
+      </a>
+    </div>
+
+    <!--text-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div style="max-width: 400px;">
+      <h2 style="margin-top: 20px;">Lines & Stars</h2>
+      <br>
+      <div style="padding-top: 8px;
+                  border-top: 2px solid magenta;">
+      </div>
+      Created by: Amanda Lee <br>
+      On: 26 October 2019 <br>
+      Base Geometry Model: Box <br>
+      <div style="padding-top: 10px;
+                  border-bottom: 2px solid magenta;">
+      </div>
+      <br>
+      Is't it great to see lines and stars on different walls of the room? <br>
+      It feels like a beam that casts dreams. <br>
+      Isn't it great that sometimes the lines turn into triangles which points at the stars? <br>
+      It's like the moment of life when the sign of great faith shines. <br>
+    </div>
+
+    <!--remix botton-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change link number !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <a href="6-remix.html">
+    <button style="margin-top: 30px;
+                   max-width: 400px;">Remix This Room</button>
+    </a>
+    <div style="height: 125px;">
+    </div>
+
+  </div>
+</main>
+
+<!--aframe-->
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
+  <a-sky color="#000000">
+  </a-sky>
+  <a-entity id="normalCamera"
+            camera
+            position="-10 0 30">
+  </a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false">
+  </a-camera>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-box id="object1" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #fff953" animation="property: rotation;
+                    from: 0 0 0;
+                    to: 360 360 360;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+  <a-box id="object2" visible="true" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #3e96f7" animation="property: rotation;
+                    from: 0 0 -0.002;
+                    to: 360 360 359.998;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+  <a-box id="object3" visible="true" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #000000" animation="property: rotation;
+                   from: 0 0 -0.005;
+                   to: 360 360 359.995;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+</a-scene>
+
+<script type="text/javascript">
+// change active camera when entering and exit vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  vrCamera.setAttribute('camera', 'active', true);
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  normalCamera.setAttribute('camera', 'active', true);
+  document.body.classList.remove('in-vr');
+}, false);
+
+// hide buttons in vr
+document.querySelector('a-scene').addEventListener('enter-vr', () => {
+  document.body.classList.add('in-vr');
+}, false);
+document.querySelector('a-scene').addEventListener('exit-vr', () => {
+  document.body.classList.remove('in-vr');
+}, false);
+</script>
+</body>
+</html>

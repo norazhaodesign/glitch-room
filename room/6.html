@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Glitch Room</title>
+<script src="../js/aframe.min.js"></script>
+</head>
+<body>
+<a-scene vr-mode-ui="enabled: false">
+  <a-sky color="#000000">
+  </a-sky>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! adjust camera z value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-entity id="normalCamera"
+            camera
+            position="0 0 29">
+  </a-entity>
+  <a-camera id="vrCamera"
+            position="0 0 0"
+            active="false">
+  </a-camera>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a-box id="object1" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #fff953" animation="property: rotation;
+                    from: 0 0 0;
+                    to: 360 360 360;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+  <a-box id="object2" visible="true" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #3e96f7" animation="property: rotation;
+                    from: 0 0 -0.002;
+                    to: 360 360 359.998;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+  <a-box id="object3" visible="true" position="0 0 0" height="20" width="20" depth="20" side="double" material="color: #000000" animation="property: rotation;
+                   from: 0 0 -0.005;
+                   to: 360 360 359.995;
+                    dir: reverse;
+                    dur: 50000;
+                    loop: true;
+                    easing: linear;" geometry="" segments-height="50" segments-width="25" segments-depth="1">
+  </a-box>
+</a-scene>
+</body>
+</html>
