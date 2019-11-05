@@ -212,6 +212,7 @@ div.image-container {
   }
 }
 @media screen and (orientation:landscape) and (max-width: 820px) {
+  /*for mobile lanscape;*/
   .projectTitle {
     font-size: 4.8em;
   }
@@ -220,6 +221,7 @@ div.image-container {
   }
 }
 @media screen and (orientation:landscape) and (max-width: 630px) {
+  /*for small screen mobile lanscape;*/
   .projectTitle {
     font-size: 4em;
   }
