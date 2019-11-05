@@ -198,7 +198,7 @@ div.image-container {
 }
 @media screen and (min-width: 800px) {
   .projectTitle {
-/*    font-size: 6.35em;*/
+    /*font-size: 6.35em;*/
     font-size: 6.81em;
   }
 }
