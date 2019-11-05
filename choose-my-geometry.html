@@ -16,7 +16,9 @@
   <div class="hideOnMobile">
   </div>
   <!--main column-->
-  <div style="z-index: 1;">
+  <div style="z-index: 1;
+              margin-left: 10px;
+              margin-right: 10px;">
     <!--back and home buttons-->
     <div style="margin-top: 5px;
                 margin-right: 10px;"
@@ -94,7 +96,7 @@
     </div>
   </div>
 </main>
-  <a-scene vr-mode-ui="enabled: false">
+<a-scene vr-mode-ui="enabled: false">
   <!-- camera -->
   <a-camera position="0 0 -3"></a-camera>
   
@@ -108,8 +110,8 @@
       material="color: black"
       animation__rotation="
           property: rotation;
-          from: 25 43 0;
-          to: -25 -43 360;
+          from: 175 43 0;
+          to: -175 -43 360;
           dir: alternate;
           dur: 30000;
           loop: true;
