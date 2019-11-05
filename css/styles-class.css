@@ -215,4 +215,15 @@ div.image-container {
   .projectTitle {
     font-size: 4.8em;
   }
+  .subHeadline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (orientation:landscape) and (max-width: 800px) {
+  .projectTitle {
+    font-size: 4em;
+  }
+  .subHeadline {
+    grid-template-columns: 1fr 1fr;
+  }
 }
