@@ -6,6 +6,7 @@
 <title>Glitch Room</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/styles-class.css">
+<script src="js/aframe.min.js"></script>
 </head>
 
 <body>
@@ -93,6 +94,59 @@
     </div>
   </div>
 </main>
+  <a-scene vr-mode-ui="enabled: false">
+  <!-- camera -->
+  <a-camera position="0 0 -3"></a-camera>
+  
+  <!-- geometry -->
+  <a-box
+      position="5 0 -3"
+      height="18"
+      width="18"
+      depth="18"
+      side="double"
+      material="color: black"
+      animation__rotation="
+          property: rotation;
+          from: 25 43 0;
+          to: -25 -43 360;
+          dir: alternate;
+          dur: 30000;
+          loop: true;
+          easing: linear;">
+    <a-box
+          height="18"
+          width="18"
+          depth="18"
+          side="double"
+          material="color: blue"
+          animation__rotation="
+              property: rotation;
+              from: 0 0 0;
+              to: -0.001 0 0.001;
+              dir: alternate;
+              dur: 20000;
+              loop: true;
+              easing: linear;">
+    </a-box>
+    <a-box
+          height="18"
+          width="18"
+          depth="18"
+          side="double"
+          material="color: green"
+          animation__rotation="
+              property: rotation;
+              from: 0 0 0;
+              to: 0.001 0 -0.001;
+              dir: alternate;
+              dur: 20000;
+              loop: true;
+              easing: linear;">
+    </a-box>
+  </a-box>
+</a-scene>
+</body>
 <script>
 // open full screen desatination page when clicking iframe
 iframeDiv1.addEventListener("click", () => {
@@ -107,7 +161,5 @@ iframeDiv3.addEventListener("click", () => {
 iframeDiv4.addEventListener("click", () => {
   window.location.href = document.getElementById("iframeDestination4").href;
 }, false);
-
 </script>
-</body>
 </html>
