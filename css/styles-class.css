@@ -97,18 +97,18 @@ div.image-container {
 }
 /*div around iframe*/
 .iframe-holder-square {
-  position: relative; 
-  padding-top: 100%; 
-  overflow: auto; 
-  border: 2px solid magenta; 
+  position: relative;
+  padding-top: 100%;
+  overflow: auto;
+  border: 2px solid magenta;
   margin-bottom: 10px
 }
 /*invisible element in front of the iframe so it can be clicked*/
 .frame-dummy {
-  position: absolute; 
-  top: 0px; 
-  bottom: 0px; 
-  left: 0px; 
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
   right: 0px;
 }
 .frame-dummy:hover {
@@ -118,6 +118,14 @@ div.image-container {
 /*hide html contents when entering vr on ios*/
 .in-vr #htmlContents {
   display: none;
+}
+
+.desktop2ColMobile1Col {
+  z-index: 1;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
 }
 /*mobile*/
 @media screen and (max-width: 500px) {
@@ -145,7 +153,7 @@ div.image-container {
   .desktopOnly {
     display: none;
   }
-} 
+}
 @media screen and (max-width: 800px) {
   .subHeadline {
     grid-template-columns: 1fr;
@@ -184,7 +192,7 @@ div.image-container {
   .h1ToH2OnMobile {
     margin-top: 20px;/*add margin on top of h1*/
   }
-} 
+}
 /*class projectTitle*/
 @media screen and (max-width: 375) {
   .projectTitle {
