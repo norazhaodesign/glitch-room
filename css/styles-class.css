@@ -193,12 +193,13 @@ div.image-container {
 }
 @media screen and (min-width: 375px) and (max-width: 800px) {
   .projectTitle {
-    font-size: 5.92em;
+    font-size: 6.05em;
+    line-height: 1.05;
   }
 }
 @media screen and (min-width: 800px) {
   .projectTitle {
     /*font-size: 6.35em;*/
-    font-size: 6.81em;
+    font-size: 6.85em;
   }
 }
