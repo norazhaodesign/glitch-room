@@ -18,7 +18,7 @@ body {
 /*research portfolio page overall two columns layout*/
 section {
   display: grid;
-  grid-template-columns: 1fr 3.5fr;
+  grid-template-columns: 1fr 5fr;
   grid-gap: 10px;
 }
 /*outcome page overall two columns layout*/
