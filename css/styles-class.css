@@ -169,7 +169,7 @@ div.image-container {
     margin-top: 20px;
   }
 }
-/*class h1ToH2OnMobile*/
+/*for class h1ToH2OnMobile*/
 @media screen and (max-width: 500px) {
   .h1ToH2OnMobile {
     font-size: 2em;
@@ -193,7 +193,7 @@ div.image-container {
     margin-top: 20px;/*add margin on top of h1*/
   }
 }
-/*class projectTitle*/
+/*for class projectTitle*/
 @media screen and (max-width: 375) {
   .projectTitle {
     font-size: 4.8em;
