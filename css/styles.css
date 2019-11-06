@@ -6,7 +6,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;  
+  -ms-text-size-adjust: 100%;
 }
 body {
   background-color: black;
@@ -83,12 +83,13 @@ button:hover {
   cursor: pointer;
 }
 iframe {
-  border: none; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  height: 100%; 
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
+  background-color: black;
 }
 /*slider look (on outcome page)*/
 input[type=range] { /*slider bar*/
@@ -118,5 +119,3 @@ input[type=range]::-moz-range-thumb { /*slider handle (for firefox)*/
   background: #ff00ff;
   cursor: pointer;
 }
-
-
