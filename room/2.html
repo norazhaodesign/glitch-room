@@ -12,7 +12,7 @@
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! adjust camera z value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <a-entity id="normalCamera"
             camera
-            position="0 0 32">
+            position="0 3.5 35">
   </a-entity>
   <a-camera id="vrCamera"
             position="0 0 0"
@@ -21,74 +21,29 @@
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! replace from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and change colors !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and calculate animation duration !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <a-cone id="object1"
-          wireframe="false"
-          position="0 0 0"
-          radius-bottom="8"
-          radius-top="8"
-          height="13"
-          segments-radial="10"
-          segments-height="50"
-          open-ended="false"
-          theta-length="360"
-          theta-start="0"
-          side="double"
-          material="color: #aeb1f9"
-          animation="property: rotation;
+  <a-cone id="object1" wireframe="false" position="0 0 0" radius-bottom="3" radius-top="14" height="35" segments-radial="3" segments-height="10" open-ended="false" theta-length="360" theta-start="0" side="double" material="color: #0f1fdb" animation="property: rotation;
                      from: 0 0 0;
                      to: 360 360 360;
                      dir: reverse;
-                     dur: 71428;
+                     dur: 50000;
                      loop: true;
-                     easing: linear;"
-          geometry=""
-          scale="1.8 1.8 1.8">
+                     easing: linear;" geometry="" scale="">
   </a-cone>
-  <a-cone id="object2"
-          visible="true"
-          position="0 0 0"
-          radius-bottom="8"
-          radius-top="8"
-          height="13"
-          segments-radial="10"
-          segments-height="50"
-          open-ended="false"
-          theta-length="360"
-          theta-start="0"
-          side="double"
-          material="color: #330d5e"
-          animation="property: rotation;
+  <a-cone id="object2" visible="true" position="0 0 0" radius-bottom="3" radius-top="14" height="35" segments-radial="3" segments-height="10" open-ended="false" theta-length="360" theta-start="0" side="double" material="color: #6bc4f2" animation="property: rotation;
                      from: 0 0 -0.002;
                      to: 360 360 359.998;
                      dir: reverse;
-                     dur: 71428;
+                     dur: 50000;
                      loop: true;
-                     easing: linear;"
-          geometry=""
-          scale="1.8 1.8 1.8">
+                     easing: linear;" geometry="" scale="">
   </a-cone>
-  <a-cone id="object3"
-          visible="true"
-          position="0 0 0"
-          radius-bottom="8"
-          radius-top="8"
-          height="13"
-          segments-radial="10"
-          segments-height="50"
-          open-ended="false"
-          theta-length="360"
-          theta-start="0"
-          side="double"
-          material="color: #54a703"
-          animation="property: rotation;
+  <a-cone id="object3" visible="true" position="0 0 0" radius-bottom="3" radius-top="14" height="35" segments-radial="3" segments-height="10" open-ended="false" theta-length="360" theta-start="0" side="double" material="color: #fff600" animation="property: rotation;
                      from: 0 0 -0.005;
                      to: 360 360 359.995;
                      dir: reverse;
-                     dur: 71428;
+                     dur: 50000;
                      loop: true;
-                     easing: linear;"
-          geometry=""
-          scale="1.8 1.8 1.8">
+                     easing: linear;" geometry="" scale="">
   </a-cone>
 </a-scene>
 </body>
