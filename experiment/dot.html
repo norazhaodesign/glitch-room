@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Spinning Circle – Nora Zhao</title>
+	<title>Drop the Dot</title>
 	<style type = "text/css">
 		html, body {margin: 0; padding: 0; overflow: hidden}
 	</style>
@@ -73,7 +73,7 @@
 		group1.rotation.set(0.01, 0.01, 0.01);
 		scene.add(group1);
 
-		var circleSize = 0.2;
+		var circleSize = 0.23;
 		var [color4, color5] = [Math.random() * 0xffffff, Math.random() * 0xffffff];
 		var obj4 = getCircle(circleSize, color4);
 		var obj5 = getCircle(circleSize, color5);
@@ -188,7 +188,7 @@
 			try {
 				var strMime = "image/png";
 				imgData = renderer.domElement.toDataURL(strMime);
-				saveFile(imgData.replace(strMime, strDownloadMime), "Drop the Dot by Nora Zhao.png"); // file name
+				saveFile(imgData.replace(strMime, strDownloadMime), "drop the dot.png"); // file name
 			} catch (e) {
 				console.log(e);
 				return;
