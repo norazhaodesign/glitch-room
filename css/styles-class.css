@@ -9,6 +9,7 @@
 .research-portfolio a:link {
   font-size: 1.05em;
   color: white;
+  text-decoration: underline;
 }
 .research-portfolio a:visited {
   color: white;
@@ -16,6 +17,9 @@
 }
 .research-portfolio div {
   padding-top: 15px;
+}
+.left-title {
+  text-transform: uppercase;
 }
 /*use container to have text shown on top of picture*/
 div.image-container {
