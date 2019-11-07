@@ -21,6 +21,14 @@
 .left-title {
   text-transform: uppercase;
 }
+.flex {
+  display: flex;
+  padding-top: 0;
+}
+.flex > div {
+  padding-top: 0;
+  margin: 0 10px 0 0;
+}
 /*use container to have text shown on top of picture*/
 div.image-container {
   position: relative;
@@ -118,12 +126,10 @@ div.image-container {
 .frame-dummy:hover {
   cursor: pointer;
 }
-
 /*hide html contents when entering vr on ios*/
 .in-vr #htmlContents {
   display: none;
 }
-
 .desktop2ColMobile1Col {
   z-index: 1;
   position: relative;
@@ -148,7 +154,7 @@ div.image-container {
   .gridxto1 {
     grid-template-columns: 1fr 1fr;
   }
-  .desktop2ColMobile1Col{
+  .desktop2ColMobile1Col {
     margin-top: 10px;
   }
 }
@@ -169,7 +175,7 @@ div.image-container {
     position: absolute;
     right: 10px;
   }
-  .desktop2ColMobile1Col{
+  .desktop2ColMobile1Col {
     margin-top: 20px;
   }
 }
@@ -194,7 +200,7 @@ div.image-container {
 }
 @media screen and (min-width: 800px) and (max-width: 950px) {
   .h1ToH2OnMobile {
-    margin-top: 20px;/*add margin on top of h1*/
+    margin-top: 20px; /*add margin on top of h1*/
   }
 }
 /*for class projectTitle*/
