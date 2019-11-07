@@ -19,7 +19,7 @@
   padding-top: 15px;
 }
 .left-title {
-  text-transform: uppercase;
+  text-transform: none;
 }
 .flex {
   display: flex;
