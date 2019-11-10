@@ -6,6 +6,9 @@
 .research-portfolio p {
   color: magenta;
 }
+.research-portfolio h2 {
+  color: magenta;
+}
 .research-portfolio a:link {
   font-size: 1.05em;
   color: white;
