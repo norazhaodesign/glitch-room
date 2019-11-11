@@ -18,9 +18,6 @@
   color: white;
   background-color: transparent;
 }
-.research-portfolio div {
-  padding-top: 15px;
-}
 .left-title {
   text-transform: none;
 }
@@ -35,13 +32,11 @@
 /*use container to have text shown on top of picture*/
 div.image-container {
   position: relative;
-  padding: 0;
 }
 .top-left-text {
   position: absolute;
-  top: -17px;
+  top: -2px;
   left: 5px;
-  padding: 0;
 }
 /*vertically center contents on a page*/
 .verticalCenter {
