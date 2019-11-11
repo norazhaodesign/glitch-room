@@ -133,7 +133,7 @@ div.image-container {
 .in-vr #htmlContents {
   display: none;
 }
-.desktop2ColMobile1Col {
+.htmlContentsOnAframe {
   z-index: 1;
   position: relative;
   overflow: auto;
