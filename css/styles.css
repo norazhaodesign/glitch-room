@@ -35,7 +35,7 @@ h1 {
   font-size: 4em;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 0 0 0 0;
+  margin: 10px 0 0 0;
 }
 h2 {
   font-size: 2em;
@@ -45,13 +45,12 @@ h2 {
 }
 h6 {
   font-size: 0.7em;
-  margin: 5px 0 10px 0;
+  margin: 5px 0 15px 0;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 p {
   font-size: 1.05em;
-  margin: 8px 0;
 }
 a:link {
   font-size: 1.05em;
