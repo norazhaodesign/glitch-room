@@ -18,15 +18,10 @@
   color: white;
   background-color: transparent;
 }
-.left-title {
-  text-transform: none;
-}
 .flex {
   display: flex;
-  padding-top: 0;
 }
 .flex > div {
-  padding-top: 0;
   margin-right: 10px;
 }
 /*use container to have text shown on top of picture*/
