@@ -232,3 +232,55 @@ div.image-container {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/*make contents bigger when it is bigger screen*/
+/*---------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 2300px) {
+  * {
+    zoom: 1.03;
+    -moz-transform: scale(1.03);
+    -moz-transform-origin: 0 0;
+  }
+}
+@media screen and (min-width: 2300px) and (max-width: 2600px) {
+  * {
+    zoom: 1.07;
+    -moz-transform: scale(1.07);
+    -moz-transform-origin: 0 0;
+  }
+}
+@media screen and (min-width: 2600px) and (max-width: 3000px) {
+  * {
+    zoom: 1.1;
+    -moz-transform: scale(1.1);
+    -moz-transform-origin: 0 0;
+  }
+}
+@media screen and (min-width: 3000px) and (max-width: 3800px) {
+  * {
+    zoom: 1.13;
+    -moz-transform: scale(1.13);
+    -moz-transform-origin: 0 0;
+  }
+}
+@media screen and (min-width: 3800px) and (max-width: 4300px) {
+  * {
+    zoom: 1.17;
+    -moz-transform: scale(1.17);
+    -moz-transform-origin: 0 0;
+  }
+}
+@media screen and (min-width: 4300px) and (max-width: 5000px) {
+  * {
+    zoom: 1.19;
+    -moz-transform: scale(1.19);
+    -moz-transform-origin: 0 0;
+  }
+}
+@media screen and (min-width: 5000px) {
+  * {
+    zoom: 1.215;
+    -moz-transform: scale(1.215);
+    -moz-transform-origin: 0 0;
+  }
+}
