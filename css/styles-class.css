@@ -235,7 +235,7 @@ div.image-container {
 
 /*make contents bigger when it is bigger screen*/
 /*---------------------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 2000px) and (max-width: 2300px) {
+/* @media screen and (min-width: 2000px) and (max-width: 2300px) {
   * {
     zoom: 1.03;
     -moz-transform: scale(1.03);
@@ -283,4 +283,4 @@ div.image-container {
     -moz-transform: scale(1.215);
     -moz-transform-origin: 0 0;
   }
-}
+} */
